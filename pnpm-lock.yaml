@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@antfu/eslint-config': ^0.25.1
+  '@heroicons/vue': ^1.0.6
   '@iconify-json/carbon': ^1.1.5
   '@iconify-json/ri': ^1.1.2
   '@types/node': ^16.11.36
@@ -23,6 +24,7 @@ specifiers:
   vue-tsc: ^0.35.2
 
 dependencies:
+  '@heroicons/vue': 1.0.6_vue@3.2.37
   vue: 3.2.37
 
 devDependencies:
@@ -250,6 +252,14 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@heroicons/vue/1.0.6_vue@3.2.37:
+    resolution: {integrity: sha512-ng2YcCQrdoQWEFpw+ipFl2rZo8mZ56v0T5+MyfQQvNqfKChwgP6DMloZLW+rl17GEcHkE3H82UTAMKBKZr4+WA==}
+    peerDependencies:
+      vue: '>= 3'
+    dependencies:
+      vue: 3.2.37
+    dev: false
 
   /@humanwhocodes/config-array/0.9.5:
     resolution: {integrity: sha512-ObyMyWxZiCu/yTisA7uzx81s40xR2fD5Cg/2Kq7G02ajkNubJf6BopgDTmDyc3U7sXpNKM8cYOw7s7Tyr+DnCw==}

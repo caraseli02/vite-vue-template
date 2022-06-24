@@ -1,7 +1,6 @@
-<script setup>
+<script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import { MoonIcon, SunIcon } from '@heroicons/vue/outline'
-import PrimaryBtn from '@/components/utils/PrimaryBtn.vue'
 
 const nightMode = ref(localStorage.getItem('theme') === 'dark')
 
