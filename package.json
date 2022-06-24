@@ -4,10 +4,15 @@
   "packageManager": "pnpm@7.1.0",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview --port 4173",
-    "test": "vitest"
+    "dev": "vite --port 3333 --open",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "preview-https": "serve dist",
+    "test": "vitest",
+    "test:e2e": "cypress open",
+    "test:unit": "vitest",
+    "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
     "vue": "^3.2.36"
