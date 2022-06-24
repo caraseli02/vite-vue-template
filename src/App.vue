@@ -3,8 +3,7 @@
 
 <template>
   <div font-sans bg-canvas h-screen>
-    <div border="~ base rounded" bg-base shadow mx8>
-    </div>
+    <div border="~ base rounded" bg-base shadow mx8 />
   </div>
 </template>
 

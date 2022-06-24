@@ -8,10 +8,10 @@ test('mount component with props', async () => {
     props: {
       attend: {
         data: {
-          enterTime: ['2022-01-16T08:34']
-        }
-      }
-    }
+          enterTime: ['2022-01-16T08:34'],
+        },
+      },
+    },
   })
   const { vm } = wrapper
   expect(wrapper).toMatchSnapshot()

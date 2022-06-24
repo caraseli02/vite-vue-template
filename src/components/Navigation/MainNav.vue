@@ -1,3 +1,35 @@
+<script setup lang="ts">
+import {
+  ChartBarIcon,
+  ClockIcon,
+  HomeIcon,
+  UserCircleIcon,
+} from '@heroicons/vue/outline'
+
+const links = [
+  {
+    component: HomeIcon,
+    path: '/',
+    name: 'Inicio',
+  },
+  {
+    component: ClockIcon,
+    path: '/dashboard',
+    name: 'Dashboard',
+  },
+  {
+    component: ChartBarIcon,
+    path: '/info',
+    name: 'Info',
+  },
+  {
+    component: UserCircleIcon,
+    path: '/perfil',
+    name: 'Perfil',
+  },
+]
+</script>
+
 <template>
   <div
     class="flex lg:flex-col items-center justify-center h-full space-x-4 lg:space-x-0 lg:space-y-4 py-2 lg:py-4 lg:rouded-xl"
@@ -24,35 +56,3 @@
     </router-link>
   </div>
 </template>
-
-<script setup lang="ts">
-  import {
-    HomeIcon,
-    ChartBarIcon,
-    ClockIcon,
-    UserCircleIcon
-  } from '@heroicons/vue/outline'
-
-  const links = [
-    {
-      component: HomeIcon,
-      path: '/',
-      name: 'Inicio'
-    },
-    {
-      component: ClockIcon,
-      path: '/dashboard',
-      name: 'Dashboard'
-    },
-    {
-      component: ChartBarIcon,
-      path: '/info',
-      name: 'Info'
-    },
-    {
-      component: UserCircleIcon,
-      path: '/perfil',
-      name: 'Perfil'
-    }
-  ]
-</script>

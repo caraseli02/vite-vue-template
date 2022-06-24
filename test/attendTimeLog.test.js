@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils'
-import attendTimeLog from '~/components/attendTimeLog.vue'
 import { describe, expect } from 'vitest'
+import attendTimeLog from '~/components/attendTimeLog.vue'
 
 describe('props testing', () => {
   test('mount component without props', async () => {
@@ -19,8 +19,8 @@ describe('props testing', () => {
     const wrapper = mount(attendTimeLog, {
       props: {
         workedDays: 5,
-        unclosedAttends: 1
-      }
+        unclosedAttends: 1,
+      },
     })
 
     expect(wrapper.vm.workedDays).toBe(5)

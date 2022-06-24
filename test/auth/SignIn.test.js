@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils'
-import SignIn from '~/components/auth/SignIn.vue'
 import { expect } from 'vitest'
+import SignIn from '~/components/auth/SignIn.vue'
 import firebase from '@/helpers/firebase'
 import firebaseConfig from '@/config/firebase'
 

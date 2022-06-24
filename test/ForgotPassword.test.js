@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils'
-import ForgotPassword from '~/components/auth/ForgotPassword.vue'
 import { expect } from 'vitest'
+import ForgotPassword from '~/components/auth/ForgotPassword.vue'
 
 test('mount MainNav component', async () => {
   expect(ForgotPassword).toBeTruthy()
@@ -12,8 +12,8 @@ test('mount MainNav component', async () => {
   expect(vm.state.error).toBe('')
   expect(vm.state.emailSending).toBe(false)
   // expect(vm.error).toBe('Please type in a valid email address.')
-  //set email to be valid
-  //find #emailForgot
+  // set email to be valid
+  // find #emailForgot
   expect(wrapper.find('#emailForgot').exists()).toBe(true)
   // type in email
   wrapper.find('#emailForgot').setValue('test@apimosa.es')

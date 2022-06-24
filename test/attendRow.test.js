@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
-import attendRow from '~/components/attendRow.vue'
 import { MailIcon } from '@heroicons/vue/outline'
+import attendRow from '~/components/attendRow.vue'
 
 test('mount component with props and check computed logic', async () => {
   expect(attendRow).toBeTruthy()
@@ -9,10 +9,10 @@ test('mount component with props and check computed logic', async () => {
     props: {
       attend: {
         data: {
-          enterTime: ['2022-01-16T08:34']
-        }
-      }
-    }
+          enterTime: ['2022-01-16T08:34'],
+        },
+      },
+    },
   })
   const vm = wrapper.vm
   expect(wrapper.get('[data-vi="dayNumber"]').text()).toBe('dom 16')

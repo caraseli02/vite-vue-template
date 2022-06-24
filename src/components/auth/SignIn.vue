@@ -1,3 +1,38 @@
+<script setup lang="ts">
+import { ArrowCircleRightIcon, KeyIcon, XCircleIcon } from '@heroicons/vue/outline'
+import { Form as VeeForm, configure, defineRule } from 'vee-validate'
+import { email, required } from '@vee-validate/rules'
+import { localize } from '@vee-validate/i18n'
+
+defineRule('required', required)
+defineRule('email', email)
+
+configure({
+  generateMessage: localize('en', {
+    messages: {
+      required: '{field} es requerido',
+      email: '{field} debe ser un correo electrónico válido',
+    },
+  }),
+})
+
+interface Form {
+  email: string
+  password: string
+}
+
+const showMovilSignIn = $ref(false)
+const form: Form = $ref({
+  email: '',
+  password: '',
+})
+const showForgotPopUp = $ref(false)
+
+const signInWithEmailAndPassword = (form: Form) => {
+  // console.log(form)
+}
+</script>
+
 <template>
   <section>
     <div id="signIn" class="flex-grid glass justify-center relative">
@@ -60,38 +95,3 @@
     />
   </section>
 </template>
-
-<script setup lang="ts">
-import { ArrowCircleRightIcon, XCircleIcon, KeyIcon } from "@heroicons/vue/outline";
-import { Form as VeeForm, defineRule, configure } from "vee-validate";
-import { required, email } from "@vee-validate/rules";
-import { localize } from "@vee-validate/i18n";
-
-defineRule("required", required);
-defineRule("email", email);
-
-configure({
-  generateMessage: localize("en", {
-    messages: {
-      required: "{field} es requerido",
-      email: "{field} debe ser un correo electrónico válido",
-    },
-  }),
-});
-
-interface Form {
-  email: string;
-  password: string;
-}
-
-const showMovilSignIn = $ref(false);
-const form: Form = $ref({
-  email: "",
-  password: "",
-});
-const showForgotPopUp = $ref(false);
-
-const signInWithEmailAndPassword = (form: Form) => {
-  console.log(form);
-};
-</script>

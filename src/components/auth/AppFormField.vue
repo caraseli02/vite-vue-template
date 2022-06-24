@@ -1,3 +1,21 @@
+<script lang="ts">
+import { defineComponent } from 'vue'
+import { ErrorMessage as VeeErrorMessage, Field as VeeField } from 'vee-validate'
+export default defineComponent({
+  components: {
+    VeeField,
+    VeeErrorMessage,
+  },
+  inheritAttrs: false,
+  props: {
+    name: { type: String, required: true },
+    label: { type: String, default: '' },
+    modelValue: { type: String, default: '' },
+    disabled: { type: Boolean, default: false },
+  },
+})
+</script>
+
 <template>
   <div class="relative">
     <label class="flex text-sm font-medium leading-5 text-secondary my-2" :for="name">{{
@@ -21,20 +39,3 @@
     />
   </div>
 </template>
-<script lang="ts">
-import { defineComponent } from "vue";
-import { Field as VeeField, ErrorMessage as VeeErrorMessage } from "vee-validate";
-export default defineComponent({
-  inheritAttrs: false,
-  props: {
-    name: { type: String, required: true },
-    label: { type: String, default: "" },
-    modelValue: { type: String, default: "" },
-    disabled: { type: Boolean, default: false },
-  },
-  components: {
-    VeeField,
-    VeeErrorMessage,
-  },
-});
-</script>

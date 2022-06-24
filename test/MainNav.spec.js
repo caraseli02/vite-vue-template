@@ -1,7 +1,6 @@
-import { render, fireEvent } from '@testing-library/vue'
-import VueRouter from 'vue-router'
+import { fireEvent, render } from '@testing-library/vue'
+import VueRouter, { createRouter, createWebHistory } from 'vue-router'
 import { expect } from 'vitest'
-import { createRouter, createWebHistory } from 'vue-router'
 
 import App from '@/App.vue'
 import HomePage from '@/pages/HomePage.vue'
@@ -13,24 +12,24 @@ import UserPerfil from '@/pages/UserPerfil.vue'
 const routes = [
   {
     path: '/',
-    component: HomePage
+    component: HomePage,
   },
   {
     path: '/auth',
-    component: AuthPage
+    component: AuthPage,
   },
   {
     path: '/dashboard',
-    component: DashboardPage
+    component: DashboardPage,
   },
   {
     path: '/perfil',
-    component: UserPerfil
+    component: UserPerfil,
   },
   {
     path: '/info',
-    component: AttendsList
-  }
+    component: AttendsList,
+  },
 ]
 
 test('full app rendering/navigating', async () => {
@@ -49,11 +48,11 @@ test('mount MainNav component', async () => {
 
   const wrapper = mount(MainNav, {
     global: {
-      plugins: [router]
-    }
+      plugins: [router],
+    },
   })
   // console.log(wrapper.html());
-  //find a tag with href /auth
+  // find a tag with href /auth
   expect(wrapper.find('a[href="/dashboard"]').exists()).toBe(true)
   expect(wrapper.find('a[href="/info"]').exists()).toBe(true)
   expect(wrapper.find('a[href="/"]').exists()).toBe(true)

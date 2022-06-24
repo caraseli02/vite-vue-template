@@ -1,10 +1,10 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
 
 import {
+  getDayName,
   getRoundedDate,
   getTimeDifference,
-  getDayName,
-  roundTime
+  roundTime,
 } from '@/composables/timeConvert'
 
 describe('testing time covnvert functions', () => {
@@ -34,7 +34,7 @@ describe('testing time covnvert functions', () => {
     let timeDifference = getTimeDifference(startDate, endDate)
     expect(timeDifference).toEqual('10h 0m')
 
-    //test with eatHour = false and min > 540
+    // test with eatHour = false and min > 540
     timeDifference = getTimeDifference(startDate, endDate, false)
     expect(timeDifference).toEqual('11h 0m')
 
@@ -46,7 +46,7 @@ describe('testing time covnvert functions', () => {
 
   it('getDayName', () => {
     const date = '2022-02-13T15:52'
-    let dayName = getDayName(date)
+    const dayName = getDayName(date)
     expect(dayName).toEqual('dom')
   })
 

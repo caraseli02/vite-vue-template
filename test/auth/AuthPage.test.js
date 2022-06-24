@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
-import AuthPage from '~/pages/AuthPage.vue'
 import { expect } from 'vitest'
+import AuthPage from '~/pages/AuthPage.vue'
 import firebase from '~/helpers/firebase'
 import firebaseConfig from '~/config/firebase'
 

@@ -1,13 +1,14 @@
 {
   "name": "vite-vue-tempalte",
+  "version": "0.0.0",
   "private": true,
   "packageManager": "pnpm@7.1.0",
-  "version": "0.0.0",
   "scripts": {
     "build": "vite build",
     "dev": "vite --port 3333 --open",
     "lint": "eslint .",
     "preview": "vite preview",
+
     "preview-https": "serve dist",
     "test": "vitest",
     "test:e2e": "cypress open",

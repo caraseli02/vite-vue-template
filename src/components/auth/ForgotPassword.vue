@@ -1,3 +1,35 @@
+<script setup lang="ts">
+// import Swal from "sweetalert2";
+
+// const emit = defineEmits<{ (e: "closePopUp", value: boolean): void }>();
+
+const state = $ref({
+  email: '',
+  error: '',
+  emailSending: false,
+})
+
+const sendEmail = async () => {
+  if (!state.email) {
+    state.error = 'Por favor, escriba una dirección de correo electrónico válida.'
+    return
+  }
+  state.error = ''
+  state.emailSending = true
+  // await store
+  //   .dispatch("auth/resetPassword", state.email)
+  //   .then(() => {
+  //     state.emailSending = false;
+  //     emit("closePopUp", false);
+  //     Swal.fire("Enviado", "Comprueba tu dirección de email", "info");
+  //   })
+  //   .catch((error: { message: string }) => {
+  //     state.emailSending = false;
+  //     state.error = error.message;
+  //   });
+}
+</script>
+
 <template>
   <section class="mt-2 p-2 flex justify-center items-center flex-col">
     <h1 class="text-center my-4 mx-8 text-xs text-secondary font-bold">
@@ -24,7 +56,7 @@
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$"
             class="px-4 py-2 border rounded w-full"
             required
-          />
+          >
         </div>
         <div class="mb-4">
           <PrimaryBtn type="submit" @click="sendEmail">
@@ -39,35 +71,3 @@
     <slot />
   </section>
 </template>
-
-<script setup lang="ts">
-// import Swal from "sweetalert2";
-
-// const emit = defineEmits<{ (e: "closePopUp", value: boolean): void }>();
-
-const state = $ref({
-  email: "",
-  error: "",
-  emailSending: false,
-});
-
-const sendEmail = async () => {
-  if (!state.email) {
-    state.error = "Por favor, escriba una dirección de correo electrónico válida.";
-    return;
-  }
-  state.error = "";
-  state.emailSending = true;
-  // await store
-  //   .dispatch("auth/resetPassword", state.email)
-  //   .then(() => {
-  //     state.emailSending = false;
-  //     emit("closePopUp", false);
-  //     Swal.fire("Enviado", "Comprueba tu dirección de email", "info");
-  //   })
-  //   .catch((error: { message: string }) => {
-  //     state.emailSending = false;
-  //     state.error = error.message;
-  //   });
-};
-</script>
