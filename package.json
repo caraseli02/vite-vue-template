@@ -1,5 +1,7 @@
 {
-  "name": "world-time",
+  "name": "vite-vue-tempalte",
+  "private": true,
+  "packageManager": "pnpm@7.1.0",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
