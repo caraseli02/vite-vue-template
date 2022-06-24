@@ -1,0 +1,1982 @@
+// Vitest Snapshot v1
+
+exports[`mount component 1`] = `
+VueWrapper {
+  "__app": {
+    "_component": {
+      "name": "VTU_ROOT",
+      "render": [Function],
+    },
+    "_container": <div
+      data-v-app=""
+    >
+      <section
+        class="max-w-sm mx-auto mt-10"
+        data-v-c025950a=""
+      >
+        <div
+          class="mb-4"
+          data-v-c025950a=""
+        >
+          <h1
+            class="text-3xl leading-9 font-extrabold text-primary"
+            data-v-c025950a=""
+          >
+             APIMOSA APP 
+          </h1>
+          <ul
+            class="inline-flex justify-center mt-4 items-center"
+            data-v-c025950a=""
+          >
+            <li
+              class="leading-5 text-primary p-2 mr-4 border-b-2"
+              data-v-c025950a=""
+              id="authLogin"
+            >
+               INICIAR SESIÓN 
+            </li>
+            <li
+              class="leading-5 text-primary p-2 border-b-2 opacity-50 cursor-pointer rounded-lg border-b-0"
+              data-v-c025950a=""
+              id="authCreate"
+            >
+               CREAR CUENTA 
+            </li>
+          </ul>
+        </div>
+        <transition-group-stub
+          data-v-c025950a=""
+        >
+          <sign-in-stub
+            data-v-c025950a=""
+          />
+        </transition-group-stub>
+      </section>
+    </div>,
+    "_context": {
+      "app": [Circular],
+      "components": {
+        "transition": {
+          "name": "transition",
+        },
+        "transition-group": {
+          "name": "transition-group",
+        },
+      },
+      "config": {
+        "compilerOptions": {},
+        "errorHandler": undefined,
+        "globalProperties": {},
+        "isNativeTag": [Function],
+        "optionMergeStrategies": {},
+        "performance": false,
+        "warnHandler": undefined,
+      },
+      "directives": {},
+      "emitsCache": WeakMap {},
+      "mixins": [
+        {
+          "beforeCreate": [Function],
+        },
+      ],
+      "optionsCache": WeakMap {},
+      "propsCache": WeakMap {},
+      "provides": {},
+      "reload": [Function],
+    },
+    "_instance": {
+      "a": null,
+      "accessCache": {},
+      "appContext": {
+        "app": [Circular],
+        "components": {
+          "transition": {
+            "name": "transition",
+          },
+          "transition-group": {
+            "name": "transition-group",
+          },
+        },
+        "config": {
+          "compilerOptions": {},
+          "errorHandler": undefined,
+          "globalProperties": {},
+          "isNativeTag": [Function],
+          "optionMergeStrategies": {},
+          "performance": false,
+          "warnHandler": undefined,
+        },
+        "directives": {},
+        "emitsCache": WeakMap {},
+        "mixins": [
+          {
+            "beforeCreate": [Function],
+          },
+        ],
+        "optionsCache": WeakMap {},
+        "propsCache": WeakMap {},
+        "provides": {},
+        "reload": [Function],
+      },
+      "asyncDep": null,
+      "asyncResolved": false,
+      "attrs": {},
+      "bc": null,
+      "bm": null,
+      "bu": null,
+      "bum": null,
+      "c": null,
+      "components": null,
+      "ctx": {},
+      "da": null,
+      "data": {},
+      "directives": null,
+      "ec": null,
+      "effect": ReactiveEffect {
+        "active": true,
+        "allowRecurse": true,
+        "deps": [
+          Set {
+            [Circular],
+          },
+          Set {
+            [Circular],
+          },
+        ],
+        "fn": [Function],
+        "onTrack": undefined,
+        "onTrigger": undefined,
+        "scheduler": [Function],
+      },
+      "emit": [Function],
+      "emitsOptions": null,
+      "emitted": null,
+      "exposeProxy": null,
+      "exposed": null,
+      "inheritAttrs": undefined,
+      "isDeactivated": false,
+      "isMounted": true,
+      "isUnmounted": false,
+      "m": null,
+      "next": null,
+      "parent": null,
+      "props": {},
+      "propsDefaults": {},
+      "propsOptions": [
+        {},
+        [],
+      ],
+      "provides": {},
+      "proxy": {},
+      "refs": {
+        "VTU_COMPONENT": {
+          "hasOwnProperty": [Function],
+        },
+      },
+      "render": [Function],
+      "renderCache": [],
+      "root": [Circular],
+      "rtc": null,
+      "rtg": null,
+      "scope": EffectScope {
+        "active": true,
+        "cleanups": [],
+        "effects": [
+          ReactiveEffect {
+            "active": true,
+            "allowRecurse": true,
+            "deps": [
+              Set {
+                [Circular],
+              },
+              Set {
+                [Circular],
+              },
+            ],
+            "fn": [Function],
+            "onTrack": undefined,
+            "onTrigger": undefined,
+            "scheduler": [Function],
+          },
+        ],
+      },
+      "setupContext": null,
+      "setupState": {},
+      "slots": {},
+      "sp": null,
+      "subTree": {
+        "__v_isVNode": true,
+        "__v_skip": true,
+        "anchor": null,
+        "appContext": null,
+        "children": null,
+        "component": {
+          "a": null,
+          "accessCache": {},
+          "appContext": {
+            "app": [Circular],
+            "components": {
+              "transition": {
+                "name": "transition",
+              },
+              "transition-group": {
+                "name": "transition-group",
+              },
+            },
+            "config": {
+              "compilerOptions": {},
+              "errorHandler": undefined,
+              "globalProperties": {},
+              "isNativeTag": [Function],
+              "optionMergeStrategies": {},
+              "performance": false,
+              "warnHandler": undefined,
+            },
+            "directives": {},
+            "emitsCache": WeakMap {},
+            "mixins": [
+              {
+                "beforeCreate": [Function],
+              },
+            ],
+            "optionsCache": WeakMap {},
+            "propsCache": WeakMap {},
+            "provides": {},
+            "reload": [Function],
+          },
+          "asyncDep": null,
+          "asyncResolved": false,
+          "attrs": {},
+          "bc": null,
+          "bm": null,
+          "bu": null,
+          "bum": null,
+          "c": null,
+          "components": {},
+          "ctx": {},
+          "da": null,
+          "data": {},
+          "devtoolsRawSetupState": {
+            "Register": {
+              "__file": "/Users/vlad/Documents/vue2/Dashboard-adminDashboard/src/components/auth/SignUp.vue",
+              "__hmrId": "1f79ce3f",
+              "components": {
+                "AppFormField": {
+                  "__file": "/Users/vlad/Documents/vue2/Dashboard-adminDashboard/src/components/AppFormField.vue",
+                  "__hmrId": "da6369b6",
+                  "inheritAttrs": false,
+                  "props": {
+                    "label": {
+                      "default": "",
+                      "type": [Function],
+                    },
+                    "modelValue": {
+                      "default": "",
+                      "type": [Function],
+                    },
+                    "name": {
+                      "required": true,
+                      "type": [Function],
+                    },
+                  },
+                  "render": [Function],
+                },
+                "ArrowCircleRightIcon": [Function],
+              },
+              "computed": {
+                "notificationMessage": [Function],
+              },
+              "data": [Function],
+              "methods": {
+                "register": [Function],
+                "showNotification": [Function],
+              },
+              "render": [Function],
+            },
+            "SignIn": {
+              "__file": "/Users/vlad/Documents/vue2/Dashboard-adminDashboard/src/components/auth/SignIn.vue",
+              "__hmrId": "0ae377c9",
+              "render": [Function],
+              "setup": [Function],
+            },
+            "isLogin": RefImpl {
+              "__v_isRef": true,
+              "_rawValue": true,
+              "_shallow": false,
+              "_value": true,
+              "dep": Set {
+                ReactiveEffect {
+                  "active": true,
+                  "allowRecurse": true,
+                  "deps": [
+                    [Circular],
+                  ],
+                  "fn": [Function],
+                  "onTrack": undefined,
+                  "onTrigger": undefined,
+                  "scheduler": [Function],
+                },
+                ReactiveEffect {
+                  "active": true,
+                  "allowRecurse": true,
+                  "deps": [
+                    [Circular],
+                  ],
+                  "fn": [Function],
+                  "onTrack": undefined,
+                  "onTrigger": undefined,
+                  "scheduler": [Function],
+                },
+              },
+            },
+            "ref": [Function],
+            "setIsLogin": [Function],
+          },
+          "directives": null,
+          "ec": null,
+          "effect": ReactiveEffect {
+            "active": true,
+            "allowRecurse": true,
+            "deps": [
+              Set {
+                [Circular],
+                ReactiveEffect {
+                  "active": true,
+                  "allowRecurse": true,
+                  "deps": [
+                    [Circular],
+                  ],
+                  "fn": [Function],
+                  "onTrack": undefined,
+                  "onTrigger": undefined,
+                  "scheduler": [Function],
+                },
+              },
+            ],
+            "fn": [Function],
+            "onTrack": undefined,
+            "onTrigger": undefined,
+            "scheduler": [Function],
+          },
+          "emit": [Function],
+          "emitsOptions": null,
+          "emitted": null,
+          "exposeProxy": {
+            "hasOwnProperty": [Function],
+          },
+          "exposed": {
+            "hasOwnProperty": [Function],
+          },
+          "inheritAttrs": undefined,
+          "isDeactivated": false,
+          "isMounted": true,
+          "isUnmounted": false,
+          "m": null,
+          "next": null,
+          "parent": [Circular],
+          "props": {},
+          "propsDefaults": {},
+          "propsOptions": [
+            {},
+            [],
+          ],
+          "provides": {},
+          "proxy": {},
+          "refs": {},
+          "render": [Function],
+          "renderCache": [
+            [Function],
+            [Function],
+          ],
+          "root": [Circular],
+          "rtc": null,
+          "rtg": null,
+          "scope": EffectScope {
+            "active": true,
+            "cleanups": [],
+            "effects": [
+              ReactiveEffect {
+                "active": true,
+                "allowRecurse": true,
+                "deps": [
+                  Set {
+                    [Circular],
+                    ReactiveEffect {
+                      "active": true,
+                      "allowRecurse": true,
+                      "deps": [
+                        [Circular],
+                      ],
+                      "fn": [Function],
+                      "onTrack": undefined,
+                      "onTrigger": undefined,
+                      "scheduler": [Function],
+                    },
+                  },
+                ],
+                "fn": [Function],
+                "onTrack": undefined,
+                "onTrigger": undefined,
+                "scheduler": [Function],
+              },
+            ],
+          },
+          "setupContext": {
+            "attrs": {},
+            "emit": [Function],
+            "expose": [Function],
+            "slots": {},
+          },
+          "setupState": {
+            "Register": {
+              "__file": "/Users/vlad/Documents/vue2/Dashboard-adminDashboard/src/components/auth/SignUp.vue",
+              "__hmrId": "1f79ce3f",
+              "components": {
+                "AppFormField": {
+                  "__file": "/Users/vlad/Documents/vue2/Dashboard-adminDashboard/src/components/AppFormField.vue",
+                  "__hmrId": "da6369b6",
+                  "inheritAttrs": false,
+                  "props": {
+                    "label": {
+                      "default": "",
+                      "type": [Function],
+                    },
+                    "modelValue": {
+                      "default": "",
+                      "type": [Function],
+                    },
+                    "name": {
+                      "required": true,
+                      "type": [Function],
+                    },
+                  },
+                  "render": [Function],
+                },
+                "ArrowCircleRightIcon": [Function],
+              },
+              "computed": {
+                "notificationMessage": [Function],
+              },
+              "data": [Function],
+              "methods": {
+                "register": [Function],
+                "showNotification": [Function],
+              },
+              "render": [Function],
+            },
+            "SignIn": {
+              "__file": "/Users/vlad/Documents/vue2/Dashboard-adminDashboard/src/components/auth/SignIn.vue",
+              "__hmrId": "0ae377c9",
+              "render": [Function],
+              "setup": [Function],
+            },
+            "isLogin": true,
+            "ref": [Function],
+            "setIsLogin": [Function],
+          },
+          "slots": {},
+          "sp": null,
+          "subTree": {
+            "__v_isVNode": true,
+            "__v_skip": true,
+            "anchor": null,
+            "appContext": null,
+            "children": [
+              {
+                "__v_isVNode": true,
+                "__v_skip": true,
+                "anchor": null,
+                "appContext": null,
+                "children": [
+                  {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": " APIMOSA APP ",
+                    "component": null,
+                    "dirs": null,
+                    "dynamicChildren": null,
+                    "dynamicProps": null,
+                    "el": <h1
+                      class="text-3xl leading-9 font-extrabold text-primary"
+                      data-v-c025950a=""
+                    >
+                       APIMOSA APP 
+                    </h1>,
+                    "key": null,
+                    "patchFlag": -1,
+                    "props": {
+                      "class": "text-3xl leading-9 font-extrabold text-primary",
+                    },
+                    "ref": null,
+                    "scopeId": "data-v-c025950a",
+                    "shapeFlag": 9,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": "h1",
+                  },
+                  {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": [
+                      {
+                        "__v_isVNode": true,
+                        "__v_skip": true,
+                        "anchor": null,
+                        "appContext": null,
+                        "children": " INICIAR SESIÓN ",
+                        "component": null,
+                        "dirs": null,
+                        "dynamicChildren": null,
+                        "dynamicProps": null,
+                        "el": <li
+                          class="leading-5 text-primary p-2 mr-4 border-b-2"
+                          data-v-c025950a=""
+                          id="authLogin"
+                        >
+                           INICIAR SESIÓN 
+                        </li>,
+                        "key": null,
+                        "patchFlag": 2,
+                        "props": {
+                          "class": "leading-5 text-primary p-2 mr-4 border-b-2",
+                          "id": "authLogin",
+                          "onClick": [Function],
+                        },
+                        "ref": null,
+                        "scopeId": "data-v-c025950a",
+                        "shapeFlag": 9,
+                        "slotScopeIds": null,
+                        "ssContent": null,
+                        "ssFallback": null,
+                        "staticCount": 0,
+                        "suspense": null,
+                        "target": null,
+                        "targetAnchor": null,
+                        "transition": null,
+                        "type": "li",
+                      },
+                      {
+                        "__v_isVNode": true,
+                        "__v_skip": true,
+                        "anchor": null,
+                        "appContext": null,
+                        "children": " CREAR CUENTA ",
+                        "component": null,
+                        "dirs": null,
+                        "dynamicChildren": null,
+                        "dynamicProps": null,
+                        "el": <li
+                          class="leading-5 text-primary p-2 border-b-2 opacity-50 cursor-pointer rounded-lg border-b-0"
+                          data-v-c025950a=""
+                          id="authCreate"
+                        >
+                           CREAR CUENTA 
+                        </li>,
+                        "key": null,
+                        "patchFlag": 2,
+                        "props": {
+                          "class": "leading-5 text-primary p-2 border-b-2 opacity-50 cursor-pointer rounded-lg border-b-0",
+                          "id": "authCreate",
+                          "onClick": [Function],
+                        },
+                        "ref": null,
+                        "scopeId": "data-v-c025950a",
+                        "shapeFlag": 9,
+                        "slotScopeIds": null,
+                        "ssContent": null,
+                        "ssFallback": null,
+                        "staticCount": 0,
+                        "suspense": null,
+                        "target": null,
+                        "targetAnchor": null,
+                        "transition": null,
+                        "type": "li",
+                      },
+                    ],
+                    "component": null,
+                    "dirs": null,
+                    "dynamicChildren": null,
+                    "dynamicProps": null,
+                    "el": <ul
+                      class="inline-flex justify-center mt-4 items-center"
+                      data-v-c025950a=""
+                    >
+                      <li
+                        class="leading-5 text-primary p-2 mr-4 border-b-2"
+                        data-v-c025950a=""
+                        id="authLogin"
+                      >
+                         INICIAR SESIÓN 
+                      </li>
+                      <li
+                        class="leading-5 text-primary p-2 border-b-2 opacity-50 cursor-pointer rounded-lg border-b-0"
+                        data-v-c025950a=""
+                        id="authCreate"
+                      >
+                         CREAR CUENTA 
+                      </li>
+                    </ul>,
+                    "key": null,
+                    "patchFlag": 0,
+                    "props": {
+                      "class": "inline-flex justify-center mt-4 items-center",
+                    },
+                    "ref": null,
+                    "scopeId": "data-v-c025950a",
+                    "shapeFlag": 17,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": "ul",
+                  },
+                ],
+                "component": null,
+                "dirs": null,
+                "dynamicChildren": null,
+                "dynamicProps": null,
+                "el": <div
+                  class="mb-4"
+                  data-v-c025950a=""
+                >
+                  <h1
+                    class="text-3xl leading-9 font-extrabold text-primary"
+                    data-v-c025950a=""
+                  >
+                     APIMOSA APP 
+                  </h1>
+                  <ul
+                    class="inline-flex justify-center mt-4 items-center"
+                    data-v-c025950a=""
+                  >
+                    <li
+                      class="leading-5 text-primary p-2 mr-4 border-b-2"
+                      data-v-c025950a=""
+                      id="authLogin"
+                    >
+                       INICIAR SESIÓN 
+                    </li>
+                    <li
+                      class="leading-5 text-primary p-2 border-b-2 opacity-50 cursor-pointer rounded-lg border-b-0"
+                      data-v-c025950a=""
+                      id="authCreate"
+                    >
+                       CREAR CUENTA 
+                    </li>
+                  </ul>
+                </div>,
+                "key": null,
+                "patchFlag": 0,
+                "props": {
+                  "class": "mb-4",
+                },
+                "ref": null,
+                "scopeId": "data-v-c025950a",
+                "shapeFlag": 17,
+                "slotScopeIds": null,
+                "ssContent": null,
+                "ssFallback": null,
+                "staticCount": 0,
+                "suspense": null,
+                "target": null,
+                "targetAnchor": null,
+                "transition": null,
+                "type": "div",
+              },
+              {
+                "__v_isVNode": true,
+                "__v_skip": true,
+                "anchor": null,
+                "appContext": null,
+                "children": {
+                  "default": [Function],
+                },
+                "component": {
+                  "a": null,
+                  "accessCache": {},
+                  "appContext": {
+                    "app": [Circular],
+                    "components": {
+                      "transition": {
+                        "name": "transition",
+                      },
+                      "transition-group": {
+                        "name": "transition-group",
+                      },
+                    },
+                    "config": {
+                      "compilerOptions": {},
+                      "errorHandler": undefined,
+                      "globalProperties": {},
+                      "isNativeTag": [Function],
+                      "optionMergeStrategies": {},
+                      "performance": false,
+                      "warnHandler": undefined,
+                    },
+                    "directives": {},
+                    "emitsCache": WeakMap {},
+                    "mixins": [
+                      {
+                        "beforeCreate": [Function],
+                      },
+                    ],
+                    "optionsCache": WeakMap {},
+                    "propsCache": WeakMap {},
+                    "provides": {},
+                    "reload": [Function],
+                  },
+                  "asyncDep": null,
+                  "asyncResolved": false,
+                  "attrs": {},
+                  "bc": null,
+                  "bm": null,
+                  "bu": null,
+                  "bum": null,
+                  "c": null,
+                  "components": null,
+                  "ctx": {},
+                  "da": null,
+                  "data": {},
+                  "directives": null,
+                  "ec": null,
+                  "effect": ReactiveEffect {
+                    "active": true,
+                    "allowRecurse": true,
+                    "deps": [
+                      Set {
+                        ReactiveEffect {
+                          "active": true,
+                          "allowRecurse": true,
+                          "deps": [
+                            [Circular],
+                          ],
+                          "fn": [Function],
+                          "onTrack": undefined,
+                          "onTrigger": undefined,
+                          "scheduler": [Function],
+                        },
+                        [Circular],
+                      },
+                    ],
+                    "fn": [Function],
+                    "onTrack": undefined,
+                    "onTrigger": undefined,
+                    "scheduler": [Function],
+                  },
+                  "emit": [Function],
+                  "emitsOptions": null,
+                  "emitted": null,
+                  "exposeProxy": null,
+                  "exposed": null,
+                  "inheritAttrs": undefined,
+                  "isDeactivated": false,
+                  "isMounted": true,
+                  "isUnmounted": false,
+                  "m": null,
+                  "next": null,
+                  "parent": [Circular],
+                  "props": {},
+                  "propsDefaults": {},
+                  "propsOptions": [
+                    {},
+                    [],
+                  ],
+                  "provides": {},
+                  "proxy": {},
+                  "refs": {},
+                  "render": [Function],
+                  "renderCache": [],
+                  "root": [Circular],
+                  "rtc": null,
+                  "rtg": null,
+                  "scope": EffectScope {
+                    "active": true,
+                    "cleanups": [],
+                    "effects": [
+                      ReactiveEffect {
+                        "active": true,
+                        "allowRecurse": true,
+                        "deps": [
+                          Set {
+                            ReactiveEffect {
+                              "active": true,
+                              "allowRecurse": true,
+                              "deps": [
+                                [Circular],
+                              ],
+                              "fn": [Function],
+                              "onTrack": undefined,
+                              "onTrigger": undefined,
+                              "scheduler": [Function],
+                            },
+                            [Circular],
+                          },
+                        ],
+                        "fn": [Function],
+                        "onTrack": undefined,
+                        "onTrigger": undefined,
+                        "scheduler": [Function],
+                      },
+                    ],
+                  },
+                  "setupContext": null,
+                  "setupState": {},
+                  "slots": {
+                    "default": [Function],
+                  },
+                  "sp": null,
+                  "subTree": {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": [
+                      {
+                        "__v_isVNode": true,
+                        "__v_skip": true,
+                        "anchor": null,
+                        "appContext": null,
+                        "children": null,
+                        "component": {
+                          "a": null,
+                          "accessCache": {},
+                          "appContext": {
+                            "app": [Circular],
+                            "components": {
+                              "transition": {
+                                "name": "transition",
+                              },
+                              "transition-group": {
+                                "name": "transition-group",
+                              },
+                            },
+                            "config": {
+                              "compilerOptions": {},
+                              "errorHandler": undefined,
+                              "globalProperties": {},
+                              "isNativeTag": [Function],
+                              "optionMergeStrategies": {},
+                              "performance": false,
+                              "warnHandler": undefined,
+                            },
+                            "directives": {},
+                            "emitsCache": WeakMap {},
+                            "mixins": [
+                              {
+                                "beforeCreate": [Function],
+                              },
+                            ],
+                            "optionsCache": WeakMap {},
+                            "propsCache": WeakMap {},
+                            "provides": {},
+                            "reload": [Function],
+                          },
+                          "asyncDep": null,
+                          "asyncResolved": false,
+                          "attrs": {},
+                          "bc": null,
+                          "bm": null,
+                          "bu": null,
+                          "bum": null,
+                          "c": null,
+                          "components": null,
+                          "ctx": {},
+                          "da": null,
+                          "data": {},
+                          "directives": null,
+                          "ec": null,
+                          "effect": ReactiveEffect {
+                            "active": true,
+                            "allowRecurse": true,
+                            "deps": [
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                            ],
+                            "fn": [Function],
+                            "onTrack": undefined,
+                            "onTrigger": undefined,
+                            "scheduler": [Function],
+                          },
+                          "emit": [Function],
+                          "emitsOptions": null,
+                          "emitted": null,
+                          "exposeProxy": null,
+                          "exposed": null,
+                          "inheritAttrs": undefined,
+                          "isDeactivated": false,
+                          "isMounted": true,
+                          "isUnmounted": false,
+                          "m": null,
+                          "next": null,
+                          "parent": [Circular],
+                          "props": {},
+                          "propsDefaults": {},
+                          "propsOptions": [
+                            {},
+                            [],
+                          ],
+                          "provides": {},
+                          "proxy": {},
+                          "refs": {},
+                          "render": [Function],
+                          "renderCache": [],
+                          "root": [Circular],
+                          "rtc": null,
+                          "rtg": null,
+                          "scope": EffectScope {
+                            "active": true,
+                            "cleanups": [],
+                            "effects": [
+                              ReactiveEffect {
+                                "active": true,
+                                "allowRecurse": true,
+                                "deps": [
+                                  Set {
+                                    [Circular],
+                                  },
+                                  Set {
+                                    [Circular],
+                                  },
+                                ],
+                                "fn": [Function],
+                                "onTrack": undefined,
+                                "onTrigger": undefined,
+                                "scheduler": [Function],
+                              },
+                            ],
+                          },
+                          "setupContext": null,
+                          "setupState": {},
+                          "slots": {},
+                          "sp": null,
+                          "subTree": {
+                            "__v_isVNode": true,
+                            "__v_skip": true,
+                            "anchor": null,
+                            "appContext": null,
+                            "children": null,
+                            "component": null,
+                            "dirs": null,
+                            "dynamicChildren": null,
+                            "dynamicProps": null,
+                            "el": <sign-in-stub
+                              data-v-c025950a=""
+                            />,
+                            "key": null,
+                            "patchFlag": 0,
+                            "props": {},
+                            "ref": null,
+                            "scopeId": null,
+                            "shapeFlag": 1,
+                            "slotScopeIds": null,
+                            "ssContent": null,
+                            "ssFallback": null,
+                            "staticCount": 0,
+                            "suspense": null,
+                            "target": null,
+                            "targetAnchor": null,
+                            "transition": null,
+                            "type": "sign-in-stub",
+                          },
+                          "suspense": null,
+                          "suspenseId": 0,
+                          "type": {
+                            "compatConfig": {
+                              "MODE": 3,
+                              "RENDER_FUNCTION": false,
+                            },
+                            "name": "SignIn",
+                            "props": {},
+                            "render": [Function],
+                          },
+                          "u": null,
+                          "uid": 3,
+                          "um": null,
+                          "update": [Function],
+                          "vnode": [Circular],
+                          "withProxy": null,
+                        },
+                        "dirs": null,
+                        "dynamicChildren": [
+                          [Circular],
+                        ],
+                        "dynamicProps": null,
+                        "el": <sign-in-stub
+                          data-v-c025950a=""
+                        />,
+                        "key": 0,
+                        "patchFlag": 0,
+                        "props": {
+                          "key": 0,
+                        },
+                        "ref": null,
+                        "scopeId": "data-v-c025950a",
+                        "shapeFlag": 4,
+                        "slotScopeIds": null,
+                        "ssContent": null,
+                        "ssFallback": null,
+                        "staticCount": 0,
+                        "suspense": null,
+                        "target": null,
+                        "targetAnchor": null,
+                        "transition": null,
+                        "type": {
+                          "compatConfig": {
+                            "MODE": 3,
+                            "RENDER_FUNCTION": false,
+                          },
+                          "name": "SignIn",
+                          "props": {},
+                          "render": [Function],
+                        },
+                      },
+                    ],
+                    "component": null,
+                    "dirs": null,
+                    "dynamicChildren": null,
+                    "dynamicProps": null,
+                    "el": <transition-group-stub
+                      data-v-c025950a=""
+                    >
+                      <sign-in-stub
+                        data-v-c025950a=""
+                      />
+                    </transition-group-stub>,
+                    "key": null,
+                    "patchFlag": 0,
+                    "props": {},
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 17,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": "transition-group-stub",
+                  },
+                  "suspense": null,
+                  "suspenseId": 0,
+                  "type": {
+                    "compatConfig": {
+                      "MODE": 3,
+                      "RENDER_FUNCTION": false,
+                    },
+                    "name": "transition-group-stub",
+                    "render": [Function],
+                  },
+                  "u": null,
+                  "uid": 2,
+                  "um": null,
+                  "update": [Function],
+                  "vnode": [Circular],
+                  "withProxy": null,
+                },
+                "dirs": null,
+                "dynamicChildren": null,
+                "dynamicProps": null,
+                "el": <transition-group-stub
+                  data-v-c025950a=""
+                >
+                  <sign-in-stub
+                    data-v-c025950a=""
+                  />
+                </transition-group-stub>,
+                "key": null,
+                "patchFlag": 0,
+                "props": null,
+                "ref": null,
+                "scopeId": "data-v-c025950a",
+                "shapeFlag": 36,
+                "slotScopeIds": null,
+                "ssContent": null,
+                "ssFallback": null,
+                "staticCount": 0,
+                "suspense": null,
+                "target": null,
+                "targetAnchor": null,
+                "transition": null,
+                "type": {
+                  "compatConfig": {
+                    "MODE": 3,
+                    "RENDER_FUNCTION": false,
+                  },
+                  "name": "transition-group-stub",
+                  "render": [Function],
+                },
+              },
+            ],
+            "component": null,
+            "dirs": null,
+            "dynamicChildren": [
+              {
+                "__v_isVNode": true,
+                "__v_skip": true,
+                "anchor": null,
+                "appContext": null,
+                "children": " INICIAR SESIÓN ",
+                "component": null,
+                "dirs": null,
+                "dynamicChildren": null,
+                "dynamicProps": null,
+                "el": <li
+                  class="leading-5 text-primary p-2 mr-4 border-b-2"
+                  data-v-c025950a=""
+                  id="authLogin"
+                >
+                   INICIAR SESIÓN 
+                </li>,
+                "key": null,
+                "patchFlag": 2,
+                "props": {
+                  "class": "leading-5 text-primary p-2 mr-4 border-b-2",
+                  "id": "authLogin",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "scopeId": "data-v-c025950a",
+                "shapeFlag": 9,
+                "slotScopeIds": null,
+                "ssContent": null,
+                "ssFallback": null,
+                "staticCount": 0,
+                "suspense": null,
+                "target": null,
+                "targetAnchor": null,
+                "transition": null,
+                "type": "li",
+              },
+              {
+                "__v_isVNode": true,
+                "__v_skip": true,
+                "anchor": null,
+                "appContext": null,
+                "children": " CREAR CUENTA ",
+                "component": null,
+                "dirs": null,
+                "dynamicChildren": null,
+                "dynamicProps": null,
+                "el": <li
+                  class="leading-5 text-primary p-2 border-b-2 opacity-50 cursor-pointer rounded-lg border-b-0"
+                  data-v-c025950a=""
+                  id="authCreate"
+                >
+                   CREAR CUENTA 
+                </li>,
+                "key": null,
+                "patchFlag": 2,
+                "props": {
+                  "class": "leading-5 text-primary p-2 border-b-2 opacity-50 cursor-pointer rounded-lg border-b-0",
+                  "id": "authCreate",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "scopeId": "data-v-c025950a",
+                "shapeFlag": 9,
+                "slotScopeIds": null,
+                "ssContent": null,
+                "ssFallback": null,
+                "staticCount": 0,
+                "suspense": null,
+                "target": null,
+                "targetAnchor": null,
+                "transition": null,
+                "type": "li",
+              },
+              {
+                "__v_isVNode": true,
+                "__v_skip": true,
+                "anchor": null,
+                "appContext": null,
+                "children": {
+                  "default": [Function],
+                },
+                "component": {
+                  "a": null,
+                  "accessCache": {
+                    "@@__IMMUTABLE_ITERABLE__@@": 0,
+                    "@@__IMMUTABLE_RECORD__@@": 0,
+                    "constructor": 0,
+                    "toJSON": 0,
+                    Symbol(Symbol.toStringTag): 0,
+                  },
+                  "appContext": {
+                    "app": [Circular],
+                    "components": {
+                      "transition": {
+                        "name": "transition",
+                      },
+                      "transition-group": {
+                        "name": "transition-group",
+                      },
+                    },
+                    "config": {
+                      "compilerOptions": {},
+                      "errorHandler": undefined,
+                      "globalProperties": {},
+                      "isNativeTag": [Function],
+                      "optionMergeStrategies": {},
+                      "performance": false,
+                      "warnHandler": undefined,
+                    },
+                    "directives": {},
+                    "emitsCache": WeakMap {},
+                    "mixins": [
+                      {
+                        "beforeCreate": [Function],
+                      },
+                    ],
+                    "optionsCache": WeakMap {},
+                    "propsCache": WeakMap {},
+                    "provides": {},
+                    "reload": [Function],
+                  },
+                  "asyncDep": null,
+                  "asyncResolved": false,
+                  "attrs": {},
+                  "bc": null,
+                  "bm": null,
+                  "bu": null,
+                  "bum": null,
+                  "c": null,
+                  "components": null,
+                  "ctx": {},
+                  "da": null,
+                  "data": {},
+                  "directives": null,
+                  "ec": null,
+                  "effect": ReactiveEffect {
+                    "active": true,
+                    "allowRecurse": true,
+                    "deps": [
+                      Set {
+                        ReactiveEffect {
+                          "active": true,
+                          "allowRecurse": true,
+                          "deps": [
+                            [Circular],
+                          ],
+                          "fn": [Function],
+                          "onTrack": undefined,
+                          "onTrigger": undefined,
+                          "scheduler": [Function],
+                        },
+                        [Circular],
+                      },
+                    ],
+                    "fn": [Function],
+                    "onTrack": undefined,
+                    "onTrigger": undefined,
+                    "scheduler": [Function],
+                  },
+                  "emit": [Function],
+                  "emitsOptions": null,
+                  "emitted": null,
+                  "exposeProxy": null,
+                  "exposed": null,
+                  "inheritAttrs": undefined,
+                  "isDeactivated": false,
+                  "isMounted": true,
+                  "isUnmounted": false,
+                  "m": null,
+                  "next": null,
+                  "parent": [Circular],
+                  "props": {},
+                  "propsDefaults": {},
+                  "propsOptions": [
+                    {},
+                    [],
+                  ],
+                  "provides": {},
+                  "proxy": {},
+                  "refs": {},
+                  "render": [Function],
+                  "renderCache": [],
+                  "root": [Circular],
+                  "rtc": null,
+                  "rtg": null,
+                  "scope": EffectScope {
+                    "active": true,
+                    "cleanups": [],
+                    "effects": [
+                      ReactiveEffect {
+                        "active": true,
+                        "allowRecurse": true,
+                        "deps": [
+                          Set {
+                            ReactiveEffect {
+                              "active": true,
+                              "allowRecurse": true,
+                              "deps": [
+                                [Circular],
+                              ],
+                              "fn": [Function],
+                              "onTrack": undefined,
+                              "onTrigger": undefined,
+                              "scheduler": [Function],
+                            },
+                            [Circular],
+                          },
+                        ],
+                        "fn": [Function],
+                        "onTrack": undefined,
+                        "onTrigger": undefined,
+                        "scheduler": [Function],
+                      },
+                    ],
+                  },
+                  "setupContext": null,
+                  "setupState": {},
+                  "slots": {
+                    "default": [Function],
+                  },
+                  "sp": null,
+                  "subTree": {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": [
+                      {
+                        "__v_isVNode": true,
+                        "__v_skip": true,
+                        "anchor": null,
+                        "appContext": null,
+                        "children": null,
+                        "component": {
+                          "a": null,
+                          "accessCache": {
+                            "@@__IMMUTABLE_ITERABLE__@@": 0,
+                            "@@__IMMUTABLE_RECORD__@@": 0,
+                            "constructor": 0,
+                            "toJSON": 0,
+                            Symbol(Symbol.toStringTag): 0,
+                          },
+                          "appContext": {
+                            "app": [Circular],
+                            "components": {
+                              "transition": {
+                                "name": "transition",
+                              },
+                              "transition-group": {
+                                "name": "transition-group",
+                              },
+                            },
+                            "config": {
+                              "compilerOptions": {},
+                              "errorHandler": undefined,
+                              "globalProperties": {},
+                              "isNativeTag": [Function],
+                              "optionMergeStrategies": {},
+                              "performance": false,
+                              "warnHandler": undefined,
+                            },
+                            "directives": {},
+                            "emitsCache": WeakMap {},
+                            "mixins": [
+                              {
+                                "beforeCreate": [Function],
+                              },
+                            ],
+                            "optionsCache": WeakMap {},
+                            "propsCache": WeakMap {},
+                            "provides": {},
+                            "reload": [Function],
+                          },
+                          "asyncDep": null,
+                          "asyncResolved": false,
+                          "attrs": {},
+                          "bc": null,
+                          "bm": null,
+                          "bu": null,
+                          "bum": null,
+                          "c": null,
+                          "components": null,
+                          "ctx": {},
+                          "da": null,
+                          "data": {},
+                          "directives": null,
+                          "ec": null,
+                          "effect": ReactiveEffect {
+                            "active": true,
+                            "allowRecurse": true,
+                            "deps": [
+                              Set {
+                                [Circular],
+                              },
+                              Set {
+                                [Circular],
+                              },
+                            ],
+                            "fn": [Function],
+                            "onTrack": undefined,
+                            "onTrigger": undefined,
+                            "scheduler": [Function],
+                          },
+                          "emit": [Function],
+                          "emitsOptions": null,
+                          "emitted": null,
+                          "exposeProxy": null,
+                          "exposed": null,
+                          "inheritAttrs": undefined,
+                          "isDeactivated": false,
+                          "isMounted": true,
+                          "isUnmounted": false,
+                          "m": null,
+                          "next": null,
+                          "parent": [Circular],
+                          "props": {},
+                          "propsDefaults": {},
+                          "propsOptions": [
+                            {},
+                            [],
+                          ],
+                          "provides": {},
+                          "proxy": {},
+                          "refs": {},
+                          "render": [Function],
+                          "renderCache": [],
+                          "root": [Circular],
+                          "rtc": null,
+                          "rtg": null,
+                          "scope": EffectScope {
+                            "active": true,
+                            "cleanups": [],
+                            "effects": [
+                              ReactiveEffect {
+                                "active": true,
+                                "allowRecurse": true,
+                                "deps": [
+                                  Set {
+                                    [Circular],
+                                  },
+                                  Set {
+                                    [Circular],
+                                  },
+                                ],
+                                "fn": [Function],
+                                "onTrack": undefined,
+                                "onTrigger": undefined,
+                                "scheduler": [Function],
+                              },
+                            ],
+                          },
+                          "setupContext": null,
+                          "setupState": {},
+                          "slots": {},
+                          "sp": null,
+                          "subTree": {
+                            "__v_isVNode": true,
+                            "__v_skip": true,
+                            "anchor": null,
+                            "appContext": null,
+                            "children": null,
+                            "component": null,
+                            "dirs": null,
+                            "dynamicChildren": null,
+                            "dynamicProps": null,
+                            "el": <sign-in-stub
+                              data-v-c025950a=""
+                            />,
+                            "key": null,
+                            "patchFlag": 0,
+                            "props": {},
+                            "ref": null,
+                            "scopeId": null,
+                            "shapeFlag": 1,
+                            "slotScopeIds": null,
+                            "ssContent": null,
+                            "ssFallback": null,
+                            "staticCount": 0,
+                            "suspense": null,
+                            "target": null,
+                            "targetAnchor": null,
+                            "transition": null,
+                            "type": "sign-in-stub",
+                          },
+                          "suspense": null,
+                          "suspenseId": 0,
+                          "type": {
+                            "compatConfig": {
+                              "MODE": 3,
+                              "RENDER_FUNCTION": false,
+                            },
+                            "name": "SignIn",
+                            "props": {},
+                            "render": [Function],
+                          },
+                          "u": null,
+                          "uid": 3,
+                          "um": null,
+                          "update": [Function],
+                          "vnode": [Circular],
+                          "withProxy": null,
+                        },
+                        "dirs": null,
+                        "dynamicChildren": [
+                          [Circular],
+                        ],
+                        "dynamicProps": null,
+                        "el": <sign-in-stub
+                          data-v-c025950a=""
+                        />,
+                        "key": 0,
+                        "patchFlag": 0,
+                        "props": {
+                          "key": 0,
+                        },
+                        "ref": null,
+                        "scopeId": "data-v-c025950a",
+                        "shapeFlag": 4,
+                        "slotScopeIds": null,
+                        "ssContent": null,
+                        "ssFallback": null,
+                        "staticCount": 0,
+                        "suspense": null,
+                        "target": null,
+                        "targetAnchor": null,
+                        "transition": null,
+                        "type": {
+                          "compatConfig": {
+                            "MODE": 3,
+                            "RENDER_FUNCTION": false,
+                          },
+                          "name": "SignIn",
+                          "props": {},
+                          "render": [Function],
+                        },
+                      },
+                    ],
+                    "component": null,
+                    "dirs": null,
+                    "dynamicChildren": null,
+                    "dynamicProps": null,
+                    "el": <transition-group-stub
+                      data-v-c025950a=""
+                    >
+                      <sign-in-stub
+                        data-v-c025950a=""
+                      />
+                    </transition-group-stub>,
+                    "key": null,
+                    "patchFlag": 0,
+                    "props": {},
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 17,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": "transition-group-stub",
+                  },
+                  "suspense": null,
+                  "suspenseId": 0,
+                  "type": {
+                    "compatConfig": {
+                      "MODE": 3,
+                      "RENDER_FUNCTION": false,
+                    },
+                    "name": "transition-group-stub",
+                    "render": [Function],
+                  },
+                  "u": null,
+                  "uid": 2,
+                  "um": null,
+                  "update": [Function],
+                  "vnode": [Circular],
+                  "withProxy": null,
+                },
+                "dirs": null,
+                "dynamicChildren": null,
+                "dynamicProps": null,
+                "el": <transition-group-stub
+                  data-v-c025950a=""
+                >
+                  <sign-in-stub
+                    data-v-c025950a=""
+                  />
+                </transition-group-stub>,
+                "key": null,
+                "patchFlag": 0,
+                "props": null,
+                "ref": null,
+                "scopeId": "data-v-c025950a",
+                "shapeFlag": 36,
+                "slotScopeIds": null,
+                "ssContent": null,
+                "ssFallback": null,
+                "staticCount": 0,
+                "suspense": null,
+                "target": null,
+                "targetAnchor": null,
+                "transition": null,
+                "type": {
+                  "compatConfig": {
+                    "MODE": 3,
+                    "RENDER_FUNCTION": false,
+                  },
+                  "name": "transition-group-stub",
+                  "render": [Function],
+                },
+              },
+            ],
+            "dynamicProps": null,
+            "el": <section
+              class="max-w-sm mx-auto mt-10"
+              data-v-c025950a=""
+            >
+              <div
+                class="mb-4"
+                data-v-c025950a=""
+              >
+                <h1
+                  class="text-3xl leading-9 font-extrabold text-primary"
+                  data-v-c025950a=""
+                >
+                   APIMOSA APP 
+                </h1>
+                <ul
+                  class="inline-flex justify-center mt-4 items-center"
+                  data-v-c025950a=""
+                >
+                  <li
+                    class="leading-5 text-primary p-2 mr-4 border-b-2"
+                    data-v-c025950a=""
+                    id="authLogin"
+                  >
+                     INICIAR SESIÓN 
+                  </li>
+                  <li
+                    class="leading-5 text-primary p-2 border-b-2 opacity-50 cursor-pointer rounded-lg border-b-0"
+                    data-v-c025950a=""
+                    id="authCreate"
+                  >
+                     CREAR CUENTA 
+                  </li>
+                </ul>
+              </div>
+              <transition-group-stub
+                data-v-c025950a=""
+              >
+                <sign-in-stub
+                  data-v-c025950a=""
+                />
+              </transition-group-stub>
+            </section>,
+            "key": null,
+            "patchFlag": 0,
+            "props": {
+              "class": "max-w-sm mx-auto mt-10",
+            },
+            "ref": null,
+            "scopeId": "data-v-c025950a",
+            "shapeFlag": 17,
+            "slotScopeIds": null,
+            "ssContent": null,
+            "ssFallback": null,
+            "staticCount": 0,
+            "suspense": null,
+            "target": null,
+            "targetAnchor": null,
+            "transition": null,
+            "type": "section",
+          },
+          "suspense": null,
+          "suspenseId": 0,
+          "type": {
+            "__file": "/Users/vlad/Documents/vue2/Dashboard-adminDashboard/src/pages/AuthPage.vue",
+            "__hmrId": "c025950a",
+            "__scopeId": "data-v-c025950a",
+            "components": {},
+            "render": [Function],
+            "setup": [Function],
+          },
+          "u": null,
+          "uid": 1,
+          "um": null,
+          "update": [Function],
+          "vnode": [Circular],
+          "withProxy": null,
+        },
+        "dirs": null,
+        "dynamicChildren": null,
+        "dynamicProps": null,
+        "el": <section
+          class="max-w-sm mx-auto mt-10"
+          data-v-c025950a=""
+        >
+          <div
+            class="mb-4"
+            data-v-c025950a=""
+          >
+            <h1
+              class="text-3xl leading-9 font-extrabold text-primary"
+              data-v-c025950a=""
+            >
+               APIMOSA APP 
+            </h1>
+            <ul
+              class="inline-flex justify-center mt-4 items-center"
+              data-v-c025950a=""
+            >
+              <li
+                class="leading-5 text-primary p-2 mr-4 border-b-2"
+                data-v-c025950a=""
+                id="authLogin"
+              >
+                 INICIAR SESIÓN 
+              </li>
+              <li
+                class="leading-5 text-primary p-2 border-b-2 opacity-50 cursor-pointer rounded-lg border-b-0"
+                data-v-c025950a=""
+                id="authCreate"
+              >
+                 CREAR CUENTA 
+              </li>
+            </ul>
+          </div>
+          <transition-group-stub
+            data-v-c025950a=""
+          >
+            <sign-in-stub
+              data-v-c025950a=""
+            />
+          </transition-group-stub>
+        </section>,
+        "key": null,
+        "patchFlag": 0,
+        "props": {
+          "ref": "VTU_COMPONENT",
+        },
+        "ref": {
+          "f": false,
+          "i": [Circular],
+          "k": undefined,
+          "r": "VTU_COMPONENT",
+        },
+        "scopeId": null,
+        "shapeFlag": 4,
+        "slotScopeIds": null,
+        "ssContent": null,
+        "ssFallback": null,
+        "staticCount": 0,
+        "suspense": null,
+        "target": null,
+        "targetAnchor": null,
+        "transition": null,
+        "type": {
+          "__file": "/Users/vlad/Documents/vue2/Dashboard-adminDashboard/src/pages/AuthPage.vue",
+          "__hmrId": "c025950a",
+          "__scopeId": "data-v-c025950a",
+          "components": {},
+          "render": [Function],
+          "setup": [Function],
+        },
+      },
+      "suspense": null,
+      "suspenseId": 0,
+      "type": {
+        "name": "VTU_ROOT",
+        "render": [Function],
+      },
+      "u": null,
+      "uid": 0,
+      "um": null,
+      "update": [Function],
+      "vnode": {
+        "__v_isVNode": true,
+        "__v_skip": true,
+        "anchor": null,
+        "appContext": {
+          "app": [Circular],
+          "components": {
+            "transition": {
+              "name": "transition",
+            },
+            "transition-group": {
+              "name": "transition-group",
+            },
+          },
+          "config": {
+            "compilerOptions": {},
+            "errorHandler": undefined,
+            "globalProperties": {},
+            "isNativeTag": [Function],
+            "optionMergeStrategies": {},
+            "performance": false,
+            "warnHandler": undefined,
+          },
+          "directives": {},
+          "emitsCache": WeakMap {},
+          "mixins": [
+            {
+              "beforeCreate": [Function],
+            },
+          ],
+          "optionsCache": WeakMap {},
+          "propsCache": WeakMap {},
+          "provides": {},
+          "reload": [Function],
+        },
+        "children": null,
+        "component": [Circular],
+        "dirs": null,
+        "dynamicChildren": null,
+        "dynamicProps": null,
+        "el": <section
+          class="max-w-sm mx-auto mt-10"
+          data-v-c025950a=""
+        >
+          <div
+            class="mb-4"
+            data-v-c025950a=""
+          >
+            <h1
+              class="text-3xl leading-9 font-extrabold text-primary"
+              data-v-c025950a=""
+            >
+               APIMOSA APP 
+            </h1>
+            <ul
+              class="inline-flex justify-center mt-4 items-center"
+              data-v-c025950a=""
+            >
+              <li
+                class="leading-5 text-primary p-2 mr-4 border-b-2"
+                data-v-c025950a=""
+                id="authLogin"
+              >
+                 INICIAR SESIÓN 
+              </li>
+              <li
+                class="leading-5 text-primary p-2 border-b-2 opacity-50 cursor-pointer rounded-lg border-b-0"
+                data-v-c025950a=""
+                id="authCreate"
+              >
+                 CREAR CUENTA 
+              </li>
+            </ul>
+          </div>
+          <transition-group-stub
+            data-v-c025950a=""
+          >
+            <sign-in-stub
+              data-v-c025950a=""
+            />
+          </transition-group-stub>
+        </section>,
+        "key": null,
+        "patchFlag": 0,
+        "props": null,
+        "ref": null,
+        "scopeId": null,
+        "shapeFlag": 4,
+        "slotScopeIds": null,
+        "ssContent": null,
+        "ssFallback": null,
+        "staticCount": 0,
+        "suspense": null,
+        "target": null,
+        "targetAnchor": null,
+        "transition": null,
+        "type": {
+          "name": "VTU_ROOT",
+          "render": [Function],
+        },
+      },
+      "withProxy": null,
+    },
+    "_props": null,
+    "_uid": 0,
+    "component": [Function],
+    "config": {
+      "compilerOptions": {},
+      "errorHandler": undefined,
+      "globalProperties": {},
+      "isNativeTag": [Function],
+      "optionMergeStrategies": {},
+      "performance": false,
+      "warnHandler": undefined,
+    },
+    "directive": [Function],
+    "mixin": [Function],
+    "mount": [Function],
+    "provide": [Function],
+    "unmount": [Function],
+    "use": [Function],
+    "version": "3.2.26",
+  },
+  "__setProps": [Function],
+  "componentVM": {},
+  "isDisabled": [Function],
+  "rootVM": {},
+  "wrapperElement": <section
+    class="max-w-sm mx-auto mt-10"
+    data-v-c025950a=""
+  >
+    <div
+      class="mb-4"
+      data-v-c025950a=""
+    >
+      <h1
+        class="text-3xl leading-9 font-extrabold text-primary"
+        data-v-c025950a=""
+      >
+         APIMOSA APP 
+      </h1>
+      <ul
+        class="inline-flex justify-center mt-4 items-center"
+        data-v-c025950a=""
+      >
+        <li
+          class="leading-5 text-primary p-2 mr-4 border-b-2"
+          data-v-c025950a=""
+          id="authLogin"
+        >
+           INICIAR SESIÓN 
+        </li>
+        <li
+          class="leading-5 text-primary p-2 border-b-2 opacity-50 cursor-pointer rounded-lg border-b-0"
+          data-v-c025950a=""
+          id="authCreate"
+        >
+           CREAR CUENTA 
+        </li>
+      </ul>
+    </div>
+    <transition-group-stub
+      data-v-c025950a=""
+    >
+      <sign-in-stub
+        data-v-c025950a=""
+      />
+    </transition-group-stub>
+  </section>,
+}
+`;

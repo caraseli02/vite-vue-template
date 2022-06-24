@@ -1,0 +1,21 @@
+// Vitest Snapshot v1
+
+exports[`mount component 1`] = `
+"<ul class=\\"w-full mx-auto h-24 flex justify-center items-center\\">
+  <li class=\\"mx-auto flex justify-around text-lg items-center p-4 text-secondary w-full\\"><svg xmlns=\\"http://www.w3.org/2000/svg\\" fill=\\"none\\" viewBox=\\"0 0 24 24\\" stroke=\\"currentColor\\" aria-hidden=\\"true\\" class=\\"w-16 h-16 text-primary animate-pulse\\">
+      <path stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" stroke-width=\\"2\\" d=\\"M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z\\" />
+    </svg>
+    <div data-vi=\\"attendTime\\" class=\\"flex flex-col justify-around text-primary\\"> Tiempo aproximado: <span class=\\"text-3xl text-center text-green-800 dark:text-green-500\\">10h</span></div>
+  </li>
+</ul>"
+`;
+
+exports[`mount component 2`] = `
+"<ul class=\\"w-full mx-auto h-24 flex justify-center items-center\\">
+  <li class=\\"mx-auto flex justify-around text-lg items-center p-4 text-secondary w-full\\"><svg xmlns=\\"http://www.w3.org/2000/svg\\" fill=\\"none\\" viewBox=\\"0 0 24 24\\" stroke=\\"currentColor\\" aria-hidden=\\"true\\" class=\\"w-16 h-16 text-primary animate-pulse\\">
+      <path stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" stroke-width=\\"2\\" d=\\"M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z\\" />
+    </svg>
+    <div data-vi=\\"attendTime\\" class=\\"flex flex-col justify-around text-primary\\"> Tiempo aproximado: <span class=\\"text-3xl text-center text-green-800 dark:text-green-500\\">10h</span></div>
+  </li>
+</ul>"
+`;

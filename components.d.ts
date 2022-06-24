@@ -5,7 +5,17 @@ import '@vue/runtime-core'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-
+    AppFormField: typeof import('./src/components/auth/AppFormField.vue')['default']
+    AppHeader: typeof import('./src/components/Navigation/AppHeader.vue')['default']
+    AuthProvider: typeof import('./src/components/auth/AuthProvider.vue')['default']
+    Counter: typeof import('./src/components/Counter.vue')['default']
+    Footer: typeof import('./src/components/Footer.vue')['default']
+    ForgotPassword: typeof import('./src/components/auth/ForgotPassword.vue')['default']
+    MainNav: typeof import('./src/components/Navigation/MainNav.vue')['default']
+    PrimaryBtn: typeof import('./src/components/buttons/PrimaryBtn.vue')['default']
+    SignIn: typeof import('./src/components/auth/SignIn.vue')['default']
+    SignUp: typeof import('./src/components/auth/SignUp.vue')['default']
+    ThemeToggler: typeof import('./src/components/Navigation/ThemeToggler.vue')['default']
   }
 }
 

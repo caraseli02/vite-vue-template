@@ -1,0 +1,1529 @@
+// Vitest Snapshot v1
+
+exports[`mount component with props 1`] = `
+VueWrapper {
+  "__app": {
+    "_component": {
+      "name": "VTU_ROOT",
+      "render": [Function],
+    },
+    "_container": <div
+      data-v-app=""
+    >
+      <ul
+        class="w-full mx-auto h-24 flex justify-center items-center"
+      >
+        <li
+          class="mx-auto flex justify-around text-lg items-center p-4 text-secondary w-full"
+        >
+          <svg
+            aria-hidden="true"
+            class="w-16 h-16 text-primary animate-pulse"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+          <div
+            class="flex flex-col justify-around text-primary"
+            data-vi="attendTime"
+          >
+             Tiempo aproximado: 
+            <span
+              class="text-3xl text-center text-green-800 dark:text-green-500"
+            >
+              1h
+            </span>
+          </div>
+        </li>
+      </ul>
+    </div>,
+    "_context": {
+      "app": [Circular],
+      "components": {
+        "transition": {
+          "name": "transition",
+        },
+        "transition-group": {
+          "name": "transition-group",
+        },
+      },
+      "config": {
+        "compilerOptions": {},
+        "errorHandler": undefined,
+        "globalProperties": {},
+        "isNativeTag": [Function],
+        "optionMergeStrategies": {},
+        "performance": false,
+        "warnHandler": undefined,
+      },
+      "directives": {},
+      "emitsCache": WeakMap {},
+      "mixins": [
+        {
+          "beforeCreate": [Function],
+        },
+      ],
+      "optionsCache": WeakMap {},
+      "propsCache": WeakMap {},
+      "provides": {},
+      "reload": [Function],
+    },
+    "_instance": {
+      "a": null,
+      "accessCache": {},
+      "appContext": {
+        "app": [Circular],
+        "components": {
+          "transition": {
+            "name": "transition",
+          },
+          "transition-group": {
+            "name": "transition-group",
+          },
+        },
+        "config": {
+          "compilerOptions": {},
+          "errorHandler": undefined,
+          "globalProperties": {},
+          "isNativeTag": [Function],
+          "optionMergeStrategies": {},
+          "performance": false,
+          "warnHandler": undefined,
+        },
+        "directives": {},
+        "emitsCache": WeakMap {},
+        "mixins": [
+          {
+            "beforeCreate": [Function],
+          },
+        ],
+        "optionsCache": WeakMap {},
+        "propsCache": WeakMap {},
+        "provides": {},
+        "reload": [Function],
+      },
+      "asyncDep": null,
+      "asyncResolved": false,
+      "attrs": {},
+      "bc": null,
+      "bm": null,
+      "bu": null,
+      "bum": null,
+      "c": null,
+      "components": null,
+      "ctx": {},
+      "da": null,
+      "data": {},
+      "directives": null,
+      "ec": null,
+      "effect": ReactiveEffect {
+        "active": true,
+        "allowRecurse": true,
+        "deps": [
+          Set {
+            [Circular],
+          },
+          Set {
+            [Circular],
+          },
+          Set {
+            [Circular],
+          },
+        ],
+        "fn": [Function],
+        "onTrack": undefined,
+        "onTrigger": undefined,
+        "scheduler": [Function],
+      },
+      "emit": [Function],
+      "emitsOptions": null,
+      "emitted": null,
+      "exposeProxy": null,
+      "exposed": null,
+      "inheritAttrs": undefined,
+      "isDeactivated": false,
+      "isMounted": true,
+      "isUnmounted": false,
+      "m": null,
+      "next": null,
+      "parent": null,
+      "props": {},
+      "propsDefaults": {},
+      "propsOptions": [
+        {},
+        [],
+      ],
+      "provides": {},
+      "proxy": {},
+      "refs": {
+        "VTU_COMPONENT": {
+          "hasOwnProperty": [Function],
+        },
+      },
+      "render": [Function],
+      "renderCache": [],
+      "root": [Circular],
+      "rtc": null,
+      "rtg": null,
+      "scope": EffectScope {
+        "active": true,
+        "cleanups": [],
+        "effects": [
+          ReactiveEffect {
+            "active": true,
+            "allowRecurse": true,
+            "deps": [
+              Set {
+                [Circular],
+              },
+              Set {
+                [Circular],
+              },
+              Set {
+                [Circular],
+              },
+            ],
+            "fn": [Function],
+            "onTrack": undefined,
+            "onTrigger": undefined,
+            "scheduler": [Function],
+          },
+        ],
+      },
+      "setupContext": null,
+      "setupState": {},
+      "slots": {},
+      "sp": null,
+      "subTree": {
+        "__v_isVNode": true,
+        "__v_skip": true,
+        "anchor": null,
+        "appContext": null,
+        "children": null,
+        "component": {
+          "a": null,
+          "accessCache": {},
+          "appContext": {
+            "app": [Circular],
+            "components": {
+              "transition": {
+                "name": "transition",
+              },
+              "transition-group": {
+                "name": "transition-group",
+              },
+            },
+            "config": {
+              "compilerOptions": {},
+              "errorHandler": undefined,
+              "globalProperties": {},
+              "isNativeTag": [Function],
+              "optionMergeStrategies": {},
+              "performance": false,
+              "warnHandler": undefined,
+            },
+            "directives": {},
+            "emitsCache": WeakMap {},
+            "mixins": [
+              {
+                "beforeCreate": [Function],
+              },
+            ],
+            "optionsCache": WeakMap {},
+            "propsCache": WeakMap {},
+            "provides": {},
+            "reload": [Function],
+          },
+          "asyncDep": null,
+          "asyncResolved": false,
+          "attrs": {},
+          "bc": null,
+          "bm": null,
+          "bu": null,
+          "bum": null,
+          "c": null,
+          "components": {},
+          "ctx": {
+            "activeSession": false,
+            "attendTime": "1h",
+          },
+          "da": null,
+          "data": {},
+          "devtoolsRawSetupState": {
+            "ClockIcon": [Function],
+            "props": {
+              "activeSession": false,
+              "attendTime": "1h",
+            },
+          },
+          "directives": null,
+          "ec": null,
+          "effect": ReactiveEffect {
+            "active": true,
+            "allowRecurse": true,
+            "deps": [
+              Set {
+                [Circular],
+              },
+              Set {
+                [Circular],
+              },
+            ],
+            "fn": [Function],
+            "onTrack": undefined,
+            "onTrigger": undefined,
+            "scheduler": [Function],
+          },
+          "emit": [Function],
+          "emitsOptions": null,
+          "emitted": null,
+          "exposeProxy": {
+            "hasOwnProperty": [Function],
+          },
+          "exposed": {
+            "hasOwnProperty": [Function],
+          },
+          "inheritAttrs": undefined,
+          "isDeactivated": false,
+          "isMounted": true,
+          "isUnmounted": false,
+          "m": null,
+          "next": null,
+          "parent": [Circular],
+          "props": {
+            "activeSession": false,
+            "attendTime": "1h",
+          },
+          "propsDefaults": {},
+          "propsOptions": [
+            {
+              "activeSession": {
+                "0": true,
+                "1": true,
+                "required": false,
+                "type": [Function],
+              },
+              "attendTime": {
+                "0": false,
+                "1": true,
+                "default": "0h",
+                "type": [Function],
+              },
+            },
+            [
+              "attendTime",
+              "activeSession",
+            ],
+          ],
+          "provides": {},
+          "proxy": {
+            "activeSession": false,
+            "attendTime": "1h",
+          },
+          "refs": {},
+          "render": [Function],
+          "renderCache": [],
+          "root": [Circular],
+          "rtc": null,
+          "rtg": null,
+          "scope": EffectScope {
+            "active": true,
+            "cleanups": [],
+            "effects": [
+              ReactiveEffect {
+                "active": true,
+                "allowRecurse": true,
+                "deps": [
+                  Set {
+                    [Circular],
+                  },
+                  Set {
+                    [Circular],
+                  },
+                ],
+                "fn": [Function],
+                "onTrack": undefined,
+                "onTrigger": undefined,
+                "scheduler": [Function],
+              },
+            ],
+          },
+          "setupContext": {
+            "attrs": {},
+            "emit": [Function],
+            "expose": [Function],
+            "slots": {},
+          },
+          "setupState": {
+            "ClockIcon": [Function],
+            "props": {
+              "activeSession": false,
+              "attendTime": "1h",
+            },
+          },
+          "slots": {},
+          "sp": null,
+          "subTree": {
+            "__v_isVNode": true,
+            "__v_skip": true,
+            "anchor": null,
+            "appContext": null,
+            "children": [
+              {
+                "__v_isVNode": true,
+                "__v_skip": true,
+                "anchor": null,
+                "appContext": null,
+                "children": [
+                  {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": null,
+                    "component": {
+                      "a": null,
+                      "accessCache": null,
+                      "appContext": {
+                        "app": [Circular],
+                        "components": {
+                          "transition": {
+                            "name": "transition",
+                          },
+                          "transition-group": {
+                            "name": "transition-group",
+                          },
+                        },
+                        "config": {
+                          "compilerOptions": {},
+                          "errorHandler": undefined,
+                          "globalProperties": {},
+                          "isNativeTag": [Function],
+                          "optionMergeStrategies": {},
+                          "performance": false,
+                          "warnHandler": undefined,
+                        },
+                        "directives": {},
+                        "emitsCache": WeakMap {},
+                        "mixins": [
+                          {
+                            "beforeCreate": [Function],
+                          },
+                        ],
+                        "optionsCache": WeakMap {},
+                        "propsCache": WeakMap {},
+                        "provides": {},
+                        "reload": [Function],
+                      },
+                      "asyncDep": null,
+                      "asyncResolved": false,
+                      "attrs": {
+                        "class": "w-16 h-16 text-primary animate-pulse",
+                      },
+                      "bc": null,
+                      "bm": null,
+                      "bu": null,
+                      "bum": null,
+                      "c": null,
+                      "components": null,
+                      "ctx": {},
+                      "da": null,
+                      "data": {},
+                      "directives": null,
+                      "ec": null,
+                      "effect": ReactiveEffect {
+                        "active": true,
+                        "allowRecurse": true,
+                        "deps": [],
+                        "fn": [Function],
+                        "onTrack": undefined,
+                        "onTrigger": undefined,
+                        "scheduler": [Function],
+                      },
+                      "emit": [Function],
+                      "emitsOptions": null,
+                      "emitted": null,
+                      "exposeProxy": null,
+                      "exposed": null,
+                      "inheritAttrs": undefined,
+                      "isDeactivated": false,
+                      "isMounted": true,
+                      "isUnmounted": false,
+                      "m": null,
+                      "next": null,
+                      "parent": [Circular],
+                      "props": {
+                        "class": "w-16 h-16 text-primary animate-pulse",
+                      },
+                      "propsDefaults": {},
+                      "propsOptions": [],
+                      "provides": {},
+                      "proxy": null,
+                      "refs": {},
+                      "render": null,
+                      "renderCache": [],
+                      "root": [Circular],
+                      "rtc": null,
+                      "rtg": null,
+                      "scope": EffectScope {
+                        "active": true,
+                        "cleanups": [],
+                        "effects": [
+                          ReactiveEffect {
+                            "active": true,
+                            "allowRecurse": true,
+                            "deps": [],
+                            "fn": [Function],
+                            "onTrack": undefined,
+                            "onTrigger": undefined,
+                            "scheduler": [Function],
+                          },
+                        ],
+                      },
+                      "setupContext": null,
+                      "setupState": {},
+                      "slots": {},
+                      "sp": null,
+                      "subTree": {
+                        "__v_isVNode": true,
+                        "__v_skip": true,
+                        "anchor": null,
+                        "appContext": null,
+                        "children": [
+                          {
+                            "__v_isVNode": true,
+                            "__v_skip": true,
+                            "anchor": null,
+                            "appContext": null,
+                            "children": null,
+                            "component": null,
+                            "dirs": null,
+                            "dynamicChildren": null,
+                            "dynamicProps": null,
+                            "el": <path
+                              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                            />,
+                            "key": null,
+                            "patchFlag": 0,
+                            "props": {
+                              "d": "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
+                              "stroke-linecap": "round",
+                              "stroke-linejoin": "round",
+                              "stroke-width": "2",
+                            },
+                            "ref": null,
+                            "scopeId": null,
+                            "shapeFlag": 1,
+                            "slotScopeIds": null,
+                            "ssContent": null,
+                            "ssFallback": null,
+                            "staticCount": 0,
+                            "suspense": null,
+                            "target": null,
+                            "targetAnchor": null,
+                            "transition": null,
+                            "type": "path",
+                          },
+                        ],
+                        "component": null,
+                        "dirs": null,
+                        "dynamicChildren": [],
+                        "dynamicProps": null,
+                        "el": <svg
+                          aria-hidden="true"
+                          class="w-16 h-16 text-primary animate-pulse"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                          />
+                        </svg>,
+                        "key": null,
+                        "patchFlag": 16,
+                        "props": {
+                          "aria-hidden": "true",
+                          "class": "w-16 h-16 text-primary animate-pulse",
+                          "fill": "none",
+                          "stroke": "currentColor",
+                          "viewBox": "0 0 24 24",
+                          "xmlns": "http://www.w3.org/2000/svg",
+                        },
+                        "ref": null,
+                        "scopeId": null,
+                        "shapeFlag": 17,
+                        "slotScopeIds": null,
+                        "ssContent": null,
+                        "ssFallback": null,
+                        "staticCount": 0,
+                        "suspense": null,
+                        "target": null,
+                        "targetAnchor": null,
+                        "transition": null,
+                        "type": "svg",
+                      },
+                      "suspense": null,
+                      "suspenseId": 0,
+                      "type": [Function],
+                      "u": null,
+                      "uid": 2,
+                      "um": null,
+                      "update": [Function],
+                      "vnode": [Circular],
+                      "withProxy": null,
+                    },
+                    "dirs": null,
+                    "dynamicChildren": null,
+                    "dynamicProps": null,
+                    "el": <svg
+                      aria-hidden="true"
+                      class="w-16 h-16 text-primary animate-pulse"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>,
+                    "key": null,
+                    "patchFlag": 0,
+                    "props": {
+                      "class": "w-16 h-16 text-primary animate-pulse",
+                    },
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 2,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": [Function],
+                  },
+                  {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": [
+                      {
+                        "__v_isVNode": true,
+                        "__v_skip": true,
+                        "anchor": null,
+                        "appContext": null,
+                        "children": " Tiempo aproximado: ",
+                        "component": null,
+                        "dirs": null,
+                        "dynamicChildren": null,
+                        "dynamicProps": null,
+                        "el":  Tiempo aproximado: ,
+                        "key": null,
+                        "patchFlag": 0,
+                        "props": null,
+                        "ref": null,
+                        "scopeId": null,
+                        "shapeFlag": 8,
+                        "slotScopeIds": null,
+                        "ssContent": null,
+                        "ssFallback": null,
+                        "staticCount": 0,
+                        "suspense": null,
+                        "target": null,
+                        "targetAnchor": null,
+                        "transition": null,
+                        "type": Symbol(Text),
+                      },
+                      {
+                        "__v_isVNode": true,
+                        "__v_skip": true,
+                        "anchor": null,
+                        "appContext": null,
+                        "children": "1h",
+                        "component": null,
+                        "dirs": null,
+                        "dynamicChildren": null,
+                        "dynamicProps": null,
+                        "el": <span
+                          class="text-3xl text-center text-green-800 dark:text-green-500"
+                        >
+                          1h
+                        </span>,
+                        "key": null,
+                        "patchFlag": 1,
+                        "props": {
+                          "class": "text-3xl text-center text-green-800 dark:text-green-500",
+                        },
+                        "ref": null,
+                        "scopeId": null,
+                        "shapeFlag": 9,
+                        "slotScopeIds": null,
+                        "ssContent": null,
+                        "ssFallback": null,
+                        "staticCount": 0,
+                        "suspense": null,
+                        "target": null,
+                        "targetAnchor": null,
+                        "transition": null,
+                        "type": "span",
+                      },
+                    ],
+                    "component": null,
+                    "dirs": null,
+                    "dynamicChildren": [
+                      {
+                        "__v_isVNode": true,
+                        "__v_skip": true,
+                        "anchor": null,
+                        "appContext": null,
+                        "children": "1h",
+                        "component": null,
+                        "dirs": null,
+                        "dynamicChildren": null,
+                        "dynamicProps": null,
+                        "el": <span
+                          class="text-3xl text-center text-green-800 dark:text-green-500"
+                        >
+                          1h
+                        </span>,
+                        "key": null,
+                        "patchFlag": 1,
+                        "props": {
+                          "class": "text-3xl text-center text-green-800 dark:text-green-500",
+                        },
+                        "ref": null,
+                        "scopeId": null,
+                        "shapeFlag": 9,
+                        "slotScopeIds": null,
+                        "ssContent": null,
+                        "ssFallback": null,
+                        "staticCount": 0,
+                        "suspense": null,
+                        "target": null,
+                        "targetAnchor": null,
+                        "transition": null,
+                        "type": "span",
+                      },
+                    ],
+                    "dynamicProps": null,
+                    "el": <div
+                      class="flex flex-col justify-around text-primary"
+                      data-vi="attendTime"
+                    >
+                       Tiempo aproximado: 
+                      <span
+                        class="text-3xl text-center text-green-800 dark:text-green-500"
+                      >
+                        1h
+                      </span>
+                    </div>,
+                    "key": 1,
+                    "patchFlag": 0,
+                    "props": {
+                      "class": "flex flex-col justify-around text-primary",
+                      "data-vi": "attendTime",
+                      "key": 1,
+                    },
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 17,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": "div",
+                  },
+                ],
+                "component": null,
+                "dirs": null,
+                "dynamicChildren": null,
+                "dynamicProps": null,
+                "el": <li
+                  class="mx-auto flex justify-around text-lg items-center p-4 text-secondary w-full"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="w-16 h-16 text-primary animate-pulse"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    />
+                  </svg>
+                  <div
+                    class="flex flex-col justify-around text-primary"
+                    data-vi="attendTime"
+                  >
+                     Tiempo aproximado: 
+                    <span
+                      class="text-3xl text-center text-green-800 dark:text-green-500"
+                    >
+                      1h
+                    </span>
+                  </div>
+                </li>,
+                "key": null,
+                "patchFlag": 0,
+                "props": {
+                  "class": "mx-auto flex justify-around text-lg items-center p-4 text-secondary w-full",
+                },
+                "ref": null,
+                "scopeId": null,
+                "shapeFlag": 17,
+                "slotScopeIds": null,
+                "ssContent": null,
+                "ssFallback": null,
+                "staticCount": 0,
+                "suspense": null,
+                "target": null,
+                "targetAnchor": null,
+                "transition": null,
+                "type": "li",
+              },
+            ],
+            "component": null,
+            "dirs": null,
+            "dynamicChildren": [
+              {
+                "__v_isVNode": true,
+                "__v_skip": true,
+                "anchor": null,
+                "appContext": null,
+                "children": null,
+                "component": {
+                  "a": null,
+                  "accessCache": null,
+                  "appContext": {
+                    "app": [Circular],
+                    "components": {
+                      "transition": {
+                        "name": "transition",
+                      },
+                      "transition-group": {
+                        "name": "transition-group",
+                      },
+                    },
+                    "config": {
+                      "compilerOptions": {},
+                      "errorHandler": undefined,
+                      "globalProperties": {},
+                      "isNativeTag": [Function],
+                      "optionMergeStrategies": {},
+                      "performance": false,
+                      "warnHandler": undefined,
+                    },
+                    "directives": {},
+                    "emitsCache": WeakMap {},
+                    "mixins": [
+                      {
+                        "beforeCreate": [Function],
+                      },
+                    ],
+                    "optionsCache": WeakMap {},
+                    "propsCache": WeakMap {},
+                    "provides": {},
+                    "reload": [Function],
+                  },
+                  "asyncDep": null,
+                  "asyncResolved": false,
+                  "attrs": {
+                    "class": "w-16 h-16 text-primary animate-pulse",
+                  },
+                  "bc": null,
+                  "bm": null,
+                  "bu": null,
+                  "bum": null,
+                  "c": null,
+                  "components": null,
+                  "ctx": {},
+                  "da": null,
+                  "data": {},
+                  "directives": null,
+                  "ec": null,
+                  "effect": ReactiveEffect {
+                    "active": true,
+                    "allowRecurse": true,
+                    "deps": [],
+                    "fn": [Function],
+                    "onTrack": undefined,
+                    "onTrigger": undefined,
+                    "scheduler": [Function],
+                  },
+                  "emit": [Function],
+                  "emitsOptions": null,
+                  "emitted": null,
+                  "exposeProxy": null,
+                  "exposed": null,
+                  "inheritAttrs": undefined,
+                  "isDeactivated": false,
+                  "isMounted": true,
+                  "isUnmounted": false,
+                  "m": null,
+                  "next": null,
+                  "parent": [Circular],
+                  "props": {
+                    "class": "w-16 h-16 text-primary animate-pulse",
+                  },
+                  "propsDefaults": {},
+                  "propsOptions": [],
+                  "provides": {},
+                  "proxy": null,
+                  "refs": {},
+                  "render": null,
+                  "renderCache": [],
+                  "root": [Circular],
+                  "rtc": null,
+                  "rtg": null,
+                  "scope": EffectScope {
+                    "active": true,
+                    "cleanups": [],
+                    "effects": [
+                      ReactiveEffect {
+                        "active": true,
+                        "allowRecurse": true,
+                        "deps": [],
+                        "fn": [Function],
+                        "onTrack": undefined,
+                        "onTrigger": undefined,
+                        "scheduler": [Function],
+                      },
+                    ],
+                  },
+                  "setupContext": null,
+                  "setupState": {},
+                  "slots": {},
+                  "sp": null,
+                  "subTree": {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": [
+                      {
+                        "__v_isVNode": true,
+                        "__v_skip": true,
+                        "anchor": null,
+                        "appContext": null,
+                        "children": null,
+                        "component": null,
+                        "dirs": null,
+                        "dynamicChildren": null,
+                        "dynamicProps": null,
+                        "el": <path
+                          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                        />,
+                        "key": null,
+                        "patchFlag": 0,
+                        "props": {
+                          "d": "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
+                          "stroke-linecap": "round",
+                          "stroke-linejoin": "round",
+                          "stroke-width": "2",
+                        },
+                        "ref": null,
+                        "scopeId": null,
+                        "shapeFlag": 1,
+                        "slotScopeIds": null,
+                        "ssContent": null,
+                        "ssFallback": null,
+                        "staticCount": 0,
+                        "suspense": null,
+                        "target": null,
+                        "targetAnchor": null,
+                        "transition": null,
+                        "type": "path",
+                      },
+                    ],
+                    "component": null,
+                    "dirs": null,
+                    "dynamicChildren": [],
+                    "dynamicProps": null,
+                    "el": <svg
+                      aria-hidden="true"
+                      class="w-16 h-16 text-primary animate-pulse"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>,
+                    "key": null,
+                    "patchFlag": 16,
+                    "props": {
+                      "aria-hidden": "true",
+                      "class": "w-16 h-16 text-primary animate-pulse",
+                      "fill": "none",
+                      "stroke": "currentColor",
+                      "viewBox": "0 0 24 24",
+                      "xmlns": "http://www.w3.org/2000/svg",
+                    },
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 17,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": "svg",
+                  },
+                  "suspense": null,
+                  "suspenseId": 0,
+                  "type": [Function],
+                  "u": null,
+                  "uid": 2,
+                  "um": null,
+                  "update": [Function],
+                  "vnode": [Circular],
+                  "withProxy": null,
+                },
+                "dirs": null,
+                "dynamicChildren": null,
+                "dynamicProps": null,
+                "el": <svg
+                  aria-hidden="true"
+                  class="w-16 h-16 text-primary animate-pulse"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>,
+                "key": null,
+                "patchFlag": 0,
+                "props": {
+                  "class": "w-16 h-16 text-primary animate-pulse",
+                },
+                "ref": null,
+                "scopeId": null,
+                "shapeFlag": 2,
+                "slotScopeIds": null,
+                "ssContent": null,
+                "ssFallback": null,
+                "staticCount": 0,
+                "suspense": null,
+                "target": null,
+                "targetAnchor": null,
+                "transition": null,
+                "type": [Function],
+              },
+              {
+                "__v_isVNode": true,
+                "__v_skip": true,
+                "anchor": null,
+                "appContext": null,
+                "children": [
+                  {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": " Tiempo aproximado: ",
+                    "component": null,
+                    "dirs": null,
+                    "dynamicChildren": null,
+                    "dynamicProps": null,
+                    "el":  Tiempo aproximado: ,
+                    "key": null,
+                    "patchFlag": 0,
+                    "props": null,
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 8,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": Symbol(Text),
+                  },
+                  {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": "1h",
+                    "component": null,
+                    "dirs": null,
+                    "dynamicChildren": null,
+                    "dynamicProps": null,
+                    "el": <span
+                      class="text-3xl text-center text-green-800 dark:text-green-500"
+                    >
+                      1h
+                    </span>,
+                    "key": null,
+                    "patchFlag": 1,
+                    "props": {
+                      "class": "text-3xl text-center text-green-800 dark:text-green-500",
+                    },
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 9,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": "span",
+                  },
+                ],
+                "component": null,
+                "dirs": null,
+                "dynamicChildren": [
+                  {
+                    "__v_isVNode": true,
+                    "__v_skip": true,
+                    "anchor": null,
+                    "appContext": null,
+                    "children": "1h",
+                    "component": null,
+                    "dirs": null,
+                    "dynamicChildren": null,
+                    "dynamicProps": null,
+                    "el": <span
+                      class="text-3xl text-center text-green-800 dark:text-green-500"
+                    >
+                      1h
+                    </span>,
+                    "key": null,
+                    "patchFlag": 1,
+                    "props": {
+                      "class": "text-3xl text-center text-green-800 dark:text-green-500",
+                    },
+                    "ref": null,
+                    "scopeId": null,
+                    "shapeFlag": 9,
+                    "slotScopeIds": null,
+                    "ssContent": null,
+                    "ssFallback": null,
+                    "staticCount": 0,
+                    "suspense": null,
+                    "target": null,
+                    "targetAnchor": null,
+                    "transition": null,
+                    "type": "span",
+                  },
+                ],
+                "dynamicProps": null,
+                "el": <div
+                  class="flex flex-col justify-around text-primary"
+                  data-vi="attendTime"
+                >
+                   Tiempo aproximado: 
+                  <span
+                    class="text-3xl text-center text-green-800 dark:text-green-500"
+                  >
+                    1h
+                  </span>
+                </div>,
+                "key": 1,
+                "patchFlag": 0,
+                "props": {
+                  "class": "flex flex-col justify-around text-primary",
+                  "data-vi": "attendTime",
+                  "key": 1,
+                },
+                "ref": null,
+                "scopeId": null,
+                "shapeFlag": 17,
+                "slotScopeIds": null,
+                "ssContent": null,
+                "ssFallback": null,
+                "staticCount": 0,
+                "suspense": null,
+                "target": null,
+                "targetAnchor": null,
+                "transition": null,
+                "type": "div",
+              },
+            ],
+            "dynamicProps": null,
+            "el": <ul
+              class="w-full mx-auto h-24 flex justify-center items-center"
+            >
+              <li
+                class="mx-auto flex justify-around text-lg items-center p-4 text-secondary w-full"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="w-16 h-16 text-primary animate-pulse"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+                <div
+                  class="flex flex-col justify-around text-primary"
+                  data-vi="attendTime"
+                >
+                   Tiempo aproximado: 
+                  <span
+                    class="text-3xl text-center text-green-800 dark:text-green-500"
+                  >
+                    1h
+                  </span>
+                </div>
+              </li>
+            </ul>,
+            "key": null,
+            "patchFlag": 0,
+            "props": {
+              "class": "w-full mx-auto h-24 flex justify-center items-center",
+            },
+            "ref": null,
+            "scopeId": null,
+            "shapeFlag": 17,
+            "slotScopeIds": null,
+            "ssContent": null,
+            "ssFallback": null,
+            "staticCount": 0,
+            "suspense": null,
+            "target": null,
+            "targetAnchor": null,
+            "transition": null,
+            "type": "ul",
+          },
+          "suspense": null,
+          "suspenseId": 0,
+          "type": {
+            "__file": "/Users/vladislavcaraseli/Documents/Dashboard-adminDashboard/src/components/workedTime.vue",
+            "__hmrId": "53868c26",
+            "components": {},
+            "props": {
+              "activeSession": {
+                "0": true,
+                "1": true,
+                "required": false,
+                "type": [Function],
+              },
+              "attendTime": {
+                "0": false,
+                "1": true,
+                "default": "0h",
+                "type": [Function],
+              },
+            },
+            "render": [Function],
+            "setup": [Function],
+          },
+          "u": null,
+          "uid": 1,
+          "um": null,
+          "update": [Function],
+          "vnode": [Circular],
+          "withProxy": null,
+        },
+        "dirs": null,
+        "dynamicChildren": null,
+        "dynamicProps": null,
+        "el": <ul
+          class="w-full mx-auto h-24 flex justify-center items-center"
+        >
+          <li
+            class="mx-auto flex justify-around text-lg items-center p-4 text-secondary w-full"
+          >
+            <svg
+              aria-hidden="true"
+              class="w-16 h-16 text-primary animate-pulse"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+            <div
+              class="flex flex-col justify-around text-primary"
+              data-vi="attendTime"
+            >
+               Tiempo aproximado: 
+              <span
+                class="text-3xl text-center text-green-800 dark:text-green-500"
+              >
+                1h
+              </span>
+            </div>
+          </li>
+        </ul>,
+        "key": null,
+        "patchFlag": 0,
+        "props": {
+          "attendTime": "1h",
+          "ref": "VTU_COMPONENT",
+        },
+        "ref": {
+          "f": false,
+          "i": [Circular],
+          "k": undefined,
+          "r": "VTU_COMPONENT",
+        },
+        "scopeId": null,
+        "shapeFlag": 4,
+        "slotScopeIds": null,
+        "ssContent": null,
+        "ssFallback": null,
+        "staticCount": 0,
+        "suspense": null,
+        "target": null,
+        "targetAnchor": null,
+        "transition": null,
+        "type": {
+          "__file": "/Users/vladislavcaraseli/Documents/Dashboard-adminDashboard/src/components/workedTime.vue",
+          "__hmrId": "53868c26",
+          "components": {},
+          "props": {
+            "activeSession": {
+              "0": true,
+              "1": true,
+              "required": false,
+              "type": [Function],
+            },
+            "attendTime": {
+              "0": false,
+              "1": true,
+              "default": "0h",
+              "type": [Function],
+            },
+          },
+          "render": [Function],
+          "setup": [Function],
+        },
+      },
+      "suspense": null,
+      "suspenseId": 0,
+      "type": {
+        "name": "VTU_ROOT",
+        "render": [Function],
+      },
+      "u": null,
+      "uid": 0,
+      "um": null,
+      "update": [Function],
+      "vnode": {
+        "__v_isVNode": true,
+        "__v_skip": true,
+        "anchor": null,
+        "appContext": {
+          "app": [Circular],
+          "components": {
+            "transition": {
+              "name": "transition",
+            },
+            "transition-group": {
+              "name": "transition-group",
+            },
+          },
+          "config": {
+            "compilerOptions": {},
+            "errorHandler": undefined,
+            "globalProperties": {},
+            "isNativeTag": [Function],
+            "optionMergeStrategies": {},
+            "performance": false,
+            "warnHandler": undefined,
+          },
+          "directives": {},
+          "emitsCache": WeakMap {},
+          "mixins": [
+            {
+              "beforeCreate": [Function],
+            },
+          ],
+          "optionsCache": WeakMap {},
+          "propsCache": WeakMap {},
+          "provides": {},
+          "reload": [Function],
+        },
+        "children": null,
+        "component": [Circular],
+        "dirs": null,
+        "dynamicChildren": null,
+        "dynamicProps": null,
+        "el": <ul
+          class="w-full mx-auto h-24 flex justify-center items-center"
+        >
+          <li
+            class="mx-auto flex justify-around text-lg items-center p-4 text-secondary w-full"
+          >
+            <svg
+              aria-hidden="true"
+              class="w-16 h-16 text-primary animate-pulse"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+            <div
+              class="flex flex-col justify-around text-primary"
+              data-vi="attendTime"
+            >
+               Tiempo aproximado: 
+              <span
+                class="text-3xl text-center text-green-800 dark:text-green-500"
+              >
+                1h
+              </span>
+            </div>
+          </li>
+        </ul>,
+        "key": null,
+        "patchFlag": 0,
+        "props": null,
+        "ref": null,
+        "scopeId": null,
+        "shapeFlag": 4,
+        "slotScopeIds": null,
+        "ssContent": null,
+        "ssFallback": null,
+        "staticCount": 0,
+        "suspense": null,
+        "target": null,
+        "targetAnchor": null,
+        "transition": null,
+        "type": {
+          "name": "VTU_ROOT",
+          "render": [Function],
+        },
+      },
+      "withProxy": null,
+    },
+    "_props": null,
+    "_uid": 0,
+    "component": [Function],
+    "config": {
+      "compilerOptions": {},
+      "errorHandler": undefined,
+      "globalProperties": {},
+      "isNativeTag": [Function],
+      "optionMergeStrategies": {},
+      "performance": false,
+      "warnHandler": undefined,
+    },
+    "directive": [Function],
+    "mixin": [Function],
+    "mount": [Function],
+    "provide": [Function],
+    "unmount": [Function],
+    "use": [Function],
+    "version": "3.2.26",
+  },
+  "__setProps": [Function],
+  "componentVM": {
+    "activeSession": false,
+    "attendTime": "1h",
+  },
+  "isDisabled": [Function],
+  "rootVM": {},
+  "wrapperElement": <ul
+    class="w-full mx-auto h-24 flex justify-center items-center"
+  >
+    <li
+      class="mx-auto flex justify-around text-lg items-center p-4 text-secondary w-full"
+    >
+      <svg
+        aria-hidden="true"
+        class="w-16 h-16 text-primary animate-pulse"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+        />
+      </svg>
+      <div
+        class="flex flex-col justify-around text-primary"
+        data-vi="attendTime"
+      >
+         Tiempo aproximado: 
+        <span
+          class="text-3xl text-center text-green-800 dark:text-green-500"
+        >
+          1h
+        </span>
+      </div>
+    </li>
+  </ul>,
+}
+`;
