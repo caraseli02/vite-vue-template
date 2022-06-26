@@ -17,6 +17,7 @@ specifiers:
   eslint: ^8.17.0
   firebase: ^9.8.4
   npm-run-all: ^4.1.5
+  sweetalert2: ^11.4.18
   typescript: ~4.7.2
   unocss: ^0.38.2
   unplugin-auto-import: ^0.8.7
@@ -33,6 +34,7 @@ dependencies:
   '@vee-validate/i18n': 4.5.11
   '@vee-validate/rules': 4.5.11
   firebase: 9.8.4
+  sweetalert2: 11.4.18
   vee-validate: 4.5.11_vue@3.2.37
   vue: 3.2.37
   vue-router: 4.0.16_vue@3.2.37
@@ -4637,6 +4639,10 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
     dev: true
+
+  /sweetalert2/11.4.18:
+    resolution: {integrity: sha512-BZPTQI54NYdjIVe2tmsS5JVU7E623P3Sv4ce3BO8V6PdeIdGPGmQm43ojr1cnpGJ1xYhbdwsHIH+t5tICvZ6ZA==}
+    dev: false
 
   /text-table/0.2.0:
     resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==}
