@@ -13,6 +13,8 @@ declare module '@vue/runtime-core' {
     ForgotPassword: typeof import('./src/components/auth/ForgotPassword.vue')['default']
     MainNav: typeof import('./src/components/Navigation/MainNav.vue')['default']
     PrimaryBtn: typeof import('./src/components/buttons/PrimaryBtn.vue')['default']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
     SignIn: typeof import('./src/components/auth/SignIn.vue')['default']
     SignUp: typeof import('./src/components/auth/SignUp.vue')['default']
     ThemeToggler: typeof import('./src/components/Navigation/ThemeToggler.vue')['default']

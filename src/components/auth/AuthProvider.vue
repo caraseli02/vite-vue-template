@@ -1,37 +1,37 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import { PhoneIcon, XCircleIcon } from '@heroicons/vue/outline'
+import { computed } from "vue";
+import { PhoneIcon, XCircleIcon } from "@heroicons/vue/outline";
 
 defineProps({
   showMovilSignIn: {
     type: Boolean,
     default: false,
   },
-})
+});
 
-const emit = defineEmits(['toggleMovilSignIn'])
+const emit = defineEmits(["toggleMovilSignIn"]);
 
-const phoneNumber = $ref(null)
+const phoneNumber = $ref("");
 // const store = useStore()
 
 const phoneNumberIsInvalid = computed(() => {
   // check if phone number is valid and has 9 digits and only numbers
-  return !phoneNumber || phoneNumber.length !== 9 || !/^\d+$/.test(phoneNumber)
-})
+  return !phoneNumber || phoneNumber.length !== 9 || !/^\d+$/.test(phoneNumber);
+});
 
 const signInWithGoogle = () => {
   // store.dispatch('auth/signInWithGoogle')
-}
+};
 
 const signInWithYahoo = () => {
   // store.dispatch('auth/signInWithYahoo')
-}
+};
 
 const signInWithMovil = () => {
   // store.dispatch('auth/signInWithMovil', {
   //   phoneNumber: phoneNumber.value
   // })
-}
+};
 </script>
 
 <template>
@@ -121,7 +121,8 @@ const signInWithMovil = () => {
         <label
           for="email-adress-icon"
           class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-        >Introduce los 9 dígitos:</label>
+          >Introduce los 9 dígitos:</label
+        >
         <div class="relative">
           <div
             class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none"
@@ -136,17 +137,22 @@ const signInWithMovil = () => {
             v-model="phoneNumber"
             data-cy="phone-input"
             type="tel"
-            :class="phoneNumberIsInvalid ? 'bg-red-300' : 'bg-gray-50 dark:bg-gray-700'"
+            :class="
+              phoneNumberIsInvalid
+                ? 'bg-red-300'
+                : 'bg-gray-50 dark:bg-gray-700'
+            "
             class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Tu teléfono"
             pattern="[0-9]{9}"
-          >
+          />
         </div>
         <div class="flex justify-between">
           <PrimaryBtn
             :disabled="phoneNumberIsInvalid"
-            class="mt-4" :class="[{ 'cursor-not-allowed': phoneNumberIsInvalid }]"
-            @click.prevent="signInWithMovil({ phoneNumber })"
+            class="mt-4"
+            :class="[{ 'cursor-not-allowed': phoneNumberIsInvalid }]"
+            @click.prevent="signInWithMovil()"
           >
             Enviar
           </PrimaryBtn>
