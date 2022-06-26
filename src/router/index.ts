@@ -3,7 +3,14 @@ import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
   {
     path: '/',
-    component: () => import('~/pages/Home.vue'),
+    name: 'Home',
+    component: () => import('~/pages/HomePage.vue'),
+    meta: { requiresAuth: true }
+  },
+  {
+    path: '/auth/',
+    name: 'Auth',
+    component: () => import('~/pages/AuthPage.vue')
   },
 ]
 
