@@ -4,7 +4,7 @@ import { ArrowCircleRightIcon } from '@heroicons/vue/outline'
 import { Form as VeeForm, configure, defineRule } from 'vee-validate'
 import { confirmed, email, min, required, url } from '@vee-validate/rules'
 import { localize } from '@vee-validate/i18n'
-import { auth, db } from '~/helpers/firebase'
+// import { auth, db } from '~/helpers/firebase'
 
 defineRule('required', required)
 defineRule('email', email)
