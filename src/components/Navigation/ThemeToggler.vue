@@ -1,34 +1,35 @@
 <script setup lang="ts">
-import { onMounted, ref } from "vue";
-import { MoonIcon, SunIcon } from "@heroicons/vue/outline";
+import { onMounted, ref } from 'vue'
+import { MoonIcon, SunIcon } from '@heroicons/vue/outline'
 
-const nightMode = ref(localStorage.getItem("theme") === "dark");
+const nightMode = ref(localStorage.getItem('theme') === 'dark')
 
 const themeInnit = () => {
   if (
-    localStorage.theme === "dark" ||
-    (!("theme" in localStorage) &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches)
+    localStorage.theme === 'dark'
+    || (!('theme' in localStorage)
+      && window.matchMedia('(prefers-color-scheme: dark)').matches)
   ) {
-    document.querySelector("html")!.classList.add("dark");
-    localStorage.setItem("theme", "dark");
-    nightMode.value = true;
+    document.querySelector('html')!.classList.add('dark')
+    localStorage.setItem('theme', 'dark')
+    nightMode.value = true
   }
-};
+}
 
 const toggleTheme = () => {
-  const htmlClasses = document.querySelector("html")!.classList;
-  if (localStorage.theme === "dark") {
-    htmlClasses.remove("dark");
-    localStorage.removeItem("theme");
-  } else {
-    htmlClasses.add("dark");
-    localStorage.theme = "dark";
+  const htmlClasses = document.querySelector('html')!.classList
+  if (localStorage.theme === 'dark') {
+    htmlClasses.remove('dark')
+    localStorage.removeItem('theme')
   }
-  nightMode.value = !nightMode.value;
-};
+  else {
+    htmlClasses.add('dark')
+    localStorage.theme = 'dark'
+  }
+  nightMode.value = !nightMode.value
+}
 
-onMounted(themeInnit);
+onMounted(themeInnit)
 </script>
 
 <template>

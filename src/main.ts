@@ -3,9 +3,9 @@ import App from './App.vue'
 import '@unocss/reset/tailwind.css'
 import 'uno.css'
 // Router
-import { Router } from '~/router';
-const app = createApp(App);
+import { Router } from '~/router'
+const app = createApp(App)
 
-app.use(Router);
+app.use(Router)
 
-app.mount('#app');
+app.mount('#app')
