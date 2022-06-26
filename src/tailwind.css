@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .glass {
+    @apply p-3 md:p-6 rounded-lg border-gray-900 bg-content;
+  }
+
+  .btn-home {
+    @apply shadow-lg
+    bg-secondary
+    text-primary
+    w-full
+    mx-8
+    h-20
+    text-lg
+    flex flex-col
+    justify-center
+    items-center
+    mb-4
+    rounded-lg
+    hover:opacity-50;
+  }
+
+  .btn-form {
+    @apply flex
+    justify-center
+    py-2
+    px-4
+    border border-transparent
+    text-sm
+    rounded-md
+    text-primary
+    bg-secondary
+    hover:bg-indigo-500
+    focus:outline-none
+    focus:border-indigo-700
+    focus:ring-indigo-600
+    transition
+    duration-150
+    ease-in-out
+    font-bold
+    shadow-lg
+    w-full;
+  }
+  .btn-enter {
+    @apply flex
+    justify-center
+    py-3.5
+    px-4
+    border border-transparent
+    text-sm
+    rounded-md
+    text-primary
+    bg-secondary
+    hover:bg-indigo-500
+    focus:outline-none
+    focus:border-indigo-700
+    focus:ring-indigo-600
+    transition
+    duration-150
+    ease-in-out
+    font-bold
+    shadow-lg
+    w-full;
+  }
+
+  .glass-blue {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    z-index: 2;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border: 2px solid rgba(25, 0, 247, 0.2);
+    background: rgba(25, 0, 247, 0.5);
+  }
+}
+
+:root {
+  @apply light;
+}
+
+.dark {
+  --color-bg-primary: #0a284c;
+  --color-bg-content: #031e3f;
+  --color-bg-secondary: #0b0f17;
+  --color-text-primary: #f9fafc;
+  --color-text-secondary: #93a4b8;
+  --color-text-accent: #08aecf;
+}
+
+.light {
+  --color-bg-primary: #e0e6e6;
+  --color-bg-content: #f5fafa;
+  --color-bg-secondary: #17e9e1;
+  --color-text-primary: #171718;
+  --color-text-secondary: #3333af;
+  --color-text-accent: #1d4ed8;
+}
