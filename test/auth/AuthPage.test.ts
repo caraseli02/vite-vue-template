@@ -1,10 +1,10 @@
 import { render, fireEvent } from "@testing-library/vue";
 import { expect, it, describe } from "vitest";
-import SignIn from "~/components/auth/SignIn.vue";
+import AuthPage from "~/pages/AuthPage.vue";
 
 describe("AuthPage", () => {
   it("mount component", async () => {
-    const { getByText } = render(SignIn);
+    const { getByText } = render(AuthPage);
 
     getByText("Sign in");
   });

@@ -4,15 +4,18 @@ import { computed } from 'vue'
 import { LogoutIcon, UserCircleIcon } from '@heroicons/vue/outline'
 import PrimaryBtn from '~/components/buttons/PrimaryBtn.vue'
 import ThemeToggler from '~/components/Navigation/ThemeToggler.vue'
+//PINIA
+import { useAuthUserStore } from "~/stores/AuthUserStore";
 
-// const store = useStore();
+const authStore = useAuthUserStore();
+
 // const router = useRouter();
 
 // access an state/getters from the store
 // const userId = computed(() => store.state.auth.authId);
-const userId = computed(() => '')
+const userId = computed(() => authStore.userId)
 // const user = computed(() => store.getters["auth/authUser"]);
-const user = computed(() => 'user')
+const user = computed(() => authStore.user)
 
 // access an action/mutations from the store
 // const toggleSidebar = () => store.dispatch("toggleSidebar");

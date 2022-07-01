@@ -7,14 +7,11 @@ import {
 import { Form as VeeForm, configure, defineRule } from "vee-validate";
 import { email, required } from "@vee-validate/rules";
 import { localize } from "@vee-validate/i18n";
-import { auth } from "~/helpers/firebase";
 
 //PINIA
 import { useAuthUserStore } from "~/stores/AuthUserStore";
 
 const authStore = useAuthUserStore();
-
-console.log("auth", auth);
 
 defineRule("required", required);
 defineRule("email", email);
