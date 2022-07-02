@@ -28,5 +28,14 @@ export default defineConfig({
       ],
       vueTemplate: true,
     }),
+    
   ],
+
+  test: {
+    include: ['test/**/*.test.ts'],
+    environment: 'jsdom',
+    deps: {
+      inline: ['@vue', '@vueuse', 'vue-demi'],
+    },
+  },
 })
