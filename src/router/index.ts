@@ -19,35 +19,35 @@ const routes = [
     component: () => import("~/pages/AuthPage.vue"),
     props: { showSignUp: true },
   },
-  {
-    path: "/dashboard",
-    name: "Dashboard",
-    component: () => import("~/pages/DashboardPage.vue"),
-    meta: {
-      requiresAuth: true,
-    },
-  },
-  {
-    path: "/info",
-    name: "Info",
-    component: () => import("~/pages/AttendsList.vue"),
-    meta: {
-      requiresAuth: true,
-    },
-  },
-  {
-    path: "/perfil",
-    name: "Perfil",
-    component: () => import("~/pages/UserPerfil.vue"),
-    meta: {
-      requiresAuth: true,
-    },
-  },
-  {
-    path: "/:pathMatch(.*)*",
-    name: "NotFound",
-    component: () => import("~/pages/Error404Page.vue"),
-  },
+  // {
+  //   path: "/dashboard",
+  //   name: "Dashboard",
+  //   component: () => import("~/pages/DashboardPage.vue"),
+  //   meta: {
+  //     requiresAuth: true,
+  //   },
+  // },
+  // {
+  //   path: "/info",
+  //   name: "Info",
+  //   component: () => import("~/pages/AttendsList.vue"),
+  //   meta: {
+  //     requiresAuth: true,
+  //   },
+  // },
+  // {
+  //   path: "/perfil",
+  //   name: "Perfil",
+  //   component: () => import("~/pages/UserPerfil.vue"),
+  //   meta: {
+  //     requiresAuth: true,
+  //   },
+  // },
+  // {
+  //   path: "/:pathMatch(.*)*",
+  //   name: "NotFound",
+  //   component: () => import("~/pages/Error404Page.vue"),
+  // },
   {
     path: "/aviso-legal",
     name: "aviso-legal",

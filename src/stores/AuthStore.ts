@@ -1,36 +1,47 @@
-// src/stores/AuthStore.js (Pinia)
-import { defineStore } from 'pinia'
-import { getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { defineStore } from "pinia";
+import {
+  AuthProvider,
+  browserSessionPersistence,
+  User,
+  getAuth,
+  signInWithPopup,
+  signInWithEmailAndPassword
+} from 'firebase/auth'
 
-const auth = getAuth();
+//TYPES
+import { Provider } from '~/types/auth'
 
-type SignIn = {
-    email: string,
-    password: string
-}
-
-export const useAuthStore = defineStore('AuthStore', {
+export const useAuthUserStore = defineStore("AuthUserStore", {
   state: () => {
     return {
-      authId: null,
-      authUserUnsubscribe: null,
-      authObserverUnsubscribe: null
-    }
-  },
-  getters: {
-    authUser: (state) =>{ 
-      return {
-        authId: state.authId,
-      } // get authId on `state`
-     }
+      user: null as User | null,
+      provider: null as AuthProvider | null,
+      
+    };
   },
   actions: {
-    signInWithEmailAndPassword ({ email, password }: SignIn) {
-      return signInWithEmailAndPassword(auth, email, password)
+    async signInWithEmailAndPassword(email: string, password: string) {
+      const auth = getAuth()
+      await signInWithEmailAndPassword(auth, email, password).then((user) => {
+        this.user = auth.currentUser;
+      });
     },
-    async signOut () {
-      await signOut(auth)
-      this.authId = null
-    }
-  }
-})
+    async loginWithFirebase (provider: AuthProvider, providedBy: Provider) {
+      const auth = getAuth()
+      await auth.setPersistence(browserSessionPersistence)
+      return await signInWithPopup(auth, provider)
+    },
+    async signOut() {
+      await getAuth().signOut()
+      this.user = null;
+    },
+  },
+  getters: {
+    authUser: (state) => {
+      return state.user;
+    },
+    userId: (state) => {
+      return state.user?.uid;
+    },
+  },
+});
