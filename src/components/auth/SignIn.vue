@@ -1,43 +1,62 @@
 <script setup lang="ts">
-import { ArrowCircleRightIcon, KeyIcon, XCircleIcon } from '@heroicons/vue/outline'
-import { Form as VeeForm, configure, defineRule } from 'vee-validate'
-import { email, required } from '@vee-validate/rules'
-import { localize } from '@vee-validate/i18n'
+import {
+  ArrowCircleRightIcon,
+  KeyIcon,
+  XCircleIcon,
+} from "@heroicons/vue/outline";
+import { Form as VeeForm, configure, defineRule } from "vee-validate";
+import { email, required } from "@vee-validate/rules";
+import { localize } from "@vee-validate/i18n";
 
-defineRule('required', required)
-defineRule('email', email)
+//PINIA
+import { useAuthUserStore } from "~/stores/AuthUserStore";
+//Router
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+const authStore = useAuthUserStore();
+
+defineRule("required", required);
+defineRule("email", email);
 
 configure({
-  generateMessage: localize('en', {
+  generateMessage: localize("en", {
     messages: {
-      required: '{field} es requerido',
-      email: '{field} debe ser un correo electrónico válido',
+      required: "{field} es requerido",
+      email: "{field} debe ser un correo electrónico válido",
     },
   }),
-})
+});
 
 interface Form {
-  email: string
-  password: string
+  email: string;
+  password: string;
 }
 
-const showMovilSignIn = $ref(false)
+const showMovilSignIn = $ref(false);
 const form: Form = $ref({
-  email: '',
-  password: '',
-})
-const showForgotPopUp = $ref(false)
+  email: "",
+  password: "",
+});
+const showForgotPopUp = $ref(false);
 
 const signInWithEmailAndPassword = (form: Form) => {
-  // console.log(form)
-}
+  authStore.signInWithEmailAndPassword(form.email, form.password).then(() => {
+    router.push({ name: 'Home' }); 
+  });
+};
 </script>
 
 <template>
   <section>
     <div id="signIn" class="flex-grid glass justify-center relative">
       <transition-group tag="span" name="slide-fade">
-        <VeeForm v-if="!showForgotPopUp" class @submit="signInWithEmailAndPassword(form)">
+        <VeeForm
+          v-if="!showForgotPopUp"
+          class
+          @submit="signInWithEmailAndPassword(form)"
+        >
           <AppFormField
             v-model="form.email"
             label="Email"
@@ -54,7 +73,11 @@ const signInWithEmailAndPassword = (form: Form) => {
           />
 
           <PrimaryBtn class="mt-4">
-            <button id="loginBtn" type="submit" class="w-40 flex justify-center">
+            <button
+              id="loginBtn"
+              type="submit"
+              class="w-40 flex justify-center"
+            >
               Entrar
               <ArrowCircleRightIcon class="h-5 w-5 ml-4" />
             </button>
