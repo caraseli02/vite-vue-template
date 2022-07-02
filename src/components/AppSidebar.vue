@@ -1,20 +1,30 @@
 <script setup lang="ts">
 import { computed, watch, onMounted } from "vue";
-// import { useStore } from "vuex";
-import legalLinks from "~/pages/Legal/legalLinks.vue";
-import PrimaryBtn from "~/components/buttons/PrimaryBtn.vue";
-import { ClockIcon, HomeIcon, ExclamationIcon, LogoutIcon } from "@heroicons/vue/outline";
+//PINIA
+import { useAuthUserStore } from "~/stores/AuthUserStore";
+import { useSidebarStore } from "~/stores/SidebarStore";
+
+import {
+  ClockIcon,
+  HomeIcon,
+  ExclamationIcon,
+  LogoutIcon,
+} from "@heroicons/vue/outline";
 import Swal from "sweetalert2";
 
-// const store = useStore();
+//Router
+import { useRouter } from "vue-router";
 
-const authUser = computed(() => {
-  return null;
-});
-const showSidebar = computed(() => true);
+const router = useRouter();
+
+const authStore = useAuthUserStore();
+const sidebarStore = useSidebarStore();
+
+const authUser = computed(() => authStore.authUser);
+const showSidebar = computed(() => sidebarStore.showSidebar);
 
 const workplaceList = computed(() => {
-  return null
+  return null;
   // return Array.isArray(authUser.workplace)
   //   ? authUser.value?.workplace
   //   : [authUser.value?.workplace];
@@ -28,11 +38,13 @@ watch(
     //   else document.body.style.removeProperty("overflow");
     // }
   },
-  { immediate: true, deep: true },
+  { immediate: true, deep: true }
 );
 
-const toggleSidebar = () => "toggleSidebar";
-// const signOut = () => "auth/signOut";
+const toggleSidebar = () => {
+  sidebarStore.toggleSidebar();
+};
+const signOut = () => authStore.signOut();
 const deleteUser = async () => {
   await Swal.fire({
     title: "Estas seguro?",
@@ -54,9 +66,9 @@ const deleteUser = async () => {
 };
 const closeSession = async () => {
   await toggleSidebar();
-  // await signOut().then(() => {
-  //   router.replace("auth");
-  // });
+  await signOut().then(() => {
+    router.replace({ name: "Auth" });
+  });
 };
 
 onMounted(() => {
@@ -97,10 +109,14 @@ onMounted(() => {
       <div class="overflow-hidden shadow dark:shadow-gray-400 max-w-xs pt-6">
         <div class="text-center px-3 pb-6 pt-2">
           <h3 data-cy="name" class="text-primary text-xl">
-            {{ authUser.name }}
+            {{ "Usuario" }}
           </h3>
-          <h3 v-if="'surname' in authUser" data-cy="surname" class="text-primary text-xl">
-            {{ authUser.surname }}
+          <h3
+            v-if="'surname' in authUser"
+            data-cy="surname"
+            class="text-primary text-xl"
+          >
+            {{ "surname" }}
           </h3>
           <p data-cy="email" class="mt-2 font-sans font-light text-primary">
             {{ authUser.email }}
@@ -137,14 +153,16 @@ onMounted(() => {
             </svg>
           </div>
         </div>
-        <div class="flex border-b-2 border-gray-500 items-center text-primary p-2">
+        <div
+          class="flex border-b-2 border-gray-500 items-center text-primary p-2"
+        >
           <div class="flex">
             <span
               v-if="'schedule' in authUser"
               class="block font-bold text-primary mt-2 text-xl"
-              >
+            >
               <!-- {{ authUser["schedule"] }} horas -->
-              </span>
+            </span>
           </div>
         </div>
       </div>
@@ -175,7 +193,9 @@ onMounted(() => {
         </div>
       </div>
       <legalLinks class="mt-4 my-2" />
-      <div class="absolute ml-3 mb-8 bottom-0 inline-flex flex-col justify-center">
+      <div
+        class="absolute ml-3 mb-8 bottom-0 inline-flex flex-col justify-center"
+      >
         <PrimaryBtn class="mb-3" data-cy="sidebarLogout" @click="closeSession">
           <LogoutIcon class="text-primary mr-4 ml-2 w-6 h-6" />
           <span class="text-primary pl-3 flex justify-center items-center">

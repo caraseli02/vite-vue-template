@@ -10,7 +10,7 @@ import "./tailwind.css";
 
 const pinia = createPinia();
 
-app.use(Router);
 app.use(pinia);
+app.use(Router);
 
 app.mount("#app");

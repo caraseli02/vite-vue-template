@@ -10,6 +10,10 @@ import { localize } from "@vee-validate/i18n";
 
 //PINIA
 import { useAuthUserStore } from "~/stores/AuthUserStore";
+//Router
+import { useRouter } from "vue-router";
+
+const router = useRouter();
 
 const authStore = useAuthUserStore();
 
@@ -38,7 +42,9 @@ const form: Form = $ref({
 const showForgotPopUp = $ref(false);
 
 const signInWithEmailAndPassword = (form: Form) => {
-  authStore.signInWithEmailAndPassword(form.email, form.password);
+  authStore.signInWithEmailAndPassword(form.email, form.password).then(() => {
+    router.push({ name: 'Home' }); 
+  });
 };
 </script>
 
