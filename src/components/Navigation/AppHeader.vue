@@ -5,7 +5,7 @@ import { LogoutIcon, UserCircleIcon } from "@heroicons/vue/outline";
 import PrimaryBtn from "~/components/buttons/PrimaryBtn.vue";
 import ThemeToggler from "~/components/Navigation/ThemeToggler.vue";
 //PINIA
-import { useAuthUserStore } from "~/stores/AuthUserStore";
+import { useAuthStore } from "~/stores/AuthStore";
 import { useSidebarStore } from "~/stores/SidebarStore";
 
 //Router
@@ -13,7 +13,7 @@ import { useRouter } from "vue-router";
 
 const router = useRouter();
 
-const authStore = useAuthUserStore();
+const authStore = useAuthStore();
 const sidebarStore = useSidebarStore();
 
 // const router = useRouter();

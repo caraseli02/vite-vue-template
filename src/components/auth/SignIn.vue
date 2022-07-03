@@ -9,13 +9,13 @@ import { email, required } from "@vee-validate/rules";
 import { localize } from "@vee-validate/i18n";
 
 //PINIA
-import { useAuthUserStore } from "~/stores/AuthUserStore";
+import { useAuthStore } from "~/stores/AuthStore";
 //Router
 import { useRouter } from "vue-router";
 
 const router = useRouter();
 
-const authStore = useAuthUserStore();
+const authStore = useAuthStore();
 
 defineRule("required", required);
 defineRule("email", email);

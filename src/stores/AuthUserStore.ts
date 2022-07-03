@@ -6,7 +6,7 @@ import {
   signOut,
 } from "../helpers/firebase";
 
-export const useAuthUserStore = defineStore("AuthUserStore", {
+export const useAuthStore = defineStore("AuthStore", {
   state: () => {
     return {
       user: null as User | null,

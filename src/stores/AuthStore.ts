@@ -7,29 +7,29 @@ import {
   signInWithPopup,
   signInWithEmailAndPassword
 } from 'firebase/auth'
+import { auth } from '../helpers/firebase'
 
 //TYPES
 import { Provider } from '~/types/auth'
 
-export const useAuthUserStore = defineStore("AuthUserStore", {
+export const useAuthStore = defineStore("AuthStore", {
   state: () => {
     return {
       user: null as User | null,
       provider: null as AuthProvider | null,
-      
     };
   },
   actions: {
     async signInWithEmailAndPassword(email: string, password: string) {
-      const auth = getAuth()
       await signInWithEmailAndPassword(auth, email, password).then((user) => {
         this.user = auth.currentUser;
       });
     },
     async loginWithFirebase (provider: AuthProvider, providedBy: Provider) {
-      const auth = getAuth()
       await auth.setPersistence(browserSessionPersistence)
-      return await signInWithPopup(auth, provider)
+      return await signInWithPopup(auth, provider).then((user) => {
+        this.user = auth.currentUser;
+      });
     },
     async signOut() {
       await getAuth().signOut()

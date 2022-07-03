@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import { useAuthUserStore } from "~/stores/AuthUserStore";
+import { useAuthStore } from "~/stores/AuthStore";
 
 const routes = [
   {
@@ -79,7 +79,7 @@ export const Router = createRouter({
 Router.beforeEach(async (to) => {
   // await store.dispatch('auth/initAuthentication')
   // store.dispatch('unsubscribeAllSnapshots')
-  const authStore = useAuthUserStore();
+  const authStore = useAuthStore();
   if (to.meta.requiresAuth && !authStore.authUser) {
     return { name: "Auth", q: { redirectTo: to.path } };
   }

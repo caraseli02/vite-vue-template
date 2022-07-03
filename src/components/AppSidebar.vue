@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, watch, onMounted } from "vue";
 //PINIA
-import { useAuthUserStore } from "~/stores/AuthUserStore";
+import { useAuthStore } from "~/stores/AuthStore";
 import { useSidebarStore } from "~/stores/SidebarStore";
 
 import {
@@ -17,7 +17,7 @@ import { useRouter } from "vue-router";
 
 const router = useRouter();
 
-const authStore = useAuthUserStore();
+const authStore = useAuthStore();
 const sidebarStore = useSidebarStore();
 
 const authUser = computed(() => authStore.authUser);
