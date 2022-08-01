@@ -1,23 +1,23 @@
 <script setup lang="ts">
-import MainNav from "~/components/Navigation/MainNav.vue";
-import AppHeader from "~/components/Navigation/AppHeader.vue";
-import AppSidebar from "~/components/AppSidebar.vue";
+import { computed } from 'vue'
+import MainNav from '~/components/Navigation/MainNav.vue'
+import AppHeader from '~/components/Navigation/AppHeader.vue'
+import AppSidebar from '~/components/AppSidebar.vue'
 // import skeletonLoade from "~/components/skeletonLoader.vue";
 
 // import { useStore } from "vuex";
-import { computed } from "vue";
 // const store = useStore();
 
 // const user = computed(() => store.getters["auth/authUser"]);
 const user = computed(() => {
   return {
-    name: "Juan",
-    surname: "Perez",
-    email: "",
-    id: "1",
-    workplace: "1",
-    };
-});
+    name: 'Juan',
+    surname: 'Perez',
+    email: '',
+    id: '1',
+    workplace: '1',
+  }
+})
 </script>
 
 <template>

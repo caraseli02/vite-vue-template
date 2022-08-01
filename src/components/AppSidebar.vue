@@ -1,34 +1,34 @@
 <script setup lang="ts">
-import { computed, watch, onMounted } from "vue";
-//PINIA
-import { useAuthStore } from "~/stores/AuthStore";
-import { useSidebarStore } from "~/stores/SidebarStore";
+import { computed, onMounted, watch } from 'vue'
+// PINIA
 
 import {
   ClockIcon,
-  HomeIcon,
   ExclamationIcon,
+  HomeIcon,
   LogoutIcon,
-} from "@heroicons/vue/outline";
-import Swal from "sweetalert2";
+} from '@heroicons/vue/outline'
+import Swal from 'sweetalert2'
 
-//Router
-import { useRouter } from "vue-router";
+// Router
+import { useRouter } from 'vue-router'
+import { useSidebarStore } from '~/stores/SidebarStore'
+import { useAuthStore } from '~/stores/AuthStore'
 
-const router = useRouter();
+const router = useRouter()
 
-const authStore = useAuthStore();
-const sidebarStore = useSidebarStore();
+const authStore = useAuthStore()
+const sidebarStore = useSidebarStore()
 
-const authUser = computed(() => authStore.authUser);
-const showSidebar = computed(() => sidebarStore.showSidebar);
+const authUser = computed(() => authStore.authUser)
+const showSidebar = computed(() => sidebarStore.showSidebar)
 
 const workplaceList = computed(() => {
-  return null;
+  return null
   // return Array.isArray(authUser.workplace)
   //   ? authUser.value?.workplace
   //   : [authUser.value?.workplace];
-});
+})
 
 watch(
   showSidebar,
@@ -38,22 +38,22 @@ watch(
     //   else document.body.style.removeProperty("overflow");
     // }
   },
-  { immediate: true, deep: true }
-);
+  { immediate: true, deep: true },
+)
 
 const toggleSidebar = () => {
-  sidebarStore.toggleSidebar();
-};
-const signOut = () => authStore.signOut();
+  sidebarStore.toggleSidebar()
+}
+const signOut = () => authStore.signOut()
 const deleteUser = async () => {
   await Swal.fire({
-    title: "Estas seguro?",
-    text: "No podras recuperarlo!",
-    icon: "warning",
+    title: 'Estas seguro?',
+    text: 'No podras recuperarlo!',
+    icon: 'warning',
     showCancelButton: true,
-    confirmButtonColor: "#3085d6",
-    cancelButtonColor: "#d33",
-    confirmButtonText: "Si, borrar!",
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Si, borrar!',
   }).then((result) => {
     if (result.isConfirmed) {
       // store.dispatch("auth/deleteAccount").then(() => {
@@ -62,20 +62,21 @@ const deleteUser = async () => {
       //   Swal.fire("Deleted!", "Tu cueanta a sido borrada.", "success");
       // });
     }
-  });
-};
+  })
+}
 const closeSession = async () => {
-  await toggleSidebar();
+  await toggleSidebar()
   await signOut().then(() => {
-    router.replace({ name: "Auth" });
-  });
-};
+    router.replace({ name: 'Auth' })
+  })
+}
 
 onMounted(() => {
-  document.addEventListener("keydown", (e) => {
-    if (e.keyCode == 27 && showSidebar) toggleSidebar;
-  });
-});
+  document.addEventListener('keydown', (e) => {
+    if (e.keyCode === 27 && showSidebar)
+      toggleSidebar
+  })
+})
 </script>
 
 <template>
@@ -186,8 +187,7 @@ onMounted(() => {
                 v-for="(place, index) in workplaceList"
                 :key="index"
                 class="block cursor-pointer text-xl font-bold text-primary hover:bg-indigo-800 hover:border-2 rounded-lg"
-                >{{ place }}</span
-              >
+              >{{ place }}</span>
             </div>
           </div>
         </div>
@@ -204,9 +204,7 @@ onMounted(() => {
         </PrimaryBtn>
         <PrimaryBtn id="deleteUser" color="pinkOrange" @click="deleteUser">
           <ExclamationIcon class="text-yellow-300 mr-4 ml-2 w-6 h-6" />
-          <span class="text-primary flex justify-center items-center"
-            >Borrar la cuenta</span
-          >
+          <span class="text-primary flex justify-center items-center">Borrar la cuenta</span>
         </PrimaryBtn>
       </div>
     </aside>

@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import legalLinks from '~/pages/Legal/legalLinks.vue'
+</script>
+
 <template>
   <section
     class="content-width mx-auto py-16 px-6 md:px-0 bg-primary text-primary"
@@ -7,7 +11,7 @@
     </h1>
     <div class="flex flex-col lg:flex-row justify-between">
       <div class="post w-full lg:w-8/12 text-lg">
-        <!--Content-->
+        <!-- Content -->
         <h2>
           <b>1.&nbsp; Alcance</b>
         </h2>
@@ -201,9 +205,7 @@
           <a
             href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home.show&amp;lng=ES"
           >
-            <span style="font-weight: 300"
-              >https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home.show&amp;lng=ES</span
-            >
+            <span style="font-weight: 300">https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home.show&amp;lng=ES</span>
           </a>
           <span style="font-weight: 300">.</span>
         </p>
@@ -212,9 +214,7 @@
     </div>
   </section>
 </template>
-<script setup lang="ts">
-  import legalLinks from '~/pages/Legal/legalLinks.vue'
-</script>
+
 <style scoped>
   h1,
   h2 {

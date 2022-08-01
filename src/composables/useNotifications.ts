@@ -1,9 +1,9 @@
 import Swal from 'sweetalert2'
 import { data } from '../assets/firebase-errors.json'
 
-type Keys = keyof typeof data;
+type Keys = keyof typeof data
 
-const showFirebaseErr = (error: Keys ) => {
+const showFirebaseErr = (error: Keys) => {
   Swal.fire({
     icon: 'error',
     title: 'Oops...',

@@ -1,3 +1,30 @@
+<script setup lang="ts">
+import {
+  ChartBarIcon,
+  ClockIcon,
+  UserCircleIcon,
+} from '@heroicons/vue/outline'
+import PrimaryBtn from '~/components/buttons/PrimaryBtn.vue'
+
+const links = [
+  {
+    text: 'Fichar',
+    path: '/dashboard',
+    iconName: ClockIcon,
+  },
+  {
+    text: 'Asistencia',
+    path: '/info',
+    iconName: ChartBarIcon,
+  },
+  {
+    text: 'Mi perfil',
+    path: '/perfil',
+    iconName: UserCircleIcon,
+  },
+]
+</script>
+
 <template>
   <article class="max-h-screen flex flex-col justify-aroud items-center mt-8">
     <h1 class="text-center mb-4 font-bold text-primary text-2xl">
@@ -21,30 +48,3 @@
     </section>
   </article>
 </template>
-
-<script setup lang="ts">
-  import {
-    ClockIcon,
-    ChartBarIcon,
-    UserCircleIcon
-  } from '@heroicons/vue/outline'
-  import PrimaryBtn from '~/components/buttons/PrimaryBtn.vue'
-
-  const links = [
-    {
-      text: 'Fichar',
-      path: '/dashboard',
-      iconName: ClockIcon
-    },
-    {
-      text: 'Asistencia',
-      path: '/info',
-      iconName: ChartBarIcon
-    },
-    {
-      text: 'Mi perfil',
-      path: '/perfil',
-      iconName: UserCircleIcon
-    }
-  ]
-</script>

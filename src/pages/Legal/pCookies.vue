@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import legalLinks from '~/pages/Legal/legalLinks.vue'
+</script>
+
 <template>
   <section>
     <!-- article -->
@@ -11,7 +15,7 @@
         <div class="w-full text-xs" />
         <div class="flex flex-col lg:flex-row justify-between">
           <div class="post w-full lg:w-8/12 text-lg">
-            <!--Content-->
+            <!-- Content -->
 
             <p>
               Ponemos a disposición del usuario la presente política de cookies,
@@ -172,7 +176,7 @@
                             Addthis para permitir a los visitantes la compartición una página
                             a través de Facebook, Twitter, correo electrónico y otros medios.
                             Pueden obtener más información aquí.
-            </p>-->
+            </p> -->
 
             <h2>¿Cómo deshabilitar o eliminar las cookies?</h2>
 
@@ -199,24 +203,21 @@
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Configuración de cookies para
               <a
                 href="https://support.google.com/chrome/bin/answer.py?hl=es&amp;answer=95647"
-                >Google Chrome</a
-              >
+              >Google Chrome</a>
             </p>
 
             <p>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Configuración de cookies para
               <a
                 href="https:// https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-que-los-sitios-we"
-                >Mozilla Firefox</a
-              >
+              >Mozilla Firefox</a>
             </p>
 
             <p>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Configuración de cookies para
               <a
                 href="https://windows.microsoft.com/es-es/windows7/how-to-manage-cookies-in-internet-explorer-9"
-                >Internet Explorer</a
-              >
+              >Internet Explorer</a>
             </p>
 
             <p>
@@ -247,9 +248,7 @@
     <!-- /article -->
   </section>
 </template>
-<script setup lang="ts">
-  import legalLinks from '~/pages/Legal/legalLinks.vue'
-</script>
+
 <style scoped>
   h1,
   h2 {

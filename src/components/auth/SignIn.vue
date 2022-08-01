@@ -3,49 +3,49 @@ import {
   ArrowCircleRightIcon,
   KeyIcon,
   XCircleIcon,
-} from "@heroicons/vue/outline";
-import { Form as VeeForm, configure, defineRule } from "vee-validate";
-import { email, required } from "@vee-validate/rules";
-import { localize } from "@vee-validate/i18n";
+} from '@heroicons/vue/outline'
+import { Form as VeeForm, configure, defineRule } from 'vee-validate'
+import { email, required } from '@vee-validate/rules'
+import { localize } from '@vee-validate/i18n'
 
-//PINIA
-import { useAuthStore } from "~/stores/AuthStore";
-//Router
-import { useRouter } from "vue-router";
+// PINIA
+import { useRouter } from 'vue-router'
+import { useAuthStore } from '~/stores/AuthStore'
+// Router
 
-const router = useRouter();
+const router = useRouter()
 
-const authStore = useAuthStore();
+const authStore = useAuthStore()
 
-defineRule("required", required);
-defineRule("email", email);
+defineRule('required', required)
+defineRule('email', email)
 
 configure({
-  generateMessage: localize("en", {
+  generateMessage: localize('en', {
     messages: {
-      required: "{field} es requerido",
-      email: "{field} debe ser un correo electrónico válido",
+      required: '{field} es requerido',
+      email: '{field} debe ser un correo electrónico válido',
     },
   }),
-});
+})
 
 interface Form {
-  email: string;
-  password: string;
+  email: string
+  password: string
 }
 
-const showMovilSignIn = $ref(false);
+const showMovilSignIn = $ref(false)
 const form: Form = $ref({
-  email: "",
-  password: "",
-});
-const showForgotPopUp = $ref(false);
+  email: '',
+  password: '',
+})
+const showForgotPopUp = $ref(false)
 
 const signInWithEmailAndPassword = (form: Form) => {
   authStore.signInWithEmailAndPassword(form.email, form.password).then(() => {
-    router.push({ name: 'Home' }); 
-  });
-};
+    router.push({ name: 'Home' })
+  })
+}
 </script>
 
 <template>

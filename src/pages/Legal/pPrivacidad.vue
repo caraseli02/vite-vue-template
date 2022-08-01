@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import legalLinks from '~/pages/Legal/legalLinks.vue'
+</script>
+
 <template>
   <section>
     <!-- article -->
@@ -11,7 +15,7 @@
         <div class="w-full text-xs" />
         <div class="flex flex-col lg:flex-row justify-between">
           <div class="post w-full lg:w-8/12 text-lg">
-            <!--Content-->
+            <!-- Content -->
 
             <h2>1.1.Identificación del Responsable del Tratamiento</h2>
             <p>
@@ -107,8 +111,7 @@
                 Puede obtener más información en
                 <a
                   href="https://www.privacyshield.gov/participant?id=a2zt0000000TOjeAAG&amp;status=Active"
-                  >https://www.privacyshield.gov/participant?id=a2zt0000000TOjeAAG&amp;status=Active</a
-                >
+                >https://www.privacyshield.gov/participant?id=a2zt0000000TOjeAAG&amp;status=Active</a>
               </span>
             </p>
             <p>&nbsp;</p>
@@ -207,9 +210,7 @@
     <legalLinks />
   </section>
 </template>
-<script setup lang="ts">
-  import legalLinks from '~/pages/Legal/legalLinks.vue'
-</script>
+
 <style scoped>
   h1,
   h2 {

@@ -1,3 +1,18 @@
+<script setup lang="ts">
+const links = [
+  { url: '/aviso-legal', text: 'Aviso Legal' },
+  { url: '/politica-de-cookies', text: 'Política de cookies' },
+  {
+    url: '/politica-privacidad',
+    text: 'Política de privacidad',
+  },
+  {
+    url: '/terminos-y-condiciones',
+    text: 'Términos y condiciones',
+  },
+]
+</script>
+
 <template>
   <div class="flex flex-wrap justify-start items-start pt-4 ml-2">
     <router-link
@@ -13,18 +28,5 @@
     </router-link>
   </div>
 </template>
-<script setup lang="ts">
-  const links = [
-          { url: '/aviso-legal', text: 'Aviso Legal' },
-          { url: '/politica-de-cookies', text: 'Política de cookies' },
-          {
-            url: '/politica-privacidad',
-            text: 'Política de privacidad'
-          },
-          {
-            url: '/terminos-y-condiciones',
-            text: 'Términos y condiciones'
-          }
-        ]
-</script>
+
 <style></style>

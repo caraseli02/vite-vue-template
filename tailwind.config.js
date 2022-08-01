@@ -7,13 +7,13 @@ module.exports = {
       backgroundColor: {
         primary: 'var(--color-bg-primary)',
         secondary: 'var(--color-bg-secondary)',
-        content: 'var(--color-bg-content)'
+        content: 'var(--color-bg-content)',
       },
       textColor: {
         accent: 'var(--color-text-accent)',
         primary: 'var(--color-text-primary)',
-        secondary: 'var(--color-text-secondary)'
-      }
-    }
-  }
+        secondary: 'var(--color-text-secondary)',
+      },
+    },
+  },
 }

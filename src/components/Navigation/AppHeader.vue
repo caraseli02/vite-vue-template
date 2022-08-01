@@ -1,36 +1,36 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed } from 'vue'
 // import { useRouter } from "vue-router";
-import { LogoutIcon, UserCircleIcon } from "@heroicons/vue/outline";
-import PrimaryBtn from "~/components/buttons/PrimaryBtn.vue";
-import ThemeToggler from "~/components/Navigation/ThemeToggler.vue";
-//PINIA
-import { useAuthStore } from "~/stores/AuthStore";
-import { useSidebarStore } from "~/stores/SidebarStore";
+import { LogoutIcon, UserCircleIcon } from '@heroicons/vue/outline'
+import { useRouter } from 'vue-router'
+import PrimaryBtn from '~/components/buttons/PrimaryBtn.vue'
+import ThemeToggler from '~/components/Navigation/ThemeToggler.vue'
+// PINIA
+import { useAuthStore } from '~/stores/AuthStore'
+import { useSidebarStore } from '~/stores/SidebarStore'
 
-//Router
-import { useRouter } from "vue-router";
+// Router
 
-const router = useRouter();
+const router = useRouter()
 
-const authStore = useAuthStore();
-const sidebarStore = useSidebarStore();
+const authStore = useAuthStore()
+const sidebarStore = useSidebarStore()
 
 // const router = useRouter();
 
 // access an state/getters from the store
 // const userId = computed(() => store.state.auth.authId);
-const userId = computed(() => authStore.userId);
+const userId = computed(() => authStore.userId)
 // const user = computed(() => store.getters["auth/authUser"]);
-const user = computed(() => authStore.authUser);
+const user = computed(() => authStore.authUser)
 
 // access an action/mutations from the store
-const toggleSidebar = () => sidebarStore.toggleSidebar();
+const toggleSidebar = () => sidebarStore.toggleSidebar()
 
 const closeSession = async () =>
   await authStore.signOut().then(() => {
-    router.push({ name: "Auth" });
-  });
+    router.push({ name: 'Auth' })
+  })
 
 // store.dispatch("attendance/fetchAllAttends")
 // store.dispatch("users/fetchAllUsers");

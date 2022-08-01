@@ -1,3 +1,24 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+import { IdentificationIcon, LoginIcon } from '@heroicons/vue/outline'
+import SignIn from '~/components/auth/SignIn.vue'
+import PrimaryBtn from '~/components/buttons/PrimaryBtn.vue'
+import Register from '~/components/auth/SignUp.vue'
+
+const props = defineProps({
+  showSignUp: {
+    type: Boolean,
+    default: false,
+  },
+})
+
+const isLogin = ref(!props.showSignUp)
+
+const setIsLogin = (nextVal: boolean) => {
+  isLogin.value = nextVal
+}
+</script>
+
 <template>
   <section class="max-w-sm mx-auto mt-10">
     <div class="mb-4">
@@ -21,27 +42,6 @@
     </Transition>
   </section>
 </template>
-
-<script setup lang="ts">
-  import SignIn from '~/components/auth/SignIn.vue'
-  import PrimaryBtn from '~/components/buttons/PrimaryBtn.vue'
-  import Register from '~/components/auth/SignUp.vue'
-  import { ref } from 'vue'
-  import { IdentificationIcon, LoginIcon } from '@heroicons/vue/outline'
-
-  const props = defineProps({
-    showSignUp: {
-      type: Boolean,
-      default: false
-    }
-  })
-
-  const isLogin = ref(!props.showSignUp)
-
-  const setIsLogin = (nextVal: boolean) => {
-    isLogin.value = nextVal
-  }
-</script>
 
 <style scoped>
   .list-enter-active,

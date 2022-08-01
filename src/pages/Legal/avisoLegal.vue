@@ -1,26 +1,30 @@
+<script setup lang="ts">
+import legalLinks from '~/pages/Legal/legalLinks.vue'
+</script>
+
 <template>
   <section class="mx-auto py-6 px-4 md:px-4 bg-primary text-primary">
-    <h1 class="pt-6 pb-4 md:py-16 text-xl font-bold">Aviso legal</h1>
+    <h1 class="pt-6 pb-4 md:py-16 text-xl font-bold">
+      Aviso legal
+    </h1>
     <div class="flex flex-col lg:flex-row justify-between">
       <div class="post w-full lg:w-10/12 text-lg mx-auto">
-        <!--Content-->
+        <!-- Content -->
         <h2>1. &nbsp; Datos identificativos</h2>
         <p>
           Cumpliendo lo establecido en el artículo 10 de la Ley 34/2002, de 11
           de julio, de servicios de la sociedad de la información y de comercio
           electrónico, a continuación, proporcionamos los datos necesarios del
           titular de la página web
-          <a href="https://apimosa-930ed.web.app"
-            >https://apimosa-930ed.web.app/</a
-          >&nbsp; (en adelante, la “Página Web”) prestador del servicio:
+          <a href="https://apimosa-930ed.web.app">https://apimosa-930ed.web.app/</a>&nbsp; (en adelante, la “Página Web”) prestador del servicio:
         </p>
         <p>
           Nombre o denominación social: Apimosa S.L.
-          <br />Número de identidad o identificación fiscal: B41365834
-          <br />Residencia o domicilio: Calle real, 66, Carmona, 41410 , Sevilla
-          (España) <br />Dirección de correo electrónico:
+          <br>Número de identidad o identificación fiscal: B41365834
+          <br>Residencia o domicilio: Calle real, 66, Carmona, 41410 , Sevilla
+          (España) <br>Dirección de correo electrónico:
           <a href="mailto:apimosa@apimosa.es">apimosa@apimosa.es</a>.
-          <br />Teléfono: 954143950 <br />Datos inscripción en Registro
+          <br>Teléfono: 954143950 <br>Datos inscripción en Registro
           Mercantil: inscrita en el Registro Mercantil de .
         </p>
         <p>&nbsp;</p>
@@ -171,9 +175,7 @@
           circunstancias indicadas en esta estipulación.
         </p>
         <p>
-          <strong
-            >&nbsp;b.&nbsp; &nbsp; &nbsp; Responsabilidad del usuario</strong
-          >
+          <strong>&nbsp;b.&nbsp; &nbsp; &nbsp; Responsabilidad del usuario</strong>
         </p>
         <p>
           El Usuario utilizará la Página Web por su propia cuenta y riesgo.
@@ -194,9 +196,7 @@
           civil, administrativo, laboral o penal que pudiera corresponder.
         </p>
         <p>
-          <strong
-            >&nbsp;c. &nbsp; &nbsp; &nbsp; Responsabilidad del titular</strong
-          >
+          <strong>&nbsp;c. &nbsp; &nbsp; &nbsp; Responsabilidad del titular</strong>
         </p>
         <p>
           El titular de la Página Web no se hace responsable de ningún daño
@@ -296,9 +296,7 @@
         </p>
         <p>
           La información completa sobre esta materia se encuentra en nuestra
-          <a href="https://apimosa-930ed.web.app/politica-privacidad/"
-            >Política de Privacidad</a
-          >.
+          <a href="https://apimosa-930ed.web.app/politica-privacidad/">Política de Privacidad</a>.
         </p>
         <p>&nbsp;</p>
         <h2>9. &nbsp; Legislación aplicable</h2>
@@ -320,9 +318,7 @@
     <legalLinks />
   </section>
 </template>
-<script setup lang="ts">
-  import legalLinks from '~/pages/Legal/legalLinks.vue'
-</script>
+
 <style scoped>
   h1,
   h2 {

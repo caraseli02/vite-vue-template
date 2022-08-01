@@ -1,20 +1,20 @@
 // src/stores/AuthStore.js (Pinia)
-import { defineStore } from "pinia";
+import { defineStore } from 'pinia'
 
-export const useSidebarStore = defineStore("SidebarStore", {
+export const useSidebarStore = defineStore('SidebarStore', {
   state: () => {
     return {
       sidebar: false,
-    };
+    }
   },
   getters: {
     showSidebar: (state) => {
-      return state.sidebar;
+      return state.sidebar
     },
   },
   actions: {
     toggleSidebar() {
-      this.sidebar = !this.sidebar;
+      this.sidebar = !this.sidebar
     },
   },
-});
+})

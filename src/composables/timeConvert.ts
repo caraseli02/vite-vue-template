@@ -47,9 +47,9 @@ export const roundTime = (time: string, minutesToRound: number) => {
 
 export const days = ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb', 'dom']
 
-export function getDayName(dateString: string) {
-  Array.isArray(dateString) ? (dateString = dateString[0]) : null
-  const d = new Date(dateString)
-  const dayName = days[d.getDay()]
-  return dayName
-}
+// export function getDayName(dateString: string) {
+//   Array.isArray(dateString) ? (dateString = dateString[0]) : null
+//   const d = new Date(dateString)
+//   const dayName = days[d.getDay()]
+//   return dayName
+// }

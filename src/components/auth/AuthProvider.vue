@@ -1,21 +1,19 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { PhoneIcon, XCircleIcon } from '@heroicons/vue/outline'
-import { GoogleAuthProvider, OAuthProvider, AuthProvider } from 'firebase/auth'
-import { Provider } from '~/types/auth'
-import { useAuthStore } from '~/stores/AuthStore'
+import type { AuthProvider } from 'firebase/auth'
+import { GoogleAuthProvider, OAuthProvider } from 'firebase/auth'
 import { useRouter } from 'vue-router'
+import type { Provider } from '~/types/auth'
+import { useAuthStore } from '~/stores/AuthStore'
 
 interface LoginProvider {
-  name: Provider;
-  color: string;
-  icon: string;
-  provider: AuthProvider;
-  datacy: string;
+  name: Provider
+  color: string
+  icon: string
+  provider: AuthProvider
+  datacy: string
 }
-
-const { loginWithFirebase } = useAuthStore()
-const router = useRouter()
 
 defineProps({
   showMovilSignIn: {
@@ -23,8 +21,9 @@ defineProps({
     default: false,
   },
 })
-
 const emit = defineEmits(['toggleMovilSignIn'])
+const { loginWithFirebase } = useAuthStore()
+const router = useRouter()
 
 const phoneNumber = $ref('')
 // const store = useStore()
@@ -39,16 +38,16 @@ const loginProviderList: LoginProvider[] = [
     name: 'Google',
     provider: new GoogleAuthProvider(),
     color: 'redYellow',
-    datacy:'google-sign-in',
-    icon: ''
-    },
+    datacy: 'google-sign-in',
+    icon: '',
+  },
   {
     name: 'Yahoo',
     provider: new OAuthProvider('yahoo.com'),
     color: 'greenBlue',
-    datacy:'yahoo-sign-in',
-    icon: ''
-  }
+    datacy: 'yahoo-sign-in',
+    icon: '',
+  },
 ]
 
 const signInWithMovil = () => {
@@ -58,11 +57,11 @@ const signInWithMovil = () => {
 }
 
 const events = {
-  async onClickLogin (provider: AuthProvider, name: Provider) {
+  async onClickLogin(provider: AuthProvider, name: Provider) {
     await loginWithFirebase(provider, name)
     localStorage.setItem('provider', name)
     await router.push('/')
-  }
+  },
 }
 </script>
 
@@ -74,17 +73,17 @@ const events = {
         :key="1"
         class="flex flex-col justify-center items-center"
       >
-        <PrimaryBtn @click="events.onClickLogin(provider.provider, provider.name)" class="mb-4" v-for="(provider, index) in loginProviderList" :key="index" :color="provider.color">
-        <span
+        <PrimaryBtn v-for="(provider, index) in loginProviderList" :key="index" class="mb-4" :color="provider.color" @click="events.onClickLogin(provider.provider, provider.name)">
+          <span
             class="relative flex justify-around w-64 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
           >
-            Entrar con {{provider.name}} Mail
+            Entrar con {{ provider.name }} Mail
           </span>
         </PrimaryBtn>
         <PrimaryBtn
           data-cy="movil-sign-in"
-          @click="emit('toggleMovilSignIn')"
           color="purpleBlue"
+          @click="emit('toggleMovilSignIn')"
         >
           <span
             class="relative flex justify-around w-64 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0 items-center"
