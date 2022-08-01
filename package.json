@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@heroicons/vue": "^1.0.6",
+    "@testing-library/vue": "^6.6.1",
     "@vee-validate/i18n": "^4.5.11",
     "@vee-validate/rules": "^4.5.11",
     "firebase": "^9.8.4",

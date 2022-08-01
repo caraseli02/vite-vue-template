@@ -1,5 +1,5 @@
-import { render, fireEvent } from "@testing-library/vue";
-import { expect, it, describe } from "vitest";
+import { render } from "@testing-library/vue";
+import { it, describe } from "vitest";
 import AuthPage from "~/pages/AuthPage.vue";
 
 describe("AuthPage", () => {
