@@ -1,30 +1,21 @@
 <script setup lang="ts">
-import { computed } from 'vue'
 import MainNav from '~/components/Navigation/MainNav.vue'
 import AppHeader from '~/components/Navigation/AppHeader.vue'
 import AppSidebar from '~/components/AppSidebar.vue'
 // import skeletonLoade from "~/components/skeletonLoader.vue";
+import { useAuthStore } from '~/stores/AuthStore'
 
-// import { useStore } from "vuex";
-// const store = useStore();
+const authStore = useAuthStore()
+const user = computed(() => authStore.authUser)
 
-// const user = computed(() => store.getters["auth/authUser"]);
-const user = computed(() => {
-  return {
-    name: 'Juan',
-    surname: 'Perez',
-    email: '',
-    id: '1',
-    workplace: '1',
-  }
-})
+
 </script>
 
 <template>
-  <div class="min-w-screen min-h-screen box-border">
+  <div class="min-w-screen min-h-screen box-border mb-24">
     <AppHeader />
     <AppSidebar />
-    <main :key="user?.id" class="max-w-md mx-auto px-4" :class="user ? 'lg:pl-24' : ''">
+    <main class="max-w-md mx-auto px-4" :class="user ? 'lg:pl-24' : ''">
       <router-view />
     </main>
     <!-- <Footer /> -->

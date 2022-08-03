@@ -16,12 +16,8 @@ const router = useRouter()
 const authStore = useAuthStore()
 const sidebarStore = useSidebarStore()
 
-// const router = useRouter();
-
 // access an state/getters from the store
-// const userId = computed(() => store.state.auth.authId);
 const userId = computed(() => authStore.userId)
-// const user = computed(() => store.getters["auth/authUser"]);
 const user = computed(() => authStore.authUser)
 
 // access an action/mutations from the store
@@ -37,7 +33,7 @@ const closeSession = async () =>
 </script>
 
 <template>
-  <header class="flex justify-between p-4">
+  <header class="flex justify-between p-2 relative z-10">
     <!-- PROFILE ICON FOR OPEN/CLOSE SIDEBAR -->
     <div
       v-if="user"
