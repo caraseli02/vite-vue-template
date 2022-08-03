@@ -15,7 +15,7 @@ const user = computed(() => authStore.authUser)
   <div class="min-w-screen min-h-screen box-border mb-24">
     <AppHeader />
     <AppSidebar />
-    <main class="max-w-md mx-auto px-4" :class="user ? 'lg:pl-24' : ''">
+    <main class="max-w-md mx-auto px-4" :class="{'lg:pl-24' : user}">
       <router-view />
     </main>
     <!-- <Footer /> -->
