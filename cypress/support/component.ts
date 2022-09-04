@@ -21,6 +21,9 @@ import './commands'
 
 import { mount } from 'cypress/vue'
 
+//Ensure global styles are loaded
+import "tailwindcss/tailwind.css"
+
 // Augment the Cypress namespace to include type definitions for
 // your custom command.
 // Alternatively, can be defined in cypress/support/component.d.ts

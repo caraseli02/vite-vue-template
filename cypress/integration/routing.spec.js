@@ -1,0 +1,26 @@
+describe('Routing Test', () => {
+  beforeEach(() => {
+    cy.visit('/')
+    cy.login()
+  })
+
+  it('Login, redirect to home and Logout', () => {
+    cy.url().should('include', '/')
+    cy.get('[href="/dashboard"]').should('be.visible').click()
+    cy.url().should('include', '/dashboard')
+    cy.get('[href="/info"]').should('be.visible').click()
+    cy.url().should('include', '/info')
+    cy.get('[href="/perfil"]').should('be.visible').click()
+    cy.url().should('include', '/perfil')
+    cy.get('[href="/"]').should('be.visible').click()
+    cy.url().should('include', '/')
+    cy.contains('Fichar').should('be.visible').click()
+    cy.url().should('include', '/dashboard')
+    cy.get('[href="/"]').should('be.visible').click()
+    cy.contains('Asistencia').should('be.visible').click()
+    cy.url().should('include', '/info')
+    cy.get('[href="/"]').should('be.visible').click()
+    cy.contains('Mi perfil').should('be.visible').click()
+    cy.url().should('include', '/perfil')
+  })
+})

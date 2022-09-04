@@ -1,21 +1,24 @@
 import { defineConfig } from 'cypress'
-import { plugin as cypressFirebasePlugin } from 'cypress-firebase';
-import admin from 'firebase-admin';
 
 export default defineConfig({
+  video: false,
+  projectId: 'wii543',
+  viewportHeight: 844,
+  viewportWidth: 490,
   e2e: {
-    baseUrl: 'http://localhost:3000',
-    supportFile: 'cypress/support/e2e/index.js',
+    // We've imported your old cypress plugins here.
+    // You may want to clean this up later by importing these.
     setupNodeEvents(on, config) {
-      // implement node event listeners here
-      cypressFirebasePlugin(on, config, admin);
+      return require('./cypress/plugins/index.js')(on, config)
     },
+    specPattern: 'cypress/**/*.spec.js',
+    baseUrl: 'http://localhost:4000'
   },
-
   component: {
+    specPattern: 'src/**/*.cy.js*',
     devServer: {
       framework: 'vue',
-      bundler: 'vite',
-    },
-  },
+      bundler: 'vite'
+    }
+  }
 })
