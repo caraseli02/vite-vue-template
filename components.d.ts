@@ -18,6 +18,7 @@ declare module '@vue/runtime-core' {
     RouterView: typeof import('vue-router')['RouterView']
     SignIn: typeof import('./src/components/auth/SignIn.vue')['default']
     SignUp: typeof import('./src/components/auth/SignUp.vue')['default']
+    TheAlerts: typeof import('./src/components/TheAlerts.vue')['default']
     ThemeToggler: typeof import('./src/components/Navigation/ThemeToggler.vue')['default']
   }
 }

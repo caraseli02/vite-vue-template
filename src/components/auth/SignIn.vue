@@ -13,7 +13,15 @@ import { useRouter } from 'vue-router'
 import { useAuthStore } from '~/stores/AuthStore'
 // Router
 
-const router = useRouter()
+import { useAlertsStore } from '~/stores/AlertsStore'
+
+import { data } from '~/assets/firebase-errors.json'
+
+interface FireAuthError {
+  [key: string]: string
+}
+
+const alerts = useAlertsStore();
 
 const authStore = useAuthStore()
 
@@ -41,10 +49,15 @@ const form: Form = $ref({
 })
 const showForgotPopUp = $ref(false)
 
-const signInWithEmailAndPassword = (form: Form) => {
-  authStore.signInWithEmailAndPassword(form.email, form.password).then(() => {
-    router.push({ name: 'Home' })
-  })
+const signInWithEmailAndPassword = async (form: Form) => {
+
+try {
+  await authStore.signInWithEmailAndPassword(form.email, form.password)
+  useRouter().push("/");
+} catch (err: any) {
+  const testData: FireAuthError = data
+  alerts.authError(testData[err.code]);
+}
 }
 </script>
 

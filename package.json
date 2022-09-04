@@ -24,6 +24,7 @@
     "@vue/compiler-sfc": "^3.2.37",
     "cy-mobile-commands": "^0.3.0",
     "cypress-firebase": "^2.2.2",
+    "daisyui": "^2.24.0",
     "firebase": "^9.9.3",
     "firebase-admin": "^11.0.1",
     "pinia": "^2.0.21",

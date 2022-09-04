@@ -1,8 +1,4 @@
 <script setup lang="ts">
-import MainNav from '~/components/Navigation/MainNav.vue'
-import AppHeader from '~/components/Navigation/AppHeader.vue'
-import AppSidebar from '~/components/AppSidebar.vue'
-// import skeletonLoade from "~/components/skeletonLoader.vue";
 import { useAuthStore } from '~/stores/AuthStore'
 
 const authStore = useAuthStore()
@@ -25,6 +21,7 @@ const user = computed(() => authStore.authUser)
     >
       <MainNav />
     </section>
+    <TheAlerts />
   </div>
 </template>
 

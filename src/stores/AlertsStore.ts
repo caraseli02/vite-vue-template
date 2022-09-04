@@ -1,7 +1,8 @@
 import { acceptHMRUpdate, defineStore } from "pinia";
 import { v4 as uuid } from "uuid";
+import { data } from '../assets/firebase-errors.json'
 
-export type AlertStyle = "error" | "success" | "warning" | "info" | "none";
+export type AlertStyle = "error" | "authError" | "success" | "warning" | "info" | "none";
 
 export interface AlertOptions {
   html?: boolean;
@@ -51,6 +52,10 @@ export const useAlertsStore = defineStore("AlertsStore", {
 
     error(message: string, options?: AlertOptions) {
       this.notify(message, "error", options);
+    },
+    
+    authError(message: string, options?: AlertOptions) {
+      this.notify(message, "authError", options);
     },
 
     warning(message: string, options?: AlertOptions) {

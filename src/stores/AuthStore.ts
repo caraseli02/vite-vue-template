@@ -23,9 +23,11 @@ export const useAuthStore = defineStore('AuthStore', {
   },
   actions: {
     async signInWithEmailAndPassword(email: string, password: string) {
+
       await signInWithEmailAndPassword(auth, email, password).then((user) => {
         this.user = auth.currentUser
       })
+
     },
     async loginWithFirebase(provider: AuthProvider, providedBy: Provider) {
       await auth.setPersistence(browserSessionPersistence)
