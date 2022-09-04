@@ -7,6 +7,7 @@ specifiers:
   '@heroicons/vue': ^1.0.6
   '@testing-library/vue': ^6.6.1
   '@types/node': ^16.11.56
+  '@types/uuid': ^8.3.4
   '@vee-validate/i18n': ^4.6.7
   '@vee-validate/rules': ^4.6.7
   '@vitejs/plugin-vue': ^2.3.4
@@ -29,6 +30,7 @@ specifiers:
   typescript: ~4.7.4
   unplugin-auto-import: ^0.8.8
   unplugin-vue-components: ^0.19.9
+  uuid: ^8.3.2
   vee-validate: ^4.6.7
   vite: ^2.9.15
   vitest: ^0.15.2
@@ -50,6 +52,7 @@ dependencies:
   firebase-admin: 11.0.1_@firebase+app-types@0.7.0
   pinia: 2.0.21_j6bzmzd4ujpabbp5objtwxyjp4
   sweetalert2: 11.4.29
+  uuid: 8.3.2
   vee-validate: 4.6.7_vue@3.2.37
   vue: 3.2.37
   vue-router: 4.1.5_vue@3.2.37
@@ -57,6 +60,7 @@ dependencies:
 devDependencies:
   '@antfu/eslint-config': 0.25.2_sorwav4hsh5vncerguqybud76i
   '@types/node': 16.11.56
+  '@types/uuid': 8.3.4
   '@vitejs/plugin-vue': 2.3.4_vite@2.9.15+vue@3.2.37
   '@vue/tsconfig': 0.1.3_@types+node@16.11.56
   '@vueuse/core': 8.9.4_vue@3.2.37
@@ -1123,6 +1127,10 @@ packages:
 
   /@types/unist/2.0.6:
     resolution: {integrity: sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==}
+    dev: true
+
+  /@types/uuid/8.3.4:
+    resolution: {integrity: sha512-c/I8ZRb51j+pYGAu5CrFMRxqZ2ke4y2grEBO5AUjgSkSk+qT2Ea+OdWElz/OiMf5MNpn2b17kuVBwZLQJXzihw==}
     dev: true
 
   /@types/web-bluetooth/0.0.14:
