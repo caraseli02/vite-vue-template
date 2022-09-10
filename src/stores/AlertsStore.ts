@@ -14,7 +14,7 @@ export interface AlertOptions {
 const defaultOptions: Required<AlertOptions> = {
   closable: true,
   html: false,
-  timeout: 3000,
+  timeout: 13000,
   style: "info",
 };
 
@@ -55,7 +55,7 @@ export const useAlertsStore = defineStore("AlertsStore", {
     },
     
     authError(message: string, options?: AlertOptions) {
-      this.notify(message, "authError", options);
+      this.notify(message, "warning", options);
     },
 
     warning(message: string, options?: AlertOptions) {

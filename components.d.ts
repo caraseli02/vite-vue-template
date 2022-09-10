@@ -8,6 +8,7 @@ declare module '@vue/runtime-core' {
     AppFormField: typeof import('./src/components/auth/AppFormField.vue')['default']
     AppHeader: typeof import('./src/components/Navigation/AppHeader.vue')['default']
     AppSidebar: typeof import('./src/components/AppSidebar.vue')['default']
+    AppSpinner: typeof import('./src/components/buttons/AppSpinner.vue')['default']
     AuthProvider: typeof import('./src/components/auth/AuthProvider.vue')['default']
     Counter: typeof import('./src/components/Counter.vue')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']

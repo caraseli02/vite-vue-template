@@ -48,7 +48,7 @@ const form: Form = $ref({
   password: '',
 })
 const showForgotPopUp = $ref(false)
-
+const loading = $ref(true)
 const signInWithEmailAndPassword = async (form: Form) => {
 
 try {
@@ -84,8 +84,9 @@ try {
             type="password"
             rules="required"
           />
-
-          <PrimaryBtn class="mt-4">
+          <AppSpinner v-if="loading" color="red" size="sm" class="ml-2 mt-2" />
+        
+          <PrimaryBtn v-else class="mt-4">
             <button
               id="loginBtn"
               type="submit"

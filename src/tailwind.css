@@ -4,7 +4,7 @@
 
 @layer components {
   .glass {
-    @apply p-3 md:p-6 rounded-lg border-gray-900 bg-content;
+    @apply p-3 md:p-6 rounded-lg border-gray-900;
   }
 
   .btn-home {

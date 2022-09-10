@@ -6,6 +6,10 @@ const props = defineProps({
     type: String,
     default: 'default',
   },
+  loading: {
+    type: Boolean,
+    default: false,
+  },
 })
 
 const classes = computed(() => {
@@ -28,7 +32,7 @@ const classes = computed(() => {
 <template>
   <button :class="classes">
     <span
-      class="relative flex px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
+      class="relative flex item-center px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
     >
       <slot />
     </span>
