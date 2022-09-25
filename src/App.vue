@@ -3,15 +3,13 @@ import { useAuthStore } from '~/stores/AuthStore'
 
 const authStore = useAuthStore()
 const user = computed(() => authStore.authUser)
-
-
 </script>
 
 <template>
   <div class="min-w-screen min-h-screen box-border mb-24">
     <AppHeader />
     <AppSidebar />
-    <main class="max-w-md mx-auto px-4" :class="{'lg:pl-24' : user}">
+    <main class="max-w-md mx-auto px-4" :class="{ 'lg:pl-24': user }">
       <router-view />
     </main>
     <!-- <Footer /> -->

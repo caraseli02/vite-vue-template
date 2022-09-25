@@ -8,7 +8,6 @@ import {
   HomeIcon,
   LogoutIcon,
 } from '@heroicons/vue/outline'
-import Swal from 'sweetalert2'
 
 // Router
 import { useRouter } from 'vue-router'
@@ -46,23 +45,7 @@ const toggleSidebar = () => {
 }
 const signOut = () => authStore.signOut()
 const deleteUser = async () => {
-  await Swal.fire({
-    title: 'Estas seguro?',
-    text: 'No podras recuperarlo!',
-    icon: 'warning',
-    showCancelButton: true,
-    confirmButtonColor: '#3085d6',
-    cancelButtonColor: '#d33',
-    confirmButtonText: 'Si, borrar!',
-  }).then((result) => {
-    if (result.isConfirmed) {
-      // store.dispatch("auth/deleteAccount").then(() => {
-      //   signOut();
-      //   router.replace("auth");
-      //   Swal.fire("Deleted!", "Tu cueanta a sido borrada.", "success");
-      // });
-    }
-  })
+  console.log('delete')
 }
 const closeSession = async () => {
   await toggleSidebar()

@@ -7,24 +7,13 @@ import {
 import { Form as VeeForm, configure, defineRule } from 'vee-validate'
 import { email, required } from '@vee-validate/rules'
 import { localize } from '@vee-validate/i18n'
-
 // PINIA
 import { useRouter } from 'vue-router'
 import { useAuthStore } from '~/stores/AuthStore'
 // Router
 
-import { useAlertsStore } from '~/stores/AlertsStore'
-
-import { data } from '~/assets/firebase-errors.json'
-
-interface FireAuthError {
-  [key: string]: string
-}
-
 const router = useRouter()
-
-const alerts = useAlertsStore();
-
+// PINIA Stores
 const authStore = useAuthStore()
 
 defineRule('required', required)
@@ -39,29 +28,15 @@ configure({
   }),
 })
 
-interface Form {
-  email: string
-  password: string
-}
-
 const showMovilSignIn = $ref(false)
-const form: Form = $ref({
+const form = $ref({
   email: '',
   password: '',
 })
 const showForgotPopUp = $ref(false)
-let loading = $ref(false)
-const signInWithEmailAndPassword = async (form: Form) => {
-
-try {
-  loading = true
-  await authStore.signInWithEmailAndPassword(form.email, form.password)
-  loading = false
-  router.push({ name: 'Home' });
-} catch (err: any) {
-  const testData: FireAuthError = data
-  alerts.authError(testData[err.code]);
-}
+const signInWithEmailAndPassword = async () => {
+    await authStore.signInWithEmailAndPassword(form)
+    router.push({ name: 'Home' })
 }
 </script>
 
@@ -71,8 +46,7 @@ try {
       <transition-group tag="span" name="slide-fade">
         <VeeForm
           v-if="!showForgotPopUp"
-          class
-          @submit="signInWithEmailAndPassword(form)"
+          @submit="signInWithEmailAndPassword()"
         >
           <AppFormField
             v-model="form.email"
@@ -95,10 +69,10 @@ try {
               class="w-40 flex justify-center"
             >
               Entrar
-              <svg v-if="loading" class="animate-spin ml-4 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-          </svg>
+              <svg v-if="authStore.loading" class="animate-spin ml-4 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" />
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+              </svg>
               <ArrowCircleRightIcon v-else class="h-5 w-5 ml-4" />
             </button>
           </PrimaryBtn>
