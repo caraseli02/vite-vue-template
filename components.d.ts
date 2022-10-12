@@ -13,6 +13,7 @@ declare module '@vue/runtime-core' {
     Counter: typeof import('./src/components/Counter.vue')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
     ForgotPassword: typeof import('./src/components/auth/ForgotPassword.vue')['default']
+    LoadingBtn: typeof import('./src/components/buttons/LoadingBtn.vue')['default']
     MainNav: typeof import('./src/components/Navigation/MainNav.vue')['default']
     PrimaryBtn: typeof import('./src/components/buttons/PrimaryBtn.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

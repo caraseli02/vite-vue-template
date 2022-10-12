@@ -16,7 +16,7 @@ specifiers:
   '@vueuse/core': ^8.9.4
   autoprefixer: ^10.4.12
   cy-mobile-commands: ^0.3.0
-  cypress: 10.6.0
+  cypress: 10.9.0
   cypress-firebase: ^2.2.2
   daisyui: ^2.31.0
   eslint: ^8.24.0
@@ -65,7 +65,7 @@ devDependencies:
   '@vue/tsconfig': 0.1.3_@types+node@16.11.60
   '@vueuse/core': 8.9.4_vue@3.2.39
   autoprefixer: 10.4.12_postcss@8.4.16
-  cypress: 10.6.0
+  cypress: 10.9.0
   eslint: 8.24.0
   jsdom: 20.0.0
   npm-run-all: 4.1.5
@@ -2065,8 +2065,8 @@ packages:
       firebase-admin: 11.0.1_@firebase+app-types@0.7.0
     dev: false
 
-  /cypress/10.6.0:
-    resolution: {integrity: sha512-6sOpHjostp8gcLO34p6r/Ci342lBs8S5z9/eb3ZCQ22w2cIhMWGUoGKkosabPBfKcvRS9BE4UxybBtlIs8gTQA==}
+  /cypress/10.9.0:
+    resolution: {integrity: sha512-MjIWrRpc+bQM9U4kSSdATZWZ2hUqHGFEQTF7dfeZRa4MnalMtc88FIE49USWP2ZVtfy5WPBcgfBX+YorFqGElA==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     requiresBuild: true
@@ -2090,7 +2090,7 @@ packages:
       dayjs: 1.11.5
       debug: 4.3.4_supports-color@8.1.1
       enquirer: 2.3.6
-      eventemitter2: 6.4.9
+      eventemitter2: 6.4.7
       execa: 4.1.0
       executable: 4.1.1
       extract-zip: 2.0.1_supports-color@8.1.1
@@ -3051,8 +3051,8 @@ packages:
     dev: false
     optional: true
 
-  /eventemitter2/6.4.9:
-    resolution: {integrity: sha512-JEPTiaOt9f04oa6NOkc4aH+nVp5I3wEjpHbIPqfgCdD5v5bUzy7xQqwcVO2aDQgOWhI28da57HksMrzK9HlRxg==}
+  /eventemitter2/6.4.7:
+    resolution: {integrity: sha512-tYUSVOGeQPKt/eC1ABfhHy5Xd96N3oIijJvN3O9+TsC28T5V9yX9oEfEK5faP0EFSNVOG97qtAS68GBrQB2hDg==}
     dev: true
 
   /execa/4.1.0:

@@ -5,11 +5,12 @@ import type {
 } from 'firebase/auth'
 import {
   browserSessionPersistence,
-  getAuth,
   createUserWithEmailAndPassword,
+  getAuth,
   signInWithEmailAndPassword,
   signInWithPopup,
 } from 'firebase/auth'
+import { doc, setDoc } from 'firebase/firestore'
 import { auth } from '../helpers/firebase'
 // Firebase Errors
 import { data } from '~/assets/firebase-errors.json'
@@ -23,7 +24,7 @@ interface FireAuthError {
 }
 
 interface IForm {
-  name:string
+  name: string
   surname: string
   email: string
   password: string
@@ -35,29 +36,33 @@ export const useAuthStore = defineStore('AuthStore', {
     return {
       user: null as User | null,
       provider: null as AuthProvider | null,
-      loading : false
+      loading: false,
     }
   },
   actions: {
-    async signInWithEmailAndPassword({email, password}: Pick<IForm, 'email' | 'password'>) {
+    async signInWithEmailAndPassword({ email, password }: Pick<IForm, 'email' | 'password'>) {
       const alertsStore = useAlertsStore()
 
       try {
         this.loading = true
         await signInWithEmailAndPassword(auth, email, password).then((user) => {
           this.user = auth.currentUser
-          console.log(user)
+          setDoc(doc(db, 'cities', 'LA'), {
+            name: 'Los Angeles',
+            state: 'CA',
+            country: 'USA',
+          })
         })
       }
       catch (err: any) {
-        console.log(err.code);
+        console.log(err.code)
         alertsStore.authError(errorsArr[err.code])
       }
       finally {
         this.loading = false
       }
     },
-    async createUserWithEmailAndPassword({email, password, name, surname}: IForm) {
+    async createUserWithEmailAndPassword({ email, password, name, surname }: IForm) {
       const alertsStore = useAlertsStore()
 
       try {
@@ -67,7 +72,7 @@ export const useAuthStore = defineStore('AuthStore', {
         })
       }
       catch (err: any) {
-        console.log(err.code);
+        console.log(err.code)
         alertsStore.authError(errorsArr[err.code])
       }
       finally {
