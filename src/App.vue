@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import { useAuthStore } from '~/stores/AuthStore'
-
-const authStore = useAuthStore()
-const user = computed(() => authStore.authUser)
+import { useCurrentUser } from 'vuefire'
+const user = useCurrentUser()
+console.log(user)
 </script>
 
 <template>

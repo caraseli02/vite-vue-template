@@ -8,7 +8,10 @@
     "jsx": "preserve",
     "allowJs": true,
     "baseUrl": ".",
-    "lib": ["esnext", "dom"],
+    "lib": [
+      "esnext",
+      "dom"
+    ],
     "allowSyntheticDefaultImports": true,
     "noUnusedLocals": true,
     "skipLibCheck": true,
@@ -22,12 +25,34 @@
     "strictNullChecks": true,
     "forceConsistentCasingInFileNames": true,
     "paths": {
-      "~/*": ["src/*"],
-      "@commands/*": ["cypress/support/commands/*"],
-      "@fixtures/*": ["cypress/fixture/*"]
+      "~/*": [
+        "src/*"
+      ],
+      "@commands/*": [
+        "cypress/support/commands/*"
+      ],
+      "@fixtures/*": [
+        "cypress/fixture/*"
+      ]
     },
-    "types": ["cypress-real-events", "node", "cypress", "vite/client", "vue/ref-macros"]
+    "types": [
+      "cypress-real-events",
+      "node",
+      "cypress",
+      "vite/client",
+      "vue/ref-macros"
+    ]
   },
-  "include": ["cypress/**/*.ts", "src/**/*"],
-  "exclude": ["dist", "node_modules"]
+  "include": [
+    "cypress/**/*.ts",
+    "env.d.ts",
+    "src/**/*",
+    "src/**/*.vue",
+    "typed-router.d.ts",
+    "./auto-imports.d.ts"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
 }
