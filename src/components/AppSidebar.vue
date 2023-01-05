@@ -1,33 +1,31 @@
 <script setup lang="ts">
-import { computed, onMounted, watch } from 'vue'
-// PINIA
-
 import {
   ClockIcon,
   ExclamationIcon,
   HomeIcon,
   LogoutIcon,
-} from '@heroicons/vue/outline'
+} from "@heroicons/vue/outline";
+
+import { useCurrentUser, useFirebaseAuth } from "vuefire";
 
 // Router
-import { useRouter } from 'vue-router'
-import { useSidebarStore } from '~/stores/SidebarStore'
-import { useAuthStore } from '~/stores/AuthStore'
+import { useRouter } from "vue-router";
+import { useSidebarStore } from "~/stores/SidebarStore";
 
-const router = useRouter()
+const router = useRouter();
 
-const authStore = useAuthStore()
-const sidebarStore = useSidebarStore()
+const sidebarStore = useSidebarStore();
+const showSidebar = computed(() => sidebarStore.showSidebar);
 
-const authUser = computed(() => authStore.authUser)
-const showSidebar = computed(() => sidebarStore.showSidebar)
+const authUser = useCurrentUser();
+const auth = useFirebaseAuth();
 
 const workplaceList = computed(() => {
-  return null
+  return null;
   // return Array.isArray(authUser.workplace)
   //   ? authUser.value?.workplace
   //   : [authUser.value?.workplace];
-})
+});
 
 watch(
   showSidebar,
@@ -37,29 +35,27 @@ watch(
     //   else document.body.style.removeProperty("overflow");
     // }
   },
-  { immediate: true, deep: true },
-)
+  { immediate: true, deep: true }
+);
 
 const toggleSidebar = () => {
-  sidebarStore.toggleSidebar()
-}
-const signOut = () => authStore.signOut()
+  sidebarStore.toggleSidebar();
+};
 const deleteUser = async () => {
-  console.log('delete')
-}
+  console.log("delete");
+};
 const closeSession = async () => {
-  await toggleSidebar()
-  await signOut().then(() => {
-    router.replace({ name: 'Auth' })
-  })
-}
+  await toggleSidebar();
+  await auth?.signOut().then(() => {
+    router.replace({ name: "/auth" });
+  });
+};
 
 onMounted(() => {
-  document.addEventListener('keydown', (e) => {
-    if (e.keyCode === 27 && showSidebar)
-      toggleSidebar
-  })
-})
+  document.addEventListener("keydown", (e) => {
+    if (e.keyCode === 27 && showSidebar) toggleSidebar;
+  });
+});
 </script>
 
 <template>
@@ -170,7 +166,8 @@ onMounted(() => {
                 v-for="(place, index) in workplaceList"
                 :key="index"
                 class="block cursor-pointer text-xl font-bold text-primary hover:bg-indigo-800 hover:border-2 rounded-lg"
-              >{{ place }}</span>
+                >{{ place }}</span
+              >
             </div>
           </div>
         </div>
@@ -187,7 +184,9 @@ onMounted(() => {
         </PrimaryBtn>
         <PrimaryBtn id="deleteUser" color="pinkOrange" @click="deleteUser">
           <ExclamationIcon class="text-yellow-300 mr-4 ml-2 w-6 h-6" />
-          <span class="text-primary flex justify-center items-center">Borrar la cuenta</span>
+          <span class="text-primary flex justify-center items-center"
+            >Borrar la cuenta</span
+          >
         </PrimaryBtn>
       </div>
     </aside>

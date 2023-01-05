@@ -1,37 +1,37 @@
 <script setup lang="ts">
-import { LogoutIcon, UserCircleIcon } from '@heroicons/vue/outline'
-import { useRouter } from 'vue-router'
-import { useCurrentUser, useFirebaseAuth } from 'vuefire'
-import PrimaryBtn from '~/components/buttons/PrimaryBtn.vue'
-import ThemeToggler from '~/components/Navigation/ThemeToggler.vue'
+import { LogoutIcon, UserCircleIcon } from "@heroicons/vue/outline";
+import { useRouter } from "vue-router";
+import { useCurrentUser, useFirebaseAuth } from "vuefire";
 // PINIA
-import { useSidebarStore } from '~/stores/SidebarStore'
+import { useSidebarStore } from "~/stores/SidebarStore";
 
 // Router
+const router = useRouter();
 
-const router = useRouter()
-
-const sidebarStore = useSidebarStore()
+const sidebarStore = useSidebarStore();
 
 // access an state/getters from the store
-const auth = useFirebaseAuth()
-const user = useCurrentUser()
+const auth = useFirebaseAuth();
+const user = useCurrentUser();
 
 // access an action/mutations from the store
-const toggleSidebar = () => sidebarStore.toggleSidebar()
+const toggleSidebar = () => sidebarStore.toggleSidebar();
 
 const closeSession = async () => {
   await auth?.signOut().then(() => {
-    router.push({ name: '/auth' })
-  })
-}
+    router.push({ name: "/auth" });
+  });
+};
 
 // store.dispatch("attendance/fetchAllAttends")
 // store.dispatch("users/fetchAllUsers");
 </script>
 
 <template>
-  <header class="flex justify-between p-2 relative z-10">
+  <header
+    :class="user ? 'justify-between' : 'justify-end'"
+    class="flex p-2 relative z-10 absolute top-0"
+  >
     <!-- PROFILE ICON FOR OPEN/CLOSE SIDEBAR -->
     <div
       v-if="user"
@@ -43,10 +43,11 @@ const closeSession = async () => {
         <UserCircleIcon class="w-5 h-5 text-primary" />
       </PrimaryBtn>
     </div>
-    <ThemeToggler />
     <!-- LOGOUT, ThemeToggler Btn -->
     <div class="flex justify-end items-center">
-      <PrimaryBtn v-if="user?.uid" id="btnLogout" @click.prevent="closeSession">
+      <ThemeToggler class="mr-4" />
+
+      <PrimaryBtn v-if="user" id="btnLogout" @click.prevent="closeSession">
         <LogoutIcon class="w-5 h-5" />
       </PrimaryBtn>
     </div>
