@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { IdentificationIcon, LoginIcon } from '@heroicons/vue/outline'
+import { getCurrentUser } from 'vuefire'
+import { useRoute, useRouter } from 'vue-router'
 import SignIn from '~/components/auth/SignIn.vue'
 import PrimaryBtn from '~/components/buttons/PrimaryBtn.vue'
 import Register from '~/components/auth/SignUp.vue'
@@ -11,12 +13,26 @@ const props = defineProps({
     default: false,
   },
 })
-
+const router = useRouter()
+const route = useRoute()
 const isLogin = ref(!props.showSignUp)
 
 const setIsLogin = (nextVal: boolean) => {
   isLogin.value = nextVal
 }
+
+// within the Page component displayed for the `/login` route
+onMounted(async () => {
+  const currentUser = await getCurrentUser()
+  if (currentUser) {
+    const to
+      = route.query.redirectTo && typeof route.query.redirectTo === 'string'
+        ? route.query.redirectTo
+        : '/'
+
+    router.push(to)
+  }
+})
 </script>
 
 <template>

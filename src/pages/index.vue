@@ -6,6 +6,13 @@ import {
 } from '@heroicons/vue/outline'
 import PrimaryBtn from '~/components/buttons/PrimaryBtn.vue'
 
+definePage({
+  name: 'Home',
+  meta: {
+    requiresAuth: true,
+  },
+})
+
 const links = [
   {
     text: 'Fichar',

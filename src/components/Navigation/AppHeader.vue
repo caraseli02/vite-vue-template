@@ -1,32 +1,30 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-// import { useRouter } from "vue-router";
 import { LogoutIcon, UserCircleIcon } from '@heroicons/vue/outline'
 import { useRouter } from 'vue-router'
+import { useCurrentUser, useFirebaseAuth } from 'vuefire'
 import PrimaryBtn from '~/components/buttons/PrimaryBtn.vue'
 import ThemeToggler from '~/components/Navigation/ThemeToggler.vue'
 // PINIA
-import { useAuthStore } from '~/stores/AuthStore'
 import { useSidebarStore } from '~/stores/SidebarStore'
 
 // Router
 
 const router = useRouter()
 
-const authStore = useAuthStore()
 const sidebarStore = useSidebarStore()
 
 // access an state/getters from the store
-const userId = computed(() => authStore.userId)
-const user = computed(() => authStore.authUser)
+const auth = useFirebaseAuth()
+const user = useCurrentUser()
 
 // access an action/mutations from the store
 const toggleSidebar = () => sidebarStore.toggleSidebar()
 
-const closeSession = async () =>
-  await authStore.signOut().then(() => {
-    router.push({ name: 'Auth' })
+const closeSession = async () => {
+  await auth?.signOut().then(() => {
+    router.push({ name: '/auth' })
   })
+}
 
 // store.dispatch("attendance/fetchAllAttends")
 // store.dispatch("users/fetchAllUsers");
@@ -48,7 +46,7 @@ const closeSession = async () =>
     <ThemeToggler />
     <!-- LOGOUT, ThemeToggler Btn -->
     <div class="flex justify-end items-center">
-      <PrimaryBtn v-if="userId" id="btnLogout" @click.prevent="closeSession">
+      <PrimaryBtn v-if="user?.uid" id="btnLogout" @click.prevent="closeSession">
         <LogoutIcon class="w-5 h-5" />
       </PrimaryBtn>
     </div>
