@@ -16,9 +16,21 @@ const { next } = useCycleList(["dark", "light", "auto"], {
     @click="next()"
   >
     <TransitionGroup name="slide-fade" mode="out-in">
-      <MoonIcon key="dark" v-if="mode === 'dark'" class="h-5 w-5" />
-      <SunIcon key="light" v-if="mode === 'light'" class="h-5 w-5" />
-      <DesktopComputerIcon key="auto" v-if="mode === 'auto'" class="h-5 w-5" />
+      <MoonIcon
+        key="dark"
+        v-if="mode === 'dark'"
+        class="h-5 w-5 MoonIcon"
+      />
+      <SunIcon
+        key="light"
+        v-if="mode === 'light'"
+        class="h-5 w-5 SunIcon"
+      />
+      <DesktopComputerIcon
+        key="auto"
+        v-if="mode === 'auto'"
+        class="h-5 w-5 DesktopComputerIcon"
+      />
     </TransitionGroup>
   </PrimaryBtn>
 </template>
