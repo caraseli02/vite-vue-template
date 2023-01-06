@@ -6,6 +6,7 @@ import { useRoute, useRouter } from 'vue-router'
 import SignIn from '~/components/auth/SignIn.vue'
 import PrimaryBtn from '~/components/buttons/PrimaryBtn.vue'
 import Register from '~/components/auth/SignUp.vue'
+import { auth } from '~/helpers/firebase'
 
 const props = defineProps({
   showSignUp: {
@@ -14,24 +15,19 @@ const props = defineProps({
   },
 })
 const router = useRouter()
-const route = useRoute()
 const isLogin = ref(!props.showSignUp)
 
 const setIsLogin = (nextVal: boolean) => {
   isLogin.value = nextVal
 }
 
-// within the Page component displayed for the `/login` route
 onMounted(async () => {
-  const currentUser = await getCurrentUser()
-  if (currentUser) {
-    const to
-      = route.query.redirectTo && typeof route.query.redirectTo === 'string'
-        ? route.query.redirectTo
-        : '/'
-
-    router.push(to)
-  }
+  auth.onAuthStateChanged(async (user) => {
+    if (user) {
+      console.log(user)
+      router.push('/')
+    }
+  })
 })
 </script>
 

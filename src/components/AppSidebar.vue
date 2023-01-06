@@ -4,28 +4,29 @@ import {
   ExclamationIcon,
   HomeIcon,
   LogoutIcon,
-} from "@heroicons/vue/outline";
-
-import { useCurrentUser, useFirebaseAuth } from "vuefire";
-
+} from '@heroicons/vue/outline'
+// Firebase
+import { useCurrentUser, useFirebaseAuth } from 'vuefire'
+import { deleteUser } from 'firebase/auth'
 // Router
-import { useRouter } from "vue-router";
-import { useSidebarStore } from "~/stores/SidebarStore";
+import { useRouter } from 'vue-router'
+// Stories
+import { useSidebarStore } from '~/stores/SidebarStore'
 
-const router = useRouter();
+const router = useRouter()
 
-const sidebarStore = useSidebarStore();
-const showSidebar = computed(() => sidebarStore.showSidebar);
+const sidebarStore = useSidebarStore()
+const showSidebar = computed(() => sidebarStore.showSidebar)
 
-const authUser = useCurrentUser();
-const auth = useFirebaseAuth();
+const authUser = useCurrentUser()
+const auth = useFirebaseAuth()
 
 const workplaceList = computed(() => {
-  return null;
+  return null
   // return Array.isArray(authUser.workplace)
   //   ? authUser.value?.workplace
   //   : [authUser.value?.workplace];
-});
+})
 
 watch(
   showSidebar,
@@ -35,27 +36,33 @@ watch(
     //   else document.body.style.removeProperty("overflow");
     // }
   },
-  { immediate: true, deep: true }
-);
+  { immediate: true, deep: true },
+)
 
 const toggleSidebar = () => {
-  sidebarStore.toggleSidebar();
-};
-const deleteUser = async () => {
-  console.log("delete");
-};
+  sidebarStore.toggleSidebar()
+}
+const DeleteUser = async () => {
+  if (auth?.currentUser) {
+    deleteUser(auth?.currentUser).then(() => {
+      // User deleted.
+      router.push({ name: '/auth' })
+    })
+  }
+}
 const closeSession = async () => {
-  await toggleSidebar();
+  await toggleSidebar()
   await auth?.signOut().then(() => {
-    router.replace({ name: "/auth" });
-  });
-};
+    router.replace({ name: '/auth' })
+  })
+}
 
 onMounted(() => {
-  document.addEventListener("keydown", (e) => {
-    if (e.keyCode === 27 && showSidebar) toggleSidebar;
-  });
-});
+  document.addEventListener('keydown', (e) => {
+    if (e.keyCode === 27 && showSidebar)
+      toggleSidebar()
+  })
+})
 </script>
 
 <template>
@@ -166,8 +173,7 @@ onMounted(() => {
                 v-for="(place, index) in workplaceList"
                 :key="index"
                 class="block cursor-pointer text-xl font-bold text-primary hover:bg-indigo-800 hover:border-2 rounded-lg"
-                >{{ place }}</span
-              >
+              >{{ place }}</span>
             </div>
           </div>
         </div>
@@ -182,11 +188,9 @@ onMounted(() => {
             Cerrar Session
           </span>
         </PrimaryBtn>
-        <PrimaryBtn id="deleteUser" color="pinkOrange" @click="deleteUser">
+        <PrimaryBtn id="deleteUser" color="pinkOrange" @click="DeleteUser">
           <ExclamationIcon class="text-yellow-300 mr-4 ml-2 w-6 h-6" />
-          <span class="text-primary flex justify-center items-center"
-            >Borrar la cuenta</span
-          >
+          <span class="text-primary flex justify-center items-center">Borrar la cuenta</span>
         </PrimaryBtn>
       </div>
     </aside>

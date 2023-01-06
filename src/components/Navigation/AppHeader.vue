@@ -1,27 +1,27 @@
 <script setup lang="ts">
-import { LogoutIcon, UserCircleIcon } from "@heroicons/vue/outline";
-import { useRouter } from "vue-router";
-import { useCurrentUser, useFirebaseAuth } from "vuefire";
+import { LogoutIcon, UserCircleIcon } from '@heroicons/vue/outline'
+import { useRouter } from 'vue-router'
+import { useCurrentUser, useFirebaseAuth } from 'vuefire'
 // PINIA
-import { useSidebarStore } from "~/stores/SidebarStore";
+import { useSidebarStore } from '~/stores/SidebarStore'
 
 // Router
-const router = useRouter();
+const router = useRouter()
 
-const sidebarStore = useSidebarStore();
+const sidebarStore = useSidebarStore()
 
 // access an state/getters from the store
-const auth = useFirebaseAuth();
-const user = useCurrentUser();
+const auth = useFirebaseAuth()
+const user = useCurrentUser()
 
 // access an action/mutations from the store
-const toggleSidebar = () => sidebarStore.toggleSidebar();
+const toggleSidebar = () => sidebarStore.toggleSidebar()
 
 const closeSession = async () => {
   await auth?.signOut().then(() => {
-    router.push({ name: "/auth" });
-  });
-};
+    router.push({ name: '/auth' })
+  })
+}
 
 // store.dispatch("attendance/fetchAllAttends")
 // store.dispatch("users/fetchAllUsers");

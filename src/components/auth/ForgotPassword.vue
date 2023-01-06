@@ -1,7 +1,9 @@
 <script setup lang="ts">
-// import Swal from "sweetalert2";
+import { useAuthStore } from '~/stores/AuthStore'
 
-// const emit = defineEmits<{ (e: "closePopUp", value: boolean): void }>();
+const emit = defineEmits<{ (e: 'closePopUp', value: boolean): void }>()
+
+const { sendEmailReset } = useAuthStore()
 
 const state = $ref({
   email: '',
@@ -16,17 +18,9 @@ const sendEmail = async () => {
   }
   state.error = ''
   state.emailSending = true
-  // await store
-  //   .dispatch("auth/resetPassword", state.email)
-  //   .then(() => {
-  //     state.emailSending = false;
-  //     emit("closePopUp", false);
-  //     Swal.fire("Enviado", "Comprueba tu dirección de email", "info");
-  //   })
-  //   .catch((error: { message: string }) => {
-  //     state.emailSending = false;
-  //     state.error = error.message;
-  //   });
+  await sendEmailReset(state.email)
+  state.emailSending = false
+  emit('closePopUp', false)
 }
 </script>
 

@@ -1,18 +1,13 @@
 <script setup lang="ts">
 import {
-  ArrowCircleRightIcon,
   KeyIcon,
   XCircleIcon,
 } from '@heroicons/vue/outline'
 import { Form as VeeForm, configure, defineRule } from 'vee-validate'
 import { email, required } from '@vee-validate/rules'
 import { localize } from '@vee-validate/i18n'
-// PINIA
-import { useRouter } from 'vue-router'
+// PINIA import
 import { useAuthStore } from '~/stores/AuthStore'
-// Router
-
-const router = useRouter()
 // PINIA Stores
 const authStore = useAuthStore()
 
@@ -36,7 +31,6 @@ const form = $ref({
 const showForgotPopUp = $ref(false)
 const signInWithEmailAndPassword = async () => {
   await authStore.signInWithEmailAndPassword(form)
-  router.push({ name: 'Home' })
 }
 </script>
 

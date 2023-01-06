@@ -1,11 +1,13 @@
 <script setup lang="ts">
-// import { mapActions } from 'vuex'
 import { ArrowCircleRightIcon } from '@heroicons/vue/outline'
 import { Form as VeeForm, configure, defineRule } from 'vee-validate'
 import { confirmed, email, min, required, url } from '@vee-validate/rules'
 import { localize } from '@vee-validate/i18n'
-// PINIA
+// Pinia stores import
 import { useAuthStore } from '~/stores/AuthStore'
+
+// PINIA Stores
+const authStore = useAuthStore()
 
 defineRule('required', required)
 defineRule('email', email)
@@ -32,9 +34,6 @@ const form = $ref({
   email: '',
   password: '',
 })
-
-// PINIA Stores
-const authStore = useAuthStore()
 
 function createUserWithEmailAndPassword(): void {
   authStore.createUserWithEmailAndPassword(form)

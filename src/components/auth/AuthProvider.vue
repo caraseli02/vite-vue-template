@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { PhoneIcon, XCircleIcon } from '@heroicons/vue/outline'
+import { MailIcon, PhoneIcon, XCircleIcon } from '@heroicons/vue/outline'
 import type { AuthProvider } from 'firebase/auth'
 import { GoogleAuthProvider, OAuthProvider } from 'firebase/auth'
 import { useRouter } from 'vue-router'
@@ -22,7 +22,7 @@ defineProps({
   },
 })
 const emit = defineEmits(['toggleMovilSignIn'])
-const { loginWithFirebase } = useAuthStore()
+const { loginWithFirebase, signInWithPhoneNumber } = useAuthStore()
 const router = useRouter()
 
 const phoneNumber = $ref('')
@@ -50,17 +50,14 @@ const loginProviderList: LoginProvider[] = [
   },
 ]
 
-const signInWithMovil = () => {
-  // store.dispatch('auth/signInWithMovil', {
-  //   phoneNumber: phoneNumber.value
-  // })
+const signInWithMovil = async () => {
+  await signInWithPhoneNumber(phoneNumber)
 }
 
 const events = {
   async onClickLogin(provider: AuthProvider, name: Provider) {
-    await loginWithFirebase(provider, name)
+    await loginWithFirebase(provider)
     localStorage.setItem('provider', name)
-    await router.push('/')
   },
 }
 </script>
@@ -75,9 +72,10 @@ const events = {
       >
         <PrimaryBtn v-for="(provider, index) in loginProviderList" :key="index" class="mb-4" :color="provider.color" @click="events.onClickLogin(provider.provider, provider.name)">
           <span
-            class="relative flex justify-around w-64 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
+            class="relative flex justify-center w-64 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
           >
-            Entrar con {{ provider.name }} Mail
+            <MailIcon class="h-5 w-5 mr-2" />
+            {{ provider.name }} Mail
           </span>
         </PrimaryBtn>
         <PrimaryBtn
@@ -86,10 +84,10 @@ const events = {
           @click="emit('toggleMovilSignIn')"
         >
           <span
-            class="relative flex justify-around w-64 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0 items-center"
+            class="relative flex justify-center w-64 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0 items-center"
           >
-            <PhoneIcon class="h-5 w-5" />
-            Entrar con Movil
+            <PhoneIcon class="h-5 w-5 mr-2" />
+            Telefono Movil
           </span>
         </PrimaryBtn>
       </div>

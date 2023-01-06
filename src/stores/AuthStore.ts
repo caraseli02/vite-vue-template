@@ -1,21 +1,20 @@
 import { defineStore } from 'pinia'
-import type {
-  AuthProvider,
-  User,
-} from 'firebase/auth'
+import type { AuthProvider } from 'firebase/auth'
 import {
+  PhoneAuthProvider,
+  RecaptchaVerifier,
   browserSessionPersistence,
   createUserWithEmailAndPassword,
   getAuth,
+  sendPasswordResetEmail,
+  signInWithCredential,
   signInWithEmailAndPassword,
+  signInWithPhoneNumber,
   signInWithPopup,
 } from 'firebase/auth'
-import { doc, setDoc } from 'firebase/firestore'
 import { auth } from '../helpers/firebase'
 // Firebase Errors
 import { data } from '~/assets/firebase-errors.json'
-// TYPES
-import type { Provider } from '~/types/auth'
 // Other stores
 import { useAlertsStore } from '~/stores/AlertsStore'
 
@@ -31,77 +30,90 @@ interface IForm {
 }
 const errorsArr: FireAuthError = data
 
+const alertsStore = useAlertsStore()
+
 export const useAuthStore = defineStore('AuthStore', {
   state: () => {
     return {
-      user: null as User | null,
       provider: null as AuthProvider | null,
       loading: false,
     }
   },
   actions: {
     async signInWithEmailAndPassword({ email, password }: Pick<IForm, 'email' | 'password'>) {
-      const alertsStore = useAlertsStore()
-
       try {
         this.loading = true
-        await signInWithEmailAndPassword(auth, email, password).then((user) => {
-          this.user = auth.currentUser
-          setDoc(doc(db, 'cities', 'LA'), {
-            name: 'Los Angeles',
-            state: 'CA',
-            country: 'USA',
-          })
-        })
+        await signInWithEmailAndPassword(auth, email, password)
       }
       catch (err: any) {
-        console.log(err.code)
         alertsStore.authError(errorsArr[err.code])
       }
       finally {
         this.loading = false
       }
     },
-    async createUserWithEmailAndPassword({ email, password, name, surname }: IForm) {
+    async createUserWithEmailAndPassword({ email, password }: IForm) {
       const alertsStore = useAlertsStore()
 
       try {
         this.loading = true
-        await createUserWithEmailAndPassword(auth, email, password).then((user) => {
-          this.user = auth.currentUser
-        })
+        await createUserWithEmailAndPassword(auth, email, password)
       }
       catch (err: any) {
-        console.log(err.code)
         alertsStore.authError(errorsArr[err.code])
       }
       finally {
         this.loading = false
       }
     },
-    async loginWithFirebase(provider: AuthProvider, providedBy: Provider) {
+    async loginWithFirebase(provider: AuthProvider) {
       const alertsStore = useAlertsStore()
       try {
         await auth.setPersistence(browserSessionPersistence)
-        return await signInWithPopup(auth, provider).then((user) => {
-          this.user = auth.currentUser
-        })
+        return await signInWithPopup(auth, provider)
       }
       catch (err: any) {
         alertsStore.authError(errorsArr[err.code])
+      }
+    },
+    async signInWithPhoneNumber(phoneNumber: string) {
+      const appVerifier = new RecaptchaVerifier('recaptcha-container', {}, auth)
+      try {
+        const phoneNumberFormatted = `+34${phoneNumber}`
+        const phoneNumberE164 = `+${phoneNumberFormatted.replace(/\D/g, '')}`
+        signInWithPhoneNumber(auth, phoneNumberE164, appVerifier)
+          .then((confirmationResult) => {
+            // SMS sent. Prompt user to type the code from the message, then sign the
+            // user in with confirmationResult.confirm(code).
+            const verificationCode = prompt('Ingresa el codigo de verificacion')
+            if (verificationCode) {
+              const credential = PhoneAuthProvider.credential(confirmationResult.verificationId, verificationCode)
+              signInWithCredential(auth, credential)
+            }
+          })
+      }
+      catch (error) {
+        // Error; SMS not sent
+        appVerifier.clear() // reset the reCAPTCHA widget
+        if (error instanceof Error && 'code' in error)
+          alertsStore.authError(errorsArr[error.code as string])
       }
     },
     async signOut() {
       await getAuth().signOut()
-      this.user = null
+    },
+    sendEmailReset(email: string) {
+      sendPasswordResetEmail(auth, email)
+        .then(() => {
+          // Password reset email sent!
+          alertsStore.info('Success')
+        })
+        .catch((error) => {
+          // Error; SMS not sent
+          alertsStore.authError(errorsArr[error.code as string])
+        })
     },
   },
   getters: {
-    authUser: (state) => {
-      return state.user
-    },
-    userId: (state) => {
-      return state.user?.uid
-    },
   },
 })
